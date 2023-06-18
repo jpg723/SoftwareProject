@@ -10,7 +10,7 @@ import axios from 'axios';
 import off_heart from '../../img/off_heart.png';
 import on_heart from '../../img/on_heart.png';
 
- function GroupItemDetail(props) {
+ function ItemDetail(props) {
 
   let { id } = useParams();
   const [groupItem, setGroupItem] = useState("");
@@ -223,4 +223,4 @@ import on_heart from '../../img/on_heart.png';
     </div>
   );
 }
-export default GroupItemDetail;
+export default ItemDetail;

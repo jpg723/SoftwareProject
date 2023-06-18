@@ -31,8 +31,8 @@ function GroupItemView(){
                 </Link>
                 <div className={styles.product_name}>{list[i].groupItem_name}</div>
                 <div className={styles.product_price}>
-                  <div className={styles.product_discount}>50%</div>
-                  <div className={styles.price}>{convertPrice(list[i].groupItem_price/2)}</div>
+                  <div className={styles.product_discount}>{list[i].groupItem_rate}%</div>
+                  <div className={styles.price}>{convertPrice(list[i].groupItem_price*list[i].groupItem_rate/100)}</div>
                   <div className={styles.unit}>원</div>
                 </div>
                 <div className={styles.product_price}>

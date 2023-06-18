@@ -20,6 +20,7 @@ function Header() {
 
     const onLogout = () => {
       alert("로그아웃");
+      sessionStorage.removeItem("id");
       sessionStorage.removeItem("name");
       setIsLogin(false);
     }
