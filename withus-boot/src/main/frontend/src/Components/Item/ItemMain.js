@@ -1,13 +1,14 @@
 import '../../Css/Item.css';
 import ItemView from './ItemView.js';
-import {Link} from 'react-router-dom';
+import styles from "../../Css/Product.module.css";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ItemMain() {
   return (
     <div>
-        <h1 id="item_header">나눔</h1>
-        <div id="item_main">
+        <h1 id="Item_header">나눔하기</h1>
+        <div id="Item_main">
             <div id="item_category">
                 <div id="item_cate">카테고리</div>
                 <div class="itemCate_content">식품</div>
@@ -17,19 +18,20 @@ function ItemMain() {
                 <div class="itemCate_content">가전제품</div>
                 <div class="itemCate_content">미용</div>
             </div>
-            <div id="item_view">
-                <div id="item_view_header">
-                    <Link to="/itemwrite" id="item_register">나눔하기</Link>
-                    <div id="item_list">
-                        <div class="item_list_content">신상품순</div>
-                        <div class="item_list_content">|</div>
-                        <div class="item_list_content">찜개수 순</div>
-                        <div class="item_list_content">|</div>
-                        <div class="item_list_content">나눔 전</div>
+            <div id="Item_view">
+                <div id="Item_view_header">
+                    <Link to="/itemwrite" class="item_register"><div class="item_register">나눔하기</div></Link>
+                    <div id="Item_list">
+                        <div class="groupItem_list_content">신상품순</div>
+                        <div class="groupItem_list_content">|</div>
+                        <div class="groupItem_list_content">찜개수 순</div>
+                        <div class="groupItem_list_content">|</div>
+                        <div class="groupItem_list_content">마감전순</div>
                     </div>
                 </div>
-                <ItemView/>
-                <ItemView/>
+                <main className={styles.flex_wrap}>
+                    <ItemView/>                
+                </main>
             </div>
         </div>
     </div>

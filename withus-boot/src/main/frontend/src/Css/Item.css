@@ -1,17 +1,41 @@
 /*헤더*/
-#item_header{
+#Item_header{
     text-align: center;
 }
 
 /*-----------------------------------------------------
-아이템 메인페이지*/
-#item_main{
+공동구매 메인페이지*/
+#Item_main{
     display: flex;
     height: 100%;
 }
 
 /*-----------------------------------------------------
-나눔 카테고리*/
+공동구매 메인페이지 헤더*/
+#Item_view_header{
+    width: 1225px;
+    display: flex;
+}
+
+/*나눔 등록 버튼*/
+.item_register{
+    margin-left: 30px;
+    font-size: 17px;
+    text-decoration-line: none;
+    color: black;
+}
+#Item_list{
+    display: flex;
+    margin-left: auto;
+    margin-right: 320px;
+}
+
+.Item_list_content{
+    margin: auto 3px;
+    font-size: 17px;
+}
+
+/*나눔 카테고리----------------*/
 #item_category{
     width: 300px;
     margin-left: 70px;
@@ -29,64 +53,37 @@
     font-size: 20px;
 }
 
-/*-----------------------------------------------
-나눔 뷰*/
-#item_view{
-    width: 100%;
+/*-----------------------------------------------------
+공동구매 상품 리스트*/
+#Item_view_main{
+    margin-left: 20px;
     height: 100%;
-}
-
-/*---------------------------
-아이템 헤더*/
-#item_view_header{
-    display: flex;
-}
-
-#item_register{
-    margin: auto 0;
-    margin-left: 50px;
-    font-size: 17px;
-    color: black;
-    text-decoration-line: none;
-}
-
-#item_list{
-    display: flex;
-    margin-left: auto;
-    margin-right: 65px;
-}
-.item_list_content{
-    margin: auto 3px;
-    font-size: 17px;
-}
-
-/*---------------------------
-아이템*/
-#item_view_main{
-    height: 100%;
+    width: 900px;
     padding: 20px 0px;
     display: flex;
-    height: 430px;
+    /*화면 넘어가면 줄바꿈*/
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.item{
+.groupItem{
     margin-left: 50px;
     width: 249px;
-    height: 100%;
+    height: 450px;
 }
-.item_image{
+.groupItem_image{
     width: 249px;
     height: 320px;
 }
 
-.item_info{
+.groupItem_info{
     width: 249px;
     height: 94.2px;
     margin: 0;
     padding: 14px 10px 0 0;
 }
 
-.item_name{
+.groupItem_name{
     width: 239px;
     height: 23.2px;
     color: #333333;
@@ -94,14 +91,14 @@
     margin: 0 0 8px;
 }
 
-.item_price{
+.groupItem_price{
     width: 239px;
     height: 24px;
     font-size: 16px;
     font-weight: 800;
 }
 
-.item_likeCount{
+.groupItem_likeCount{
     width: 239px;
     height: 25px;
     padding: 5px 0 0;
@@ -109,10 +106,11 @@
     font-size: 14px;
 }
 
-.item_state{
-    width: 70px;
+.groupItem_state{
+    width: 110px;
     height: 25px;
     margin: 5px 0px auto auto;
     color: black;
     font-size: 14px;
+    text-align: right;
 }

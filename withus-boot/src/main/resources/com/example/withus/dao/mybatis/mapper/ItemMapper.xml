@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.ItemMapper">
+
+  <cache />
+  
+	<insert id="insertItem" useGeneratedKeys="false" keyProperty="item_id" parameterType="item">
+  		<selectKey keyProperty="item_id" resultType="int" order="BEFORE">
+          SELECT ITEM_SEQ.NEXTVAL FROM DUAL
+      	</selectKey>
+         insert into ITEM(item_id, item_name, item_state, item_detail, item_date, like_count, user_id, itemcategory_id)
+         values(#{item_id}, #{item_name}, #{item_state}, #{item_detail}, #{item_date}, #{like_count}, #{user_id}, #{itemcategory_id})
+   	</insert>
+
+</mapper>

@@ -1,35 +1,49 @@
 import '../../Css/Item.css';
-import item_image from '../../img/item_image.jpg';
-import React from 'react';
+import styles from "../../Css/Product.module.css";
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-function ItemView() {
+function ItemView(){
+  const [list , SetList] = useState([]);
+    
+  const convertPrice = (price) =>{
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+  }
+  useEffect(()=> {
+    axios.get('/groupItem').then((res)=>{
+      SetList(res.data)
+      console.log(res)
+    })
+    .catch(error => console.log(error))
+  },[])       
+
   return (
-    <div id="item_view_main">
-        <div class="item">
-            <img class="item_image" src={item_image}></img>
-            <div class="item_info">
-                <div class="item_name">나눔 아이템 이름</div>
-                <div class="item_likeCount">찜 개수 100</div>
-                <div class="item_state">나눔 완료</div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="item_image" src={item_image}></img>
-            <div class="item_info">
-                <div class="item_name">나눔 아이템 이름</div>
-                <div class="item_likeCount">찜 개수 100</div>
-                <div class="item_state">나눔 완료</div>
-            </div>
-        </div>
-        <div class="item">
-            <img class="item_image" src={item_image}></img>
-            <div class="item_info">
-                <div class="item_name">나눔 아이템 이름</div>
-                <div class="item_likeCount">찜 개수 100</div>
-                <div class="item_state">나눔 완료</div>
-            </div>
-        </div>
-    </div>
+    <div id="Item_view_main">
+      {
+        list.map(function(a,i){
+            return(
+              <div className={styles.product}>  
+                <Link to={'/groupItem/detail/'+list[i].groupItem_id} className="/groupItem">  
+                  <div className={styles.product_image}>       
+                  <img className="groupItem_image" src={process.env.PUBLIC_URL+'/' + list[i].img}></img>
+                  </div>
+                </Link>
+                <div className={styles.product_name}>{list[i].groupItem_name}</div>
+                <div className={styles.product_price}>
+                  <div className={styles.product_discount}>50%</div>
+                  <div className={styles.price}>{convertPrice(list[i].groupItem_price/2)}</div>
+                  <div className={styles.unit}>원</div>
+                </div>
+                <div className={styles.product_price}>
+                  <div className={styles.origin_price}>{convertPrice(list[i].groupItem_price)}</div>
+                  <div className={styles.origin_unit}>원</div>
+                </div>
+              </div>              
+            )           
+        })
+      }
+    </div>   
   );
 }
 
