@@ -1,0 +1,139 @@
+#order_header{
+    text-align: center;
+}
+
+/*구분선----------------------------------------------------*/
+#order_line{
+    border: 1px solid black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/*주문 입력 폼----------------------------------------------------*/
+#order_form{
+    width: 400px;
+    margin: 20px auto;
+}
+
+/*입력란----------------------------------------------------*/
+.order_content{
+    height: 60px;
+    display: flex;
+    margin-top: 15px;
+}
+
+/*입력박스이름----------------------------------------------------*/
+.order_content1{
+    width: 100px;
+}
+
+.order_name{
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+/*입력박스----------------------------------------------------*/
+.order_content2{
+    width: 350px;
+    display: flex;
+    margin: auto 0px;
+}
+.start_content2{
+    width: 400px;
+    display: flex;
+    margin: auto 0px;
+}
+
+.order_inputBox{
+    display: flex;
+    margin: 5px 20px auto; 
+    width: 250px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.start_inputBox{
+    margin-top: 20px;
+    display: flex;
+    margin: 5px 20px auto; 
+    width: 250px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.order_input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 300px;
+    height: 18.4px;
+}
+
+.start_input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 14px;
+    width: 500px;
+    height: 18.4px;
+}
+
+/*주문 수량-------------------------------------------*/
+.order-count-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.order-count{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #ee5f41;
+}
+
+/*주문 가격---------------------------------------------*/
+.order-price-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0px;
+    font-size: 20px;
+}
+
+.order-price{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #ee5f41;
+}
+
+.order-price-content2{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+    font-size: 20px;
+}
+
+/*주문 버튼-------------------------------------------*/
+#order_btn{
+    border: none;
+    margin: 20px 0 0 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    background-color: #ee5f41;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+}

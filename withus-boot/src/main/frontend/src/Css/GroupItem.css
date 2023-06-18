@@ -1,0 +1,91 @@
+/*헤더*/
+#groupItem_header{
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+공동구매 메인페이지*/
+#groupItem_main{
+    display: flex;
+    height: 100%;
+}
+
+/*-----------------------------------------------------
+공동구매 메인페이지 헤더*/
+#groupItem_view_header{
+    width: 1225px;
+    display: flex;
+}
+
+#groupItem_list{
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.groupItem_list_content{
+    margin: auto 3px;
+    font-size: 17px;
+}
+
+/*-----------------------------------------------------
+공동구매 상품 리스트*/
+#groupItem_view_main{
+    margin-left: 20px;
+    height: 100%;
+    width: 1200px;
+    padding: 20px 0px;
+    display: flex;
+    /*화면 넘어가면 줄바꿈*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.groupItem{
+    margin-left: 50px;
+    width: 249px;
+    height: 450px;
+}
+.groupItem_image{
+    width: 249px;
+    height: 320px;
+}
+
+.groupItem_info{
+    width: 249px;
+    height: 94.2px;
+    margin: 0;
+    padding: 14px 10px 0 0;
+}
+
+.groupItem_name{
+    width: 239px;
+    height: 23.2px;
+    color: #333333;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.groupItem_price{
+    width: 239px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.groupItem_likeCount{
+    width: 239px;
+    height: 25px;
+    padding: 5px 0 0;
+    color: black;
+    font-size: 14px;
+}
+
+.groupItem_state{
+    width: 110px;
+    height: 25px;
+    margin: 5px 0px auto auto;
+    color: black;
+    font-size: 14px;
+    text-align: right;
+}

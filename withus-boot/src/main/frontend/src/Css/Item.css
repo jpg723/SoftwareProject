@@ -1,0 +1,118 @@
+/*헤더*/
+#item_header{
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+아이템 메인페이지*/
+#item_main{
+    display: flex;
+    height: 100%;
+}
+
+/*-----------------------------------------------------
+나눔 카테고리*/
+#item_category{
+    width: 300px;
+    margin-left: 70px;
+}
+
+#item_cate{
+    width: 100px;
+    margin: 0 auto;
+    font-size: 23px;
+}
+
+.itemCate_content{
+    width: 80px;
+    margin: 20px 65px 0px;
+    font-size: 20px;
+}
+
+/*-----------------------------------------------
+나눔 뷰*/
+#item_view{
+    width: 100%;
+    height: 100%;
+}
+
+/*---------------------------
+아이템 헤더*/
+#item_view_header{
+    display: flex;
+}
+
+#item_register{
+    margin: auto 0;
+    margin-left: 50px;
+    font-size: 17px;
+    color: black;
+    text-decoration-line: none;
+}
+
+#item_list{
+    display: flex;
+    margin-left: auto;
+    margin-right: 65px;
+}
+.item_list_content{
+    margin: auto 3px;
+    font-size: 17px;
+}
+
+/*---------------------------
+아이템*/
+#item_view_main{
+    height: 100%;
+    padding: 20px 0px;
+    display: flex;
+    height: 430px;
+}
+
+.item{
+    margin-left: 50px;
+    width: 249px;
+    height: 100%;
+}
+.item_image{
+    width: 249px;
+    height: 320px;
+}
+
+.item_info{
+    width: 249px;
+    height: 94.2px;
+    margin: 0;
+    padding: 14px 10px 0 0;
+}
+
+.item_name{
+    width: 239px;
+    height: 23.2px;
+    color: #333333;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.item_price{
+    width: 239px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.item_likeCount{
+    width: 239px;
+    height: 25px;
+    padding: 5px 0 0;
+    color: black;
+    font-size: 14px;
+}
+
+.item_state{
+    width: 70px;
+    height: 25px;
+    margin: 5px 0px auto auto;
+    color: black;
+    font-size: 14px;
+}

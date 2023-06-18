@@ -1,0 +1,94 @@
+/*헤더 박스-------------------------------------*/
+#item-register-header{
+    margin-top: 20px;
+}
+/*헤더 문구-------------------------------------*/
+#item-register-title{
+    width: 200px;
+    margin-left: 120px;
+    font-size: 25px;
+}
+/*구분선--------------------------------*/
+#item-register-line{
+    width: 1000px;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+/*메인(글작성)-------------------------------------*/
+#item-register-main{
+    margin: 20px auto;
+    width: 1000px;
+}
+
+/*카테고리 선택-------------------------------------*/
+#item-category-select-box{
+    margin-left: 190px;
+    width: 120px;
+
+}
+#item-category-select{
+    width: 120px;
+    height: 25px;
+}
+
+/*글 작성-------------------------------------*/
+.item-register-main-write {
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.item-register-main-write div {
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+/*글 제목-------------------------------------*/
+#title_txt {
+    margin-top: 10px;
+    width: 670px;
+    padding-bottom: 20px;
+    border: none;
+    font-size: 22px;
+    border-bottom: solid 1px #ababab;
+}
+#title_txt:focus { outline : none; }
+/*글 내용-------------------------------------*/
+#content_txt{
+    margin-top: 20px;
+    width: 670px;
+    resize: none;
+    border: none;
+    height: 500px;
+}
+#content_txt:focus { outline : none; }
+/*이미지 업로드 버튼-------------------------------------------*/
+#item_image_upload{
+    margin-top: 10px;
+    margin-right: 420px;
+}
+/*글 등록 버튼-------------------------------------------------*/
+#post_submit{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#post_submit button {
+    margin-left: 600px;
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ee5f41;
+    cursor: pointer;
+    color:#ee5f41;
+    background-color:white;
+}
+
+/*유효성 검사-------------------------------------------------------*/
+.board_inputCheck{
+    width: 400px;
+    padding-left: 115px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 13.5px;
+    color: red;
+}

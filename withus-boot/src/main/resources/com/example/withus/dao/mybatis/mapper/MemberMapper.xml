@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.MemberMapper">
+  <cache />
+
+  <select id="findByIdAndPassword" resultType="MEMBER">
+    SELECT *
+    FROM MEMBER
+    WHERE USER_ID = #{user_id}
+      AND PASSWORD = #{password}
+  </select>
+
+  
+</mapper>

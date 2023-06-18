@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.CartMapper">
+
+  <cache />
+
+ <select id="getCartItemList" parameterType="String" resultType="CARTITEM">
+    SELECT g.groupItem_id, g.groupItem_name, g.groupItem_price,c.quantity, g.groupItem_rate, g.img
+    FROM CARTITEM c, GROUPITEM g
+    WHERE c.USER_ID = #{user_id} AND c.GROUPITEM_ID=g.GROUPITEM_ID
+  </select>
+  
+  <select id="getCartItem" resultType="Cart">
+    SELECT *
+    FROM CARTITEM
+    WHERE USER_ID = #{user_id} AND GROUPITEM_ID = #{groupItem_id}
+  </select>
+
+  <insert id="insertGroupItem">
+    INSERT INTO CARTITEM (GROUPITEM_ID, USER_ID,QUANTITY)
+    VALUES(#{groupItem_id}, #{user_id}, #{quantity})
+  </insert>
+  
+  <delete id="deleteGroupItem">
+    delete from CARTITEM where cart_id = #{cart_id}
+  </delete>
+ 
+  
+  <!-- <select id="isGroupItemInStock" resultType="bool">
+    SELECT sum(TOTALGROUPITEM_COUNT)
+	FROM ATTENDGROUPITEM
+	where GROUPITEM_ID = #{groupItemId}
+  </select>
+  
+  <select id="isItemInStock" resultType="boolean">
+    SELECT IF(item_stock > 0, 1, 0)
+	FROM ITEM
+	where ITEM_ID = #{groupItemId}
+  </select> -->
+</mapper>

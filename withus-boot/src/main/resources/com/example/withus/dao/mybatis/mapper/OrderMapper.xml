@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.OrderMapper">
+
+  <cache />
+
+  <select id="getOrder" resultType="Order">
+    select *
+    FROM ORDERS
+    WHERE order_id = #{order_id}
+  </select>
+
+  <select id="getOrdersByUserId" resultType="Order">
+    SELECT *
+    FROM ORDERS
+    WHERE USER_ID = #{user_id}
+    ORDER BY ORDER_DATE
+  </select>
+
+  <insert id="insertOrder">
+    INSERT INTO ORDERS (user_id, ORDER_DATE, TOTALITEM_COUNT, TOTALITEM_PRICE, SHIP_STATE, GROUPITEM_ID)
+    VALUES(#{user_id}, #{order_date}, #{totalitem_count}, #{totalitem_price} , #{ship_status}, #{groupitem_id})
+  </insert>
+
+  <update id="cancleOrder" parameterType="Order">
+      update orders set ship_status = 'C' where order_id = #{order_id}
+   </update>
+   
+   <!-- 주문 배송정보 수정 -->
+   <update id="modifyOrderInfo" parameterType="Order">
+      UPDATE ORDERS SET 
+      totalitem_count = #{totalitem_count},
+      totalitem_price = #{totalitem_price},
+      order_date = #{order_date}
+      WHERE order_id = #{order_id}      
+   </update>
+   
+   <!-- 페이징을 위한 전체 구매수-->
+   <select id="userOrderTotal" resultType="int">
+    SELECT COUNT(*)
+    FROM orders
+    WHERE user_id = #{user_id}      
+    </select>
+
+  
+ <!-- <insert id="msSqlServerInsertOrder" useGeneratedKeys="true">
+     insert into orders (userid, orderdate, shipaddr1, shipaddr2,
+        shipcity, shipstate, shipzip, shipcountry, billaddr1, billaddr2,
+        billcity, billstate, billzip, billcountry, courier, totalprice,
+        billtofirstname, billtolastname, shiptofirstname, shiptolastname,
+        creditcard, exprdate, cardtype, locale) values (#username#,
+        #orderDate#, #shipAddress1#, #shipAddress2:VARCHAR#, #shipCity#,
+        #shipState#, #shipZip#, #shipCountry#, #billAddress1#,
+        #billAddress2:VARCHAR#, #billCity#, #billState#, #billZip#,
+        #billCountry#, #courier#, #totalPrice#, #billToFirstName#,
+        #billToLastName#, #shipToFirstName#, #shipToLastName#,
+        #creditCard#, #expiryDate#, #cardType#, #locale#); 
+     select @@identity as value
+  </insert>-->
+
+</mapper>

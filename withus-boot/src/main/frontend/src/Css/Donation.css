@@ -1,0 +1,87 @@
+/*헤더*/
+#donation_header{
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+기부 메인페이지*/
+#donation_main{
+    display: flex;
+    height: 100%;
+}
+
+/*-----------------------------------------------------
+기부 메인페이지 헤더*/
+#donation_view_header{
+    width: 1225px;
+    display: flex;
+}
+
+#donation_list{
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.donation_list_content{
+    margin: auto 3px;
+    font-size: 17px;
+}
+
+/*-----------------------------------------------------
+공동구매 상품 리스트*/
+#donation_view_main{
+    height: 100%;
+    padding: 20px 0px;
+    display: flex;
+    height: 430px;
+}
+
+.donation{
+    margin-left: 50px;
+    width: 249px;
+    height: 100%;
+}
+.donation_image{
+    width: 249px;
+    height: 320px;
+}
+
+.donation_info{
+    width: 249px;
+    height: 94.2px;
+    margin: 0;
+    padding: 14px 10px 0 0;
+}
+
+.donation_name{
+    width: 239px;
+    height: 23.2px;
+    color: #333333;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.donation_price{
+    width: 239px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.donation_likeCount{
+    width: 239px;
+    height: 25px;
+    padding: 5px 0 0;
+    color: black;
+    font-size: 14px;
+}
+
+.donation_state{
+    width: 70px;
+    height: 25px;
+    margin: 5px 0px auto auto;
+    color: black;
+    font-size: 14px;
+    text-align: right;
+}

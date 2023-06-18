@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.LikeMapper">
+
+  <cache />
+  
+  <select id="rankingItem" resultType="Item">
+   select item_id, COUNT(item_id)
+   from LIKE_ITEM
+   group by item_id 
+   order by COUNT(item_id) DESC
+  </select>
+  
+   <select id="rankingGroupItem" resultType="GroupItem">
+   select groupitem_id, COUNT(groupitem_id)
+   from LIKE_ITEM
+   group by groupitem_id 
+   order by COUNT(groupitem_id) DESC
+  </select>
+  
+  <select id="getItemLikes" parameterType="java.util.Map" resultType="Item">
+   select like_id, user_id, item_id, like_date
+   from LIKE_ITEM
+   where #{item_id} is not null and user_id=#{user_id}
+  </select>
+  
+  <select id="getGroupItemLikes" parameterType="java.util.Map" resultType="GroupItem">
+   select like_id, user_id, groupItem_id, like_date
+   from LIKE_ITEM
+   where #{groupItem_id} is not null and user_id=#{user_id}
+  </select>
+  
+  <insert id="insertItemLike" useGeneratedKeys="true" keyProperty="like_id" parameterType="Like">
+   insert into LIKE_ITEM(user_id, item_id)
+   values(#{user_id}, #{item_id})
+  </insert>
+   
+   <insert id="insertGroupItemLike" useGeneratedKeys="true" keyProperty="like_id" parameterType="Like">
+   insert into LIKE_ITEM(user_id, groupItem_id)
+   values(#{user_id}, #{groupItem_id})
+  </insert>
+  
+  <delete id="removeItemLike" parameterType="Like">
+   delete from LIKE_ITEM
+   where item_id=#{item_id} and user_id=#{user_id}
+  </delete>
+  
+  <delete id="removeGroupItemLike" parameterType="Like">
+   delete from LIKE_ITEM
+   where groupItem_id=#{groupItem_id} and user_id=#{user_id}
+  </delete>
+
+</mapper>

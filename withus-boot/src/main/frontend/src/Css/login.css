@@ -1,0 +1,82 @@
+#login_header{
+    text-align: center;
+}
+
+#login_line{
+    border: 1px solid black;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#login_form{
+    width: 450px;
+    margin: 20px auto;
+}
+
+.login_content{
+    height: 60px;
+    margin: 10px 0px;
+}
+
+.login_inputBox{
+    display: flex;
+    margin: 5px auto; 
+    width: 300px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.login_input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 300px;
+    height: 18.4px;
+}
+
+#find{
+    display: flex;
+    width: 190px;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.find_content{
+    margin: 3px;
+    font-size: 14px;
+}
+
+/*-----------------------------------------
+로그인, 가입하기 버튼*/
+#login_button{
+    border: none;
+    margin: 0px 70px; 
+    width: 310px;
+    height: 50px;
+    font-size: 15px;
+    background-color: #ee5f41;
+    color: white;
+    border-radius: 6px;
+}
+
+#register_button{
+    border: 1px solid #ee5f41;
+    margin: 0px 70px; 
+    width: 310px;
+    height: 50px;
+    font-size: 15px;
+    background-color: white;
+    color: #ee5f41;
+    border-radius: 6px;
+}
+
+.inputLoginCheck{
+    text-align: left;
+    margin-left: 70px;
+    font-size: 13.5px;
+    color: red;
+}

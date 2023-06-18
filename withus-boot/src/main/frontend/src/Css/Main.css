@@ -1,0 +1,218 @@
+/*헤더*/
+#header{
+    height: 100px;
+}
+
+#header_top{
+    height: 36px;
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*헤더 회원가입, 로그인, 고객센터 박스*/
+.headerTop_content{
+    height: 35px;
+    width: 200px;
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*회원가입*/
+.member{
+    font-family: "Noto Sans";
+    font-size: 12px;
+    margin: auto 0 auto auto;
+    text-decoration-line: none;
+    color: black;
+}
+
+/*로그인*/
+.login{
+    font-family: "Noto Sans";
+    font-size: 12px;
+    margin: auto 0 auto auto;
+    text-decoration-line: none;
+    color: black;
+}
+
+.barIcon{
+    color: #D9D9D9;
+    margin: auto 0 auto auto;
+}
+
+/*고객센터*/
+.service{
+    font-family: "Noto Sans";
+    font-size: 12px;
+    margin: auto 0 auto auto;
+}
+
+/*고객센터 화살표*/
+#arrow{
+    margin: 0px 0px 1px 5px;
+    width: 8px;
+    height: 5px;
+    margin: auto 0 auto auto;
+}
+
+.arrow-down{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #000000;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+#header_wrap{
+    display: flex;
+    height: 63px;
+    width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.header_content1{
+    margin: auto 0;
+
+}
+
+/*로고*/
+.loco{
+    margin: 0 0 0 50px;
+    width: 66.25px;
+    height: 23.94px;
+    color: #ee5f41;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+/*검색 박스*/
+.header_content2{
+    display: flex;
+    margin: auto auto; 
+    width: 400px;
+    height: 48px;
+    border: 1px solid #417bba;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+/*검색 입력 박스*/
+.search_box{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 300px;
+    height: 18.4px;
+}
+
+.search{
+    margin: 5px 10px 10px auto;
+    width: 30px;
+    height: 30px;
+}
+
+.header_content3{
+    margin: auto 0px auto auto;
+    height: 36px;
+}
+
+/*주소, 하트 아이콘*/
+.icon{
+    margin: 0 20px 0 0;
+    width: 36px;
+    height: 36px;
+}
+
+/*장바구니 아이콘*/
+.basket{
+    margin: auto 0 auto auto;
+}
+
+/*----------------------------------------------------------------
+카테고리*/
+#category{
+    height: 56px;
+    width: 1050px;
+    margin: 0 auto; /*중앙 정렬*/
+    display: flex;
+    flex-direction: row;
+}
+
+.category_content1{
+    display: flex;
+    margin: auto 0;
+}
+
+/*카테고리 아이콘*/
+.cate_icon{
+    margin: auto 14px auto 50px;
+    width: 16px;
+    height: 14px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMTZ2MS43SDBWMHptMCA2LjE1aDE2djEuN0gwdi0xLjd6bTAgNi4xNWgxNlYxNEgwdi0xLjd6IiBmaWxsPSIjMzMzIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KPC9zdmc+Cg==)
+}
+
+.category_text{
+    color: rgb(51, 51, 51);
+    margin: auto;
+}
+
+.category_content2{
+    display: flex;
+    margin: auto;
+}
+
+/*카테고리 종류*/
+.category_content2_sub{
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+/*메인화면-------------------------------------------------------------*/
+#main{
+    height: 420px;
+    width: 1250px;
+    margin: 0 auto; /*중앙 정렬*/
+    display: flex;
+    flex-direction: row;
+}
+/*왼쪽 메인-----------------------------------------------*/
+#main_1{
+    width: 50%;
+    height: 430px;
+}
+/*문구1-----------------------------------------------*/
+.main1_content1{
+    margin-top: 100px;
+    margin-left: 120px;
+    font-size: 35px;
+}
+/*문구2-----------------------------------------------*/
+.main1_content2{
+    margin-left: 300px;
+    font-size: 80px;
+    color:#ee5f41;
+}
+/*오른쪽 메인-----------------------------------------------*/
+#main_2{
+    height: 430px;
+}
+/*오른쪽 메인 이미지-----------------------------------------------*/
+.mainpage_bg{
+    margin-top: 40px;
+    margin-left: 80px;
+    height: 390px;
+    width: 520px;
+}

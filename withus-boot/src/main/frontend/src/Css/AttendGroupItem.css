@@ -1,0 +1,123 @@
+.attendGroup {
+  width: 600px;
+  height: 20px;
+
+}
+
+.product_name {
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/*구분선-------------------------------------*/
+.line2{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 1050px;
+  height: 2px;
+  background: #c4c4c4;
+}
+/*공동구매 박스 헤더------------------------------------------*/
+.groupBuy-header{
+  display: flex;
+}
+
+.groupBuy-header-content1{
+  border: 1px solid #ee5f41;
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  padding-top: 5px;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 17px;
+  color: #ee5f41;
+  border-radius: 5px;
+}
+
+.groupStartBtn{
+  margin-top: 20px;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  background: #ee5f41;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.message{
+  margin-top: 15px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-size: 17px;
+  color: #ee5f41;
+  border-radius: 5px;
+}
+
+.groupBuy-header-content2{
+  margin: auto 80px 0px auto;
+}
+
+/*공동구매 팀*/
+.groupBox{
+  border: 1px solid #c4c4c4;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 950px;
+}
+
+.groupBox2{
+  border-bottom: 1px solid #c4c4c4;
+  margin: 0 auto;
+  width: 900px;
+  display: flex;
+  height: 50px;
+}
+
+/*박스 아이콘----------------------------*/
+.boxicon{
+  margin-top: auto;
+  margin-left: 20px;
+  margin-bottom: auto;
+  width: 35px;
+  height: 35px;
+}
+
+/*공동구매자 이름----------------------------*/
+.groupitem-username{
+  font-size: 20px;
+  margin-top: auto;
+  margin-left: 15px;
+  margin-bottom: auto;
+  padding-top: 2px; 
+}
+
+/*공동구매 참여자 수----------------------------*/
+.groupitem-count{
+  font-size: 20px;
+  margin-top: auto;
+  margin-left: 10px;
+  margin-bottom: auto;
+  padding-top: 2px; 
+}
+
+/*공동구매 참여 버튼----------------------------*/
+.groupBuy-btnBox{
+  margin: auto 0 auto auto;
+  width: 100px;
+}
+.groupBuyBtn{
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  background: #ee5f41;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+

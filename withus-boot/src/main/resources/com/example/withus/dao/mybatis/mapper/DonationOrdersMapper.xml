@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.DonationOrdersMapper">
+
+  <cache />
+  
+  <!-- 내가 신청한 도네이션 리스트 -->
+  <select id="getTotalDonationOrders" parameterType="String" resultType="DonationOrders">
+   select *
+   from DONATIONORDERS
+   where user_id=#{user_id}
+  </select>
+    
+  <!-- 내가 신청한 도네이션 하나 -->  
+  <select id="getDonationOrder" parameterType="java.util.Map" resultType="DonationOrders">
+   select *
+   from DONATIONORDERS
+   where donation_id=#{donation_id} and user_id=#{user_id}
+  </select>
+ 
+  <!-- 도네이션 신청 -->
+  <!-- <insert id="applyDonationOrder" useGeneratedKeys="true" keyProperty="donation_orderid" parameterType="DonationOrders">
+   INSERT INTO DONATIONORDERS (user_id, donation_price, donation_state, donationadd_date, donation_id, comments)
+   VALUES
+   (#{user_id}, #{donation_price}, #{donation_state}, #{donationadd_date}, #{donation_id}, #{comments})
+  </insert> -->
+  
+  <insert id="applyDonationOrder" useGeneratedKeys="false" keyProperty="donation_orderid" parameterType="DonationOrders">
+  <selectKey keyProperty="donation_orderid" resultType="int" order="BEFORE">
+	    	SELECT DONATIONORDERS_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+   INSERT INTO DONATIONORDERS (donation_orderid, user_id, donation_price, donation_state, donationadd_date, donation_id, comments)
+   VALUES
+   (#{donation_orderid}, #{user_id}, #{donation_price}, #{donation_state}, #{donationadd_date}, #{donation_id}, #{comments})
+  </insert>
+  
+  <!-- 도네이션 신청 취소 -->
+  <delete id="cancelDonationOrder" parameterType="java.util.Map">
+   delete from DONATIONORDERS
+   where donation_id=#{donation_id} and user_id=#{user_id}
+  </delete>
+  
+</mapper>

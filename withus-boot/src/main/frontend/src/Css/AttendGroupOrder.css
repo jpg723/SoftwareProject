@@ -1,0 +1,165 @@
+#attend-group-order_header{
+    text-align: center;
+}
+
+/*구분선----------------------------------------------------*/
+#attend-group-order_line{
+    border: 1px solid black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/*주문 입력 폼----------------------------------------------------*/
+#attend-group-order_form{
+    width: 400px;
+    margin: 20px auto;
+}
+
+/*입력란----------------------------------------------------*/
+.attend-group-order_content{
+    height: 60px;
+    display: flex;
+    margin-top: 15px;
+}
+
+/*입력박스이름----------------------------------------------------*/
+.attend-group-order_content1{
+    width: 100px;
+}
+
+.attend-group-order_name{
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+/*입력박스----------------------------------------------------*/
+.attend-group-order_content2{
+    width: 350px;
+    display: flex;
+    margin: auto 0px;
+}
+
+.attend-group-order_inputBox{
+    display: flex;
+    margin: 5px 20px auto; 
+    width: 250px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.attend-group-order_input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 300px;
+    height: 18.4px;
+}
+/*주문 수량-------------------------------------------*/
+.group-buy-count-box{
+    margin-top: 20px;
+    margin-left: 10px;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.group-buy-count-box .minus {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.group-buy-count-box .count {
+    position: absolute;
+    width: 56px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c4c4c4;
+    border-top:none;
+    border-bottom:none;
+}
+
+.group-buy-count-box .count span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.group-buy-count-box .plus {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/*주무수량------------------------------------------*/
+.attned-group-order_content3{
+    display: flex;
+}
+.attend-group-order-count-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.attend-group-order-count{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #ee5f41;
+}
+
+/*주문 가격---------------------------------------------*/
+.attend-group-order-price-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0px;
+    font-size: 20px;
+}
+
+.attend-group-order-price{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    font-size: 20px;
+    color: #ee5f41;
+}
+
+.attend-group-order-price-content2{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+    font-size: 20px;
+}
+
+/*주문 버튼-------------------------------------------*/
+#attend-group-order_btn{
+    border: none;
+    margin: 15px 0 0 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    background-color: #ee5f41;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+}

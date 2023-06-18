@@ -1,0 +1,158 @@
+#register_header{
+    text-align: center;
+}
+
+#register_line{
+    border: 1px solid black;
+    width: 700px;
+    margin: 0 auto;
+}
+
+#register_form{
+    width: 650px;
+    margin: 20px auto;
+}
+
+.register_content{
+    height: 60px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.register_content1{
+    width: 150px;
+}
+
+.register_name{
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+.register_content2{
+    width: 350px;
+    display: flex;
+    margin: auto 0px;
+}
+
+.register_inputBox{
+    display: flex;
+    margin: 5px 20px auto; 
+    width: 300px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.register_input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 300px;
+    height: 18.4px;
+}
+
+.register_yearInputBox{
+    display: flex;
+    margin: 5px 10px 5px 20px; 
+    width: 80px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.register_yearInput{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 70px;
+    height: 18.4px;
+}
+
+.register_monthInputBox{
+    display: flex;
+    margin: 5px 10px auto; 
+    width: 70px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.register_monthInput{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 60px;
+    height: 18.4px;
+}
+
+.register_dateInputBox{
+    display: flex;
+    margin: 5px 10px auto; 
+    width: 70px;
+    height: 48px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0 0 0 14px;
+}
+
+.register_dateInput{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 16px;
+    width: 60px;
+    height: 18.4px;
+}
+
+.register_check_btn{
+    margin: 5px 5px auto; 
+    width: 120px;
+    height: 48px;
+    border: 1px solid #ee5f41;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    color: #ee5f41;
+    font-size: 15px;
+}
+
+#register_bottom{
+    height: 60px;
+    margin-top: 50px;
+}
+
+#register_btn{
+    border: none;
+    margin: 4px 215px;
+    height: 50px;
+    width: 200px;
+    font-size: 17px;
+    background-color: #ee5f41;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+}
+
+.radio_btn{
+    margin: auto 20px;
+    height:20px;
+    width: 20px;
+}
+
+.inputCheck{
+    width: 400px;
+    margin-left: 170px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 13.5px;
+    color: red;
+}

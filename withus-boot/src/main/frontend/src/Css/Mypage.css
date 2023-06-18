@@ -1,0 +1,34 @@
+/*mypage*/
+#mypage_main{
+    display: flex;
+    margin-top: 30px;
+}
+
+#mypage_category{
+    margin-left: 150px;
+}
+
+#mypage_cate{
+    font-size: 25px;
+}
+
+.mypageCate_content{
+    margin-top: 25px;
+    font-size: 20px;
+    text-decoration-line: none;
+    color: black;
+}
+
+#mypage_view{
+    margin-left: 50px;
+}
+
+#mypage_header{
+    font-size: 26px;
+}
+
+#mypage_line{
+    border: 1.5px solid black;
+    margin-top: 10px;
+    width: 800px;
+}

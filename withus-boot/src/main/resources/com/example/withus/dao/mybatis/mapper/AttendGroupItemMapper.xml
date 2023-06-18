@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.AttendGroupItemMapper">
+  <cache />
+
+  <select id="getAttendGroupItemList" resultType="AttendGroupItem">
+    SELECT *
+    FROM ATTENDGROUPITEM
+  </select>
+
+<select id="attendLists" resultType="AttendGroupItem">
+    SELECT  *
+    FROM ATTENDGROUPITEM
+    WHERE GROUPITEM_ID = #{groupItem_id}
+  </select>
+  
+  <select id="getGroupItem" resultType="GroupItem" parameterType="Integer">
+    SELECT  *
+    FROM ATTENDGROUPITEM
+    WHERE ATTEND_GROUP_ID = #{attend_group_id}
+  </select>
+  
+  <insert id="insertAttendGroupItem">
+    INSERT INTO ATTENDGROUPITEM (user_id, user_name, totalGroupItem_count, GROUPITEM_ID, MESSAGE)
+    VALUES(#{user_id}, #{user_name}, #{totalGroupItem_count}, #{groupItem_id}, #{message})
+  </insert>
+  
+  <update id="updateTotalCount">
+    UPDATE ATTENDGROUPITEM 
+    SET TOTALGROUPITEM_COUNT = TOTALGROUPITEM_COUNT+1
+    WHERE ATTEND_GROUP_ID = #{attend_group_id}
+  </update>
+</mapper>

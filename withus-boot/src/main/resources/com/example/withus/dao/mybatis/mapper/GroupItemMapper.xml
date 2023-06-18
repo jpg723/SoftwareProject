@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.GroupItemMapper">
+  <cache />
+
+  <select id="getGroupItemList" resultType="GroupItem">
+    SELECT *
+    FROM GROUPITEM
+  </select>
+
+  <select id="getGroupItem" resultType="GroupItem" parameterType="Integer">
+    SELECT  *
+    FROM GROUPITEM
+    WHERE GROUPITEM_ID = #{groupItem_id}
+  </select>
+  
+  <select id="GroupItemState" resultType="boolean">
+    SELECT IF(GROUPTEM_STATE = 1, 1, 0)
+	FROM GROUPITEM
+	where GROUPITEM_ID = #{groupItem_id}
+  </select>
+  
+</mapper>

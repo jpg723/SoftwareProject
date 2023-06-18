@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.DonationMapper">
+
+  <cache />
+  
+  <select id="getTotalDonations" resultType="Donation">
+   select *
+   from DONATION
+  </select>
+
+  
+  <select id="getDonation" parameterType="int" resultType="Donation">
+   select *
+   from DONATION
+   where donation_id=#{donation_id}
+  </select>
+  
+ 
+  <insert id="registerDonation" useGeneratedKeys="true" keyProperty="donation_id" parameterType="Donation">
+   insert into DONATION
+   (donation_name, totalDonationPrice, close_date, like_count, donation_detail, donation_closeState)
+   values
+   (#{donation_name}, #{totalDonationPrice}, #{close_date}, #{like_count}, #{donation_detail}, #{donation_closeState})
+  </insert>
+  
+  
+  <delete id="deleteDonation" parameterType="int">
+   delete from DONATION
+   where donation_id=#{donation_id}
+  </delete>
+  
+  <update id="updateDonation" parameterType="Donation">
+   UPDATE DONATION SET 
+		donation_name = #{donation_name},
+		totalDonationPrice = #{totalDonationPrice},
+		close_date = #{close_date}
+		donation_detail = #{donation_detail}
+		onation_closeState = #{donation_closeState}
+		WHERE donation_id = #{donation_id}		
+  </update>
+
+ <select id="rankingDonation" resultType="Donation">
+   select donation_id, COUNT(like_count)
+   from Donation
+   group by donation_id 
+   order by COUNT(like_count) DESC
+  </select>
+  
+</mapper>

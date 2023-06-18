@@ -1,0 +1,315 @@
+.groupItemDetailmain {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  height: 100%;
+}
+
+/*그룹아이템 이미지------------------------------------*/
+.product_img {
+  margin-left: 130px;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+}
+  
+.product_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*그룹아이템 정보------------------------------------*/
+.groupItemInfo{
+  width: 620px;
+}
+
+/*상품이름*/
+.groupItemInfo .product_name {
+  text-align: left;
+  padding-left: 50px;
+  margin-top: 20px;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+
+/*seller-store*/
+.seller_store{
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 17px;
+  color: gray;
+}
+  
+/*상품가격*/
+.groupItemInfo .price {
+  padding-left: 50px;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+  
+.product_info .unit {
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+
+/*상품 문구*/
+.groupItemtext{
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 17px;
+}  
+ 
+/*구분선*/
+.line {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 600px;
+  height: 2px;
+  background: #c4c4c4;
+}
+
+/*배송지*/
+.delivery{
+  margin-top: 20px;
+  display: flex;
+}
+.deliveryAddress1{
+  text-align: left;
+  padding-left: 50px;
+  font-size: 17px;
+  color: gray;
+}
+
+.deliveryAddress2{
+  margin-left: 50px;
+  text-align: left;
+  font-size: 17px;
+  color: black;
+}
+
+/*혼자 주문하기*/
+.aloneBuy{
+  border: 1px solid #ee5f41;
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  padding-top: 5px;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 17px;
+  color: #ee5f41;
+  border-radius: 5px;
+}
+
+/*상품 개수 설정 버튼*/
+.amount {
+  margin-top: 20px;
+  margin-left: 50px;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.amount .minus {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+  
+.amount .count {
+  position: absolute;
+  width: 56px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #c4c4c4;
+  border-top:none;
+  border-bottom:none;
+}
+  
+.amount .count span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+.amount .plus {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+  
+/*상품 총 금액, 수량---------------------------------------*/
+.sum {
+  display: flex;
+  margin-left: 50px;
+}
+
+/*상품 총 수량---------------------------------------------*/
+.sum .total {
+  padding-top: 5px;
+  font-size: 18px;
+  color: #767676;
+}
+
+.sum .total_count {
+  padding-top: 5px;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ee5f41;
+}
+/*구분선*/
+.sum .total_count::after {
+  content: "|";
+  width: 5px;
+  height: 23px;
+  color: #c4c4c4;
+  padding: 0px 11px;
+}
+
+/*상품 총 금액---------------------------------------------*/
+.sum .total_price {
+  margin-left: 30px;
+  display: flex;
+  font-size: 30px;
+  color: #ee5f41;
+}
+  
+.sum .total_unit {
+  margin-left: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  line-height: 23px;
+  color: black;
+}
+
+/*버튼-------------------------------------------------*/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*주문하기 버튼-------------------------------------------------*/
+.btn .btn_buy {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 360px;
+  height: 60px;
+  border-radius: 5px;
+  background: #ee5f41;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #ffffff;
+  margin-right: 44px;
+}
+ 
+/*장바구니 버튼-------------------------------------------------*/ 
+.btn .btn_cart {
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background: #767676;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/*공동구매 박스-------------------------------------------------------*/
+.groupItemInfo2{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 1050px;
+}
+
+.desc {
+  margin-top: 140px;
+}
+ 
+@media (max-width: 1440px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .sum .total_price {
+    font-size: 24px;
+  }
+
+  .sum .sum_price {
+    margin-right: 24px;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+  .btn .btn_buy {
+    width: 70%;
+  }
+
+  .btn .btn_cart {
+    width: 30%;
+  }
+
+  .line {
+    width: 80%;
+  }
+
+  .product_info .price {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .product_info .seller_store,
+  .btn .btn_cart,
+  .btn .btn_buy {
+    font-size: 14px;
+  }
+
+  .product_info .product_name,
+  .product_info .price,
+  .sum .total_price {
+    font-size: 20px;
+  }
+
+  .sum {
+    display: block;
+  }
+}
+
+  
