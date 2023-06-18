@@ -27,7 +27,7 @@ public class DonationOrdersController {
 	 @RequestMapping(value="/donation/order", method=RequestMethod.POST) 
 		public void initNewDonationOrders (HttpServletRequest request, @RequestBody Map<String, Object> paramMap)  {
 		
-		String[] orderInfo = new String[3];
+		String[] orderInfo = new String[4];
 		 int i = 0;
 		 for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
 			 orderInfo[i] = pair.getValue().toString();
@@ -36,7 +36,7 @@ public class DonationOrdersController {
 			}
 		 
 		 DonationOrders donationOrders = new DonationOrders();
-		 donationOrders.setUser_id("hy"); //나중에 user id 정보 불러오기
+		 donationOrders.setUser_id(orderInfo[3]); //나중에 user id 정보 불러오기
 		 donationOrders.setDonation_price(Integer.parseInt(orderInfo[0]));
 		 donationOrders.setDonation_state(Integer.parseInt(orderInfo[1]));
 		 donationOrders.setDonation_id(Integer.parseInt(orderInfo[2]));

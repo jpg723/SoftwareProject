@@ -30,6 +30,17 @@ public class LikeController {
    @Autowired
    private LikeService likeService;
    
+   //공동구매 찜하기 조회
+   @GetMapping(value="/groupItem/getLike/{id}/{user_id}")
+   public List<Like> getGroupItemLike (@PathVariable("user_id") String user_id, @PathVariable("id") int id) {
+	   Like like = new Like();       
+       like.setGroupItem_id(id);
+       like.setUser_id(user_id);
+       Date day = new Date();
+       like.setLike_date(day);
+       
+       return likeService.getGroupItemLike(like);
+   }
     //공동구매 찜하기
     @GetMapping(value="/groupItem/like/{id}/{user_id}") 
       public void GroupItemLike (@PathVariable("user_id") String user_id, @PathVariable("id") int id)  {

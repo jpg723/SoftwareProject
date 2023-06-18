@@ -20,6 +20,12 @@ public class MybatisLikeDao implements LikeDao {
 	private LikeMapper likeMapper;
 
 	@Override
+	public List<Like> getGroupItemLike(Like like) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return likeMapper.getGroupItemLike(like);
+	}
+	
+	@Override
 	public List<Item> getItemLikes(Map<String, Integer> params) throws DataAccessException {
 		return likeMapper.getItemLikes(params);
 	}
@@ -72,4 +78,6 @@ public class MybatisLikeDao implements LikeDao {
 		
 		return rankingItems;
 	}
+
+	
 }

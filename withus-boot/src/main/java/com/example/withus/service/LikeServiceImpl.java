@@ -51,4 +51,7 @@ public class LikeServiceImpl implements LikeService {
 		return likeDao.rankingGroupItem();
 	}
 
+	public List<Like> getGroupItemLike(Like like) {
+		return likeDao.getGroupItemLike(like);
+	}
 }

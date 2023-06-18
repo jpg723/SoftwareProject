@@ -9,6 +9,9 @@ import com.example.withus.domain.Like;
 
 //@WebService(name = "LikeService") 
 public interface LikeService {
+	
+	List<Like> getGroupItemLike(Like like);
+	
 	//생필품 좋아요 목록
 	List<Item> getItemLikes(Map<String, Integer> params);
 

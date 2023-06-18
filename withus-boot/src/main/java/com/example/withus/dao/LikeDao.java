@@ -12,6 +12,8 @@ import com.example.withus.domain.Order;
 
 public interface LikeDao {
 
+	List<Like> getGroupItemLike(Like like) throws DataAccessException; 
+	
 	List<Item> getItemLikes(Map<String, Integer> params) throws DataAccessException;
 
 	List<GroupItem> getGroupItemLikes(Map<String, Integer> params) throws DataAccessException;

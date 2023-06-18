@@ -31,14 +31,26 @@
    where #{groupItem_id} is not null and user_id=#{user_id}
   </select>
   
-  <insert id="insertItemLike" useGeneratedKeys="true" keyProperty="like_id" parameterType="Like">
-   insert into LIKE_ITEM(user_id, item_id)
-   values(#{user_id}, #{item_id})
+  <select id="getGroupItemLike" parameterType="Like" resultType="Like">
+   select *
+   from LIKE_ITEM
+   where GROUPITEM_ID = #{groupItem_id} and USER_ID = #{user_id}
+  </select>
+  
+  <insert id="insertItemLike" useGeneratedKeys="false" keyProperty="like_id" parameterType="Like">
+   <selectKey keyProperty="like_id" resultType="int" order="BEFORE">
+          SELECT LIKE_ITEM_SEQ.NEXTVAL FROM DUAL
+      </selectKey>
+   insert into LIKE_ITEM(like_id, user_id, item_id, like_date)
+   values(#{like_id}, #{user_id}, #{item_id}, #{like_date})
   </insert>
-   
-   <insert id="insertGroupItemLike" useGeneratedKeys="true" keyProperty="like_id" parameterType="Like">
-   insert into LIKE_ITEM(user_id, groupItem_id)
-   values(#{user_id}, #{groupItem_id})
+
+   <insert id="insertGroupItemLike" useGeneratedKeys="false" keyProperty="like_id" parameterType="Like">
+   <selectKey keyProperty="like_id" resultType="int" order="BEFORE">
+          SELECT LIKE_ITEM_SEQ.NEXTVAL FROM DUAL
+      </selectKey>
+   insert into LIKE_ITEM(like_id, user_id, groupItem_id, like_date)
+   values(#{like_id}, #{user_id}, #{groupItem_id}, #{like_date})
   </insert>
   
   <delete id="removeItemLike" parameterType="Like">

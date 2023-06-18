@@ -29,6 +29,8 @@ import com.example.withus.domain.Like;
 @Mapper
 public interface LikeMapper {
 
+	List<Like> getGroupItemLike(Like like);
+  
   List<Item> getItemLikes(Map<String, Integer> params);
   
   List<GroupItem> getGroupItemLikes(Map<String, Integer> params);

@@ -39,7 +39,8 @@ import axios from 'axios';
                 data: {
                  data1: donation.totalDonationPrice, 
                  data2: donation.donation_closeState, 
-                 data3: id
+                 data3: id,
+                 data4: sessionStorage.getItem("id")
                 } , 
                 baseURL: 'http://localhost:8080',
                 //withCredentials: true,
