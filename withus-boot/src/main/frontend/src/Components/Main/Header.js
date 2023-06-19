@@ -32,9 +32,9 @@ function Header() {
               <div class="headerTop_content" name={isLogin}>
             
                   {isLogin ? (
-                    <div class="member" onClick={onLogout}>로그아웃</div>
+                    <div class="register_member" onClick={onLogout}>로그아웃</div>
                     ) : (
-                    <Link to="/register" class="member">회원가입</Link>
+                    <Link to="/register" class="register_member">회원가입</Link>
                   )}
                   <div class="barIcon">|</div>
 
