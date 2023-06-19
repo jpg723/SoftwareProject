@@ -16,7 +16,7 @@ public interface LikeDao {
 	
 	List<Item> getItemLikes(Map<String, Integer> params) throws DataAccessException;
 
-	List<GroupItem> getGroupItemLikes(Map<String, Integer> params) throws DataAccessException;
+	List<GroupItem> getGroupItemLikes(String user_id) throws DataAccessException;
 	 
 	void insertItemLike(Like like) throws DataAccessException;
 

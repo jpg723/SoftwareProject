@@ -13,7 +13,17 @@ public class Donation implements Serializable {
  private String donation_detail;
  private int donation_closeState;
  
- public int getDonation_id() {
+ //이미지
+ private String img;
+ 
+ 
+ public String getImg() {
+	return img;
+}
+public void setImg(String img) {
+	this.img = img;
+}
+public int getDonation_id() {
 	return donation_id;
 }
  public void setDonation_id(int donation_id) {

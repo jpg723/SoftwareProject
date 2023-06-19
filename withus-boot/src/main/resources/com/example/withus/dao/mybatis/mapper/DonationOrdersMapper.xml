@@ -11,6 +11,12 @@
    from DONATIONORDERS
    where user_id=#{user_id}
   </select>
+  
+  <select id="getDonationOrdersForComment" parameterType="int" resultType="DonationOrders">
+   select *
+   from DONATIONORDERS
+   where donation_id=#{donation_id}
+  </select>
     
   <!-- 내가 신청한 도네이션 하나 -->  
   <select id="getDonationOrder" parameterType="java.util.Map" resultType="DonationOrders">

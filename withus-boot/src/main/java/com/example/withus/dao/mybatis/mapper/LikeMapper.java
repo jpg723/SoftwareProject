@@ -33,7 +33,7 @@ public interface LikeMapper {
   
   List<Item> getItemLikes(Map<String, Integer> params);
   
-  List<GroupItem> getGroupItemLikes(Map<String, Integer> params);
+  List<GroupItem> getGroupItemLikes(String user_id);
 
   void insertItemLike(Like like);
   

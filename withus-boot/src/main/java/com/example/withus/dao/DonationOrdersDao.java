@@ -12,4 +12,5 @@ public interface DonationOrdersDao {
 	DonationOrders getDonationOrder(String user_id, int donation_id) throws DataAccessException;
 	void applyDonationOrder(DonationOrders donationOrders) throws DataAccessException;
 	void cancelDonationOrder(String user_id, int donation_id) throws DataAccessException;
+	List<DonationOrders> getDonationOrdersForComment(int donation_id) throws DataAccessException;
 }

@@ -1,8 +1,9 @@
 package com.example.withus.domain;
 
+import java.io.Serializable;
 import java.util.Date;
-
-public class DonationOrders {
+@SuppressWarnings("serial")
+public class DonationOrders implements Serializable {
 	
 	 private String user_id;
 	 private double donation_price;

@@ -47,9 +47,10 @@ import on_heart from '../../img/on_heart.png';
   /* 찜하기 추가 */
   const [likeState, setLikeState] = useState(false);
   console.log("초기상태" + likeState);
+
   function likeBtn_click() {
     /*좋아요가 안 눌러져 있을 경우 */
-    if(likeState === false && sessionStorage.getItem("id") !== null){
+    if(likeState === false && sessionStorage.getItem("id") !== null){ 
       setLikeState(true);
       axios(
         {
@@ -101,8 +102,6 @@ import on_heart from '../../img/on_heart.png';
   }
 
   function check_like() {  
-    console.log("로그인확인" + sessionStorage.getItem("id"));
-    //console.log(likeState);
     if(sessionStorage.getItem("id") !== null) {
       axios(
         {
@@ -114,16 +113,17 @@ import on_heart from '../../img/on_heart.png';
       ).then(function (response) {
         console.log(response.data);
         setLikeList(response.data);
+
+        if(response.data.length > 0) {
+          setLikeState(true);
+          console.log("좋아요 여부" + likeList);
+        }
+        else {
+          setLikeState(false);
+          console.log("좋아요 안함" + likeList);
+        }
+
       });
-      /*
-      if(likeList != null) {
-        setLikeState();
-        console.log(likeState);
-      }
-      else {
-        setLikeState(false);
-        console.log(likeState);
-      }*/
     }
     else {
       setLikeState(false);

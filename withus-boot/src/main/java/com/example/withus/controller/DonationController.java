@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import com.example.withus.domain.Donation;
+import com.example.withus.domain.DonationOrders;
 import com.example.withus.domain.GroupItem;
 import com.example.withus.service.DonationService;
 
@@ -47,32 +48,29 @@ public class DonationController {
    public Donation getDonation(@PathVariable("id") int donation_id) {
       return donationService.getDonation(donation_id);
    }  
+  
 
    // 기부 등록 폼
-   @GetMapping("/donation/register")
-   public String form() {
-      return "donation/donationForm";
-   }
-
-   // 기부 등록
-   @PostMapping(value = "/donation/register")
-   public String submitDonation(@ModelAttribute("donation") DonationInfo donationInfo, BindingResult result,
-         SessionStatus status) {
-//       new DonationInfoValidator().validate(donationInfo, result);
-//       if(result.hasErrors()) {
-//          return "donation/donationForm";
-//       }
-
-      donationService.registerDonation(null);
-      status.setComplete();
-      return "/donation/list";
-   }
-
-   // 기부 삭제
-   @PostMapping(value = "/donation/{donation_id}/cancel")
-   public String deleteDonation(@PathVariable("donation_id") int donation_id) {
-      donationService.deleteDonation(donation_id);
-      return "redirect:/donation";
-   }
+	/*¿
+	 * @GetMapping("/donation/register") public String form() { return
+	 * "donation/donationForm"; }
+	 * 
+	 * // 기부 등록
+	 * 
+	 * @PostMapping(value = "/donation/register") public String
+	 * submitDonation(@ModelAttribute("donation") DonationInfo donationInfo,
+	 * BindingResult result, SessionStatus status) { // new
+	 * DonationInfoValidator().validate(donationInfo, result); //
+	 * if(result.hasErrors()) { // return "donation/donationForm"; // }
+	 * 
+	 * donationService.registerDonation(null); status.setComplete(); return
+	 * "/donation/list"; }
+	 * 
+	 * // 기부 삭제
+	 * 
+	 * @PostMapping(value = "/donation/{donation_id}/cancel") public String
+	 * deleteDonation(@PathVariable("donation_id") int donation_id) {
+	 * donationService.deleteDonation(donation_id); return "redirect:/donation"; }
+	 */
 
 }

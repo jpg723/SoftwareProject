@@ -20,9 +20,9 @@
  
   <insert id="registerDonation" useGeneratedKeys="true" keyProperty="donation_id" parameterType="Donation">
    insert into DONATION
-   (donation_name, totalDonationPrice, close_date, like_count, donation_detail, donation_closeState)
+   (donation_name, totalDonationPrice, close_date, like_count, donation_detail, donation_closeState, img)
    values
-   (#{donation_name}, #{totalDonationPrice}, #{close_date}, #{like_count}, #{donation_detail}, #{donation_closeState})
+   (#{donation_name}, #{totalDonationPrice}, #{close_date}, #{like_count}, #{donation_detail}, #{donation_closeState}, #{img})
   </insert>
   
   
@@ -31,13 +31,20 @@
    where donation_id=#{donation_id}
   </delete>
   
-  <update id="updateDonation" parameterType="Donation">
+  <!-- <update id="updateDonation" parameterType="Donation">
    UPDATE DONATION SET 
 		donation_name = #{donation_name},
 		totalDonationPrice = #{totalDonationPrice},
 		close_date = #{close_date}
 		donation_detail = #{donation_detail}
-		onation_closeState = #{donation_closeState}
+		donation_closeState = #{donation_closeState}
+		
+		WHERE donation_id = #{donation_id}		
+  </update> -->
+  
+  <update id="updateDonation" parameterType="Donation">
+   UPDATE DONATION SET 
+		totalDonationPrice = #{totalDonationPrice}
 		WHERE donation_id = #{donation_id}		
   </update>
 

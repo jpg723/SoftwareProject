@@ -16,7 +16,7 @@ public interface LikeService {
 	List<Item> getItemLikes(Map<String, Integer> params);
 
 	//공동구매상품 좋아요 목록
-	List<GroupItem> getGroupItemLikes(Map<String, Integer> params);
+	List<GroupItem> getGroupItemLikes(String user_id);
 	
 	//생필품 좋아요 추가
 	void insertItemLike(Like like);

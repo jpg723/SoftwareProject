@@ -25,10 +25,10 @@
    where #{item_id} is not null and user_id=#{user_id}
   </select>
   
-  <select id="getGroupItemLikes" parameterType="java.util.Map" resultType="GroupItem">
-   select like_id, user_id, groupItem_id, like_date
+  <select id="getGroupItemLikes" parameterType="String" resultType="GroupItem">
+   select *
    from LIKE_ITEM
-   where #{groupItem_id} is not null and user_id=#{user_id}
+   where groupItem_id is not null and user_id=#{user_id}
   </select>
   
   <select id="getGroupItemLike" parameterType="Like" resultType="Like">

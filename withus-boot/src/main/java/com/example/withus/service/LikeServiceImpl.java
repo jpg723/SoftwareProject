@@ -23,8 +23,8 @@ public class LikeServiceImpl implements LikeService {
 		return likeDao.getItemLikes(params);
 	}
 
-	public List<GroupItem> getGroupItemLikes(Map<String, Integer> params) {
-		return likeDao.getGroupItemLikes(params);
+	public List<GroupItem> getGroupItemLikes(String user_id) {
+		return likeDao.getGroupItemLikes(user_id);
 	}
 
 	public void insertItemLike(Like like) {

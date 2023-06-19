@@ -13,4 +13,5 @@ public interface DonationOrdersMapper {
 	DonationOrders getDonationOrder(String user_id, int donation_id);
 	void applyDonationOrder(DonationOrders donationOrders);
 	void cancelDonationOrder(String user_id, int donation_id);
+	List<DonationOrders> getDonationOrdersForComment(int donation_id);
 }

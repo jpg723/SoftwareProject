@@ -312,4 +312,7 @@
     }
   }
   
+  .comments{
+    flex-direction: column;
+  }
     

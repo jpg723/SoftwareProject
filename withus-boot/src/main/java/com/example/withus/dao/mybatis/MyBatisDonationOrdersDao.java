@@ -44,4 +44,9 @@ public class MyBatisDonationOrdersDao implements DonationOrdersDao {
 	public void cancelDonationOrder(String user_id, int donation_id) throws DataAccessException {
 		donationOrdersMapper.cancelDonationOrder(user_id, donation_id);
 	}
+	
+	@Transactional
+	public List<DonationOrders> getDonationOrdersForComment(int donation_id) throws DataAccessException {
+		return donationOrdersMapper.getDonationOrdersForComment(donation_id);
+	}
 }

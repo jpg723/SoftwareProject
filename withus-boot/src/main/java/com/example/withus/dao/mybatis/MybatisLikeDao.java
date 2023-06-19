@@ -31,8 +31,8 @@ public class MybatisLikeDao implements LikeDao {
 	}
 
 	@Override
-	public List<GroupItem> getGroupItemLikes(Map<String, Integer> params) throws DataAccessException {
-		return likeMapper.getGroupItemLikes(params);
+	public List<GroupItem> getGroupItemLikes(String user_id) throws DataAccessException {
+		return likeMapper.getGroupItemLikes(user_id);
 	}
 
 	@Override
