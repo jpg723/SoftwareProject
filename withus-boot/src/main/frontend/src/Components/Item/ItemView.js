@@ -6,12 +6,9 @@ import { Link } from 'react-router-dom';
 
 function ItemView(){
   const [list , SetList] = useState([]);
-    
-  const convertPrice = (price) =>{
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
-  }
+   
   useEffect(()=> {
-    axios.get('/groupItem').then((res)=>{
+    axios.get('/item/list').then((res)=>{
       SetList(res.data)
       console.log(res)
     })
@@ -24,20 +21,14 @@ function ItemView(){
         list.map(function(a,i){
             return(
               <div className={styles.product}>  
-                <Link to={'/groupItem/detail/'+list[i].groupItem_id} className="/groupItem">  
-                  <div className={styles.product_image}>       
-                  <img className="groupItem_image" src={process.env.PUBLIC_URL+'/' + list[i].img}></img>
-                  </div>
-                </Link>
-                <div className={styles.product_name}>{list[i].groupItem_name}</div>
+                <Link to={'/item/detail/'+list[i].item_id} className="/groupItem">              
+                  <img src={list[i].img} name="viewimg" id="previewimg" alt="" style={{width:"200px", height:"300px", border:"1px solid"}}/>
+                </Link>             
                 <div className={styles.product_price}>
-                  <div className={styles.product_discount}>50%</div>
-                  <div className={styles.price}>{convertPrice(list[i].groupItem_price/2)}</div>
-                  <div className={styles.unit}>원</div>
+                <div className={styles.product_name}>{list[i].item_name}</div>
                 </div>
                 <div className={styles.product_price}>
-                  <div className={styles.origin_price}>{convertPrice(list[i].groupItem_price)}</div>
-                  <div className={styles.origin_unit}>원</div>
+                  <div className={styles.origin_price}>{list[i].like_count}</div>
                 </div>
               </div>              
             )           

@@ -5,12 +5,19 @@
 
   <cache />
   
-	<insert id="insertItem" useGeneratedKeys="false" keyProperty="item_id" parameterType="item">
-  		<selectKey keyProperty="item_id" resultType="int" order="BEFORE">
-          SELECT ITEM_SEQ.NEXTVAL FROM DUAL
-      	</selectKey>
-         insert into ITEM(item_id, item_name, item_state, item_detail, item_date, like_count, user_id, itemcategory_id)
-         values(#{item_id}, #{item_name}, #{item_state}, #{item_detail}, #{item_date}, #{like_count}, #{user_id}, #{itemcategory_id})
-   	</insert>
+	<insert id="insertItem">
+	INSERT INTO ITEM(ITEM_NAME, ITEM_STATE, ITEM_DETAIL, ITEM_DATE, LIKE_COUNT, USER_ID, ITEMCATEGORY_ID,  IMG)
+	VALUES(#{item_name},#{item_state}, #{item_detail} , #{item_date}, #{like_count}, #{user_id}, #{itemCategory_id}, #{img}) 
+	</insert>
 
+    <select id="itemList" resultType="Item">
+    SELECT *FROM ITEM 
+    </select>
+
+ 	<select id="getItem" resultType="Item" parameterType="Integer">
+    SELECT  *
+    FROM ITEM
+    WHERE ITEM_ID = #{item_id}
+  </select>
+  
 </mapper>
