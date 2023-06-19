@@ -1,38 +1,99 @@
-.groupItemDetailmain {
-    margin: 0 auto;
-    margin-top: 30px;
-    display: flex;
-    height: 100%;
-  }
+.DonationDetailmain {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  height: 100%;
+}
   
-  /*그룹아이템 이미지------------------------------------*/
-  .product_img {
-    margin-left: 130px;
-    width: 400px;
-    height: 500px;
-    border-radius: 10px;
-  }
-    
-  .product_img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
+/*기부 이미지------------------------------------*/
+.donation_img {
+  margin-left: 250px;
+  width: 350px;
+  height: 420px;
+}
   
-  /*그룹아이템 정보------------------------------------*/
-  .groupItemInfo{
-    width: 620px;
-  }
+.donation_img img {
+  width: 350px;
+  height: 420px;
+}
   
-  /*상품이름*/
-  .groupItemInfo .product_name {
-    text-align: left;
-    padding-left: 50px;
-    margin-top: 20px;
-    font-size: 36px;
-    line-height: 45px;
-    color: #000000;
-  }
+/*기부 정보 박스------------------------------------*/
+.donationInfo{
+  width: 500px;
+  margin-left: 50px;
+}
+
+/*기부 진행 상태--------------*/
+.donation_closeState{
+  text-align: left;
+  color: gray;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+/*기부 이름*/
+.donation_name {
+  text-align: left;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+
+.donation_content01{
+  margin-top: 20px;
+  text-align: left;
+}
+.donation_total_box{
+  display: flex;
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+.donation_detail{
+  text-align: left;
+  margin-top: 20px;
+  font-size: 18px;
+  height: 150px;
+}
+
+.donation_btn_box{
+  width: 200px;
+  margin-top: 25px;
+}
+
+.btn_donation{
+  background-color: #417bba;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+}
+/*기부 코멘트------------------------*/
+.comment_header{
+  border: 1px solid black;
+  font-size: 30px;
+  text-align: left;
+}
+.comments_box{
+  border: 1px solid red;
+  width: 901px;
+  margin-left: 250px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.donation_comment_content{
+  border: 1px solid black;
+  width: 900px;
+  display: flex;
+}
+
+.donation_comment_id{
+  font-size: 18px;
+  margin-top: 10px;
+}
+.donation_comment{
+  margin-top: 20px;
+}
   
   /*seller-store*/
   .seller_store{

@@ -1,8 +1,15 @@
 import {useParams } from "react-router-dom";
-import styles from '../../Css/GroupItemDetail.module.css';
+import '../../Css/ItemDetail.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+<<<<<<< Updated upstream
 import { Link } from 'react-router-dom';
+=======
+import {Link} from 'react-router-dom';
+import off_heart from '../../img/off_heart.png';
+import on_heart from '../../img/on_heart.png';
+import styles from '../../Css/GroupItemDetail.module.css';
+>>>>>>> Stashed changes
 
  function ItemDetail(props) {
 
@@ -18,13 +25,50 @@ import { Link } from 'react-router-dom';
             alert("failed to");
         }
     });
-}, []);
+  }, []);
+
+  const [likeState, setLikeState] = useState(false);
+  console.log("초기상태" + likeState);
+  function likeBtn_click() {
+    /*좋아요가 안 눌러져 있을 경우 */
+    if(likeState === false && sessionStorage.getItem("id") !== null){
+      setLikeState(true);
+      /*axios(
+        {
+        url: '/groupItem/like/' + id +  '/' + sessionStorage.getItem("id"),
+        method: 'get',
+        baseURL: 'http://localhost:8080',
+        //withCredentials: true,
+        }
+      ).then(function (response) {
+        console.log(response.data);
+      });*/
+    }
+    else if(likeState === true && sessionStorage.getItem("id") !== null){
+      setLikeState(false);
+      /*axios(
+        {
+        url: '/groupItem/like/cancel/' + id +  '/' + sessionStorage.getItem("id"),
+        method: 'get',
+        baseURL: 'http://localhost:8080',
+        //withCredentials: true,
+        }
+      ).then(function (response) {
+        console.log(response.data);
+      });*/
+    }
+    else{
+      alert("로그인을 해주세요!");
+    }
+  }
+
   return(
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6">
-          <img src={item.img} style={{width:"500px", height:"700px", border:"1px solid"}}/>
+    <div id= "item-main">
+      <div id="item-info">
+        <div id="item-image">
+          <img src={item.img} style={{width:"300px", height:"400px"}}/>
         </div>
+<<<<<<< Updated upstream
         <div className="col-md-6">
           <h4 className="pt-5">{item.item_name}</h4>
           <p>{item.item_state}</p>
@@ -33,10 +77,31 @@ import { Link } from 'react-router-dom';
             <Link to="/chat" state={{seller:item.user_id}}>
           <button  className={styles.btn_buy}>채팅하기</button> 
           </Link>
+=======
+        <div id="item-content">
+          <div className="item-state">{item.item_state === 0 ? <div>진행중</div> : <div>나눔 종료</div>}</div>
+          <div className="item-name">{item.item_name}</div>
+          <div className="item-category">
+            {item.itemCategory_id === 0 ? <div>식품</div> : null}
+            {item.itemCategory_id === 1 ? <div>의류</div> : null}
+            {item.itemCategory_id === 2 ? <div>침구류</div> : null}
+            {item.itemCategory_id === 3 ? <div>생활용품</div> : null}
+            {item.itemCategory_id === 4 ? <div>가전제품</div> : null}
+            {item.itemCategory_id === 5 ? <div>미용</div> : null}
+          </div>
+          <div className="item-detail">{item.item_detail}</div>
+          <div className="item-content1">
+            <Link to="/chat">
+              <div className="chat-btn-box">
+                <button className="chat-btn">채팅하기</button> 
+              </div>
+            </Link>
+            <button className="btn_itemLike" onClick={() => likeBtn_click()}><img className="btn_itemLike_icon" src={likeState?on_heart:off_heart}></img></button>
+>>>>>>> Stashed changes
           </div>
         </div>
       </div>
     </div> 
     )
-    }
-    export default ItemDetail;
+  }
+export default ItemDetail;

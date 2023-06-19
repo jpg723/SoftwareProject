@@ -50,7 +50,11 @@ function User_login() {
                 data: {
                     data1:userId,data2:pw
                 } , 
+<<<<<<< Updated upstream
                 // baseURL: 'http://localhost:8080',
+=======
+                //baseURL: 'http://localhost:8080',
+>>>>>>> Stashed changes
                 //withCredentials: true,
                 }
             ).then(function (response) {

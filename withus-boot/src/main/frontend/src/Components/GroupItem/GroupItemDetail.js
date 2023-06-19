@@ -56,7 +56,7 @@ import on_heart from '../../img/on_heart.png';
         {
         url: '/groupItem/like/' + id +  '/' + sessionStorage.getItem("id"),
         method: 'get',
-        baseURL: 'http://localhost:8080',
+        //baseURL: 'http://localhost:8080',
         //withCredentials: true,
         }
       ).then(function (response) {
@@ -69,7 +69,7 @@ import on_heart from '../../img/on_heart.png';
         {
         url: '/groupItem/like/cancel/' + id +  '/' + sessionStorage.getItem("id"),
         method: 'get',
-        baseURL: 'http://localhost:8080',
+        //baseURL: 'http://localhost:8080',
         //withCredentials: true,
         }
       ).then(function (response) {
@@ -91,7 +91,7 @@ import on_heart from '../../img/on_heart.png';
           data: {
             data1: id, data2:sessionStorage.getItem("id"), data3:count
           } , 
-          baseURL: 'http://localhost:8080',
+          //baseURL: 'http://localhost:8080',
           //withCredentials: true,
           }
       ).then(function (response) {
@@ -107,7 +107,7 @@ import on_heart from '../../img/on_heart.png';
         {
         url: '/groupItem/getLike/' + id +  '/' + sessionStorage.getItem("id"),
         method: 'get',
-        baseURL: 'http://localhost:8080',
+        //baseURL: 'http://localhost:8080',
         //withCredentials: true,
         }
       ).then(function (response) {
@@ -213,7 +213,7 @@ import on_heart from '../../img/on_heart.png';
                 <button id="order_btn" type="submit" onClick={() => insertBtn_click()}>추가</button>
               </div>  
             </Modal>
-              <button className={styles.btn_like} onClick={() => likeBtn_click()}><img className={styles.btn_like_icon} src={likeState?on_heart:off_heart}></img></button>
+            <button className={styles.btn_like} onClick={() => likeBtn_click()}><img className={styles.btn_like_icon} src={likeState?on_heart:off_heart}></img></button>
           </div>
         </div>
       </div>

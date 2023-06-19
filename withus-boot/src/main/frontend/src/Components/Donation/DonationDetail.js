@@ -68,7 +68,7 @@ import DonationComments from "./DonationComments";
                  data4: sessionStorage.getItem("id"),
                  data5: comments,
                 } , 
-                baseURL: 'http://localhost:8080',
+                //baseURL: 'http://localhost:8080',
                 //withCredentials: true,
                 }
             ).then(function (response) {
@@ -93,67 +93,59 @@ import DonationComments from "./DonationComments";
 
     return (
         <div>
-            <div className={styles.DonationDetailmain}>
-                <div className={styles.groupItemInfo}>
-                <div className={styles.product_name}>{donation.donation_name}</div>
-                <div className={styles.product_img}>
+            <div className={styles.DonationDetailmain}>    
+                <div className={styles.donation_img}>
                     <img className="groupItem_image" src={process.env.PUBLIC_URL + '/' + donation.img}></img>
                 </div>
-                <div className={styles.price}>
-                    {donation.totalDonationPrice}
-                    <span className={styles.unit}>원</span>
-                </div>
-
-                <div className={styles.line}></div>
-                
-                <div className={styles.sum}>  
-                    <div className={styles.total}> 지금까지 기부액 </div> 
-                    <div className={styles.total_price}>{donation.totalDonationPrice}</div>
-                    <div className={styles.total_unit}>원</div>
-                </div>  
-
-                <div className={styles.btn}>
-                <button className={styles.btn_buy}  onClick={openModal2}>기부하기</button>
+                <div className={styles.donationInfo}>
+                    <div className={styles.donation_closeState}>{donation.donation_closeState === 0 ? <div>진행중</div> : <div>나눔 종료</div>}</div>
+                    <div className={styles.donation_name}>{donation.donation_name}</div>        
+                    <div className={styles.donation_content01}> 지금까지 기부액 </div>        
+                    <div className={styles.donation_total_box}>  
+                        <div className={styles.total_price}>{donation.totalDonationPrice}</div>
+                        <div className={styles.total_unit}>원</div>
+                    </div>  
+                    <div className={styles.donation_detail}>{donation.donation_detail}</div>
+                    <div className={styles.donation_btn_box}>
+                        <button className={styles.btn_donation}  onClick={openModal2}>기부하기</button>
+                    </div>
                 </div>
 
                 <Modal open={modalOpen2} close={closeModal2} header="기부하기">
-                    <main> {props.children} </main>
-                    기부 정보
+                    <main> {props.children} </main>기부 정보
                     <form id = "order_form">
                         <div class="order_content"> 
                             <div class="order_content1">
-                    <div class="order_name"> &nbsp; 금액 </div></div>
-                    <div class="order_content2">
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <div class="order_content2">
-                            <div class="order_inputBox">
-                            <input class="order_input" placeholder="금액을 입력해주세요" onChange={insertPrice}></input> 
+                                <div class="order_name"> &nbsp; 금액 </div>
+                            </div>
+                            <div class="order_content2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                <div class="order_content2">
+                                    <div class="order_inputBox">
+                                        <input class="order_input" placeholder="금액을 입력해주세요" onChange={insertPrice}></input> 
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="order_content">
+                            <div class="order_content1">
+                                <div class="order_name">메시지</div>
+                            </div>
+                            <div class="order_content2">
+                                <div class="start_inputBox">
+                                    <input class="order_input" placeholder="전하고 싶은 마음을 알려주세요" onChange={insertComments}></input>  
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="order_content">
-                    <div class="order_content1">
-                        <div class="order_name">메시지</div>
-                    </div>
-                    <div class="order_content2">
-                        <div class="start_inputBox">
-                    <input class="order_input" placeholder="전하고 싶은 마음을 알려주세요" onChange={insertComments}></input>  
-                    </div>
-                    </div>
-                    </div>
-                    <div id="order_bottom">
-                    <button id="order_btn" type="submit" onClick={() => donationOrder()}>확인</button>
-                    </div> 
+                        <div id="order_bottom">
+                            <button id="order_btn" type="submit" onClick={() => donationOrder()}>확인</button>
+                        </div> 
                     </form> 
                 </Modal>     
-            </div>
             </div> 
-            <div className={styles.comments}>
+            <div className={styles.comments_box}>
                 <DonationComments/>
             </div>
-        </div>
-        
+        </div>        
     );
 }
 export default DonationDetail;

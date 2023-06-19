@@ -13,13 +13,14 @@
 /*-----------------------------------------------------
 공동구매 메인페이지 헤더*/
 #Item_view_header{
-    width: 1225px;
+    margin-left: 20px;
+    width: 900px;
     display: flex;
 }
 
 /*나눔 등록 버튼*/
 .item_register{
-    margin-left: 30px;
+    margin-left: 10px;
     font-size: 17px;
     text-decoration-line: none;
     color: black;
@@ -27,7 +28,7 @@
 #Item_list{
     display: flex;
     margin-left: auto;
-    margin-right: 320px;
+    margin-right: 0px;
 }
 
 .Item_list_content{

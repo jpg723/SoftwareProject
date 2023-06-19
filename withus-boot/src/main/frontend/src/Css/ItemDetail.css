@@ -1,0 +1,86 @@
+#item-main{
+    margin-top: 40px;
+}
+
+#item-info{
+    display: flex;
+}
+
+/*상품 이미지-------------------*/
+#item-image{
+    width: 300px;
+    height: 400px;
+    margin-left: 250px;
+}
+/*상품 정보-------------------*/
+#item-content{
+    margin-left: 80px;
+}
+
+/*거래 상태---------------------*/
+.item-state{
+    text-align: left;
+    color: gray;
+    font-size: 15px;
+}
+
+/*상품 제목--------------------*/
+.item-name{
+    font-size: 35px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/*상품 카테고리-------------------*/
+.item-category{
+    text-align: left;
+    margin-top: 10px;
+    color: gray;
+    font-size: 15px;
+}
+
+/*상품 설명---------------------*/
+.item-detail{
+    text-align: left;
+    margin-top: 20px;
+    height: 200px;
+    width: 460px;
+    font-size: 18px;
+}
+.item-content1{
+    display: flex;
+}
+
+/*채팅 버튼--------------------*/
+.chat-btn-box{
+    width: 200px;
+    margin-top: 25px;
+}
+.chat-btn{
+    background-color: #417bba;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/*찜버튼---------------------------------------*/
+.btn_itemLike {
+    margin-top: 17px;
+    margin-left: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #ffffff;
+  }
+  
+  .btn_itemLike_icon{
+    width: 45px;
+    height: 45px;
+  }
