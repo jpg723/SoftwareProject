@@ -15,7 +15,7 @@ public interface AttendGroupItemDao {
      //공동구매참여 등록
      void insertAttendGroupItem(AttendGroupItem attendGroupItem) throws DataAccessException;
      
-     //공동구매상품 전체 조회
+     //공동구매상품 전체조회
      List<AttendGroupItem> getAttendGroupItemList() throws DataAccessException;
      
      //공동구매참여 리스트
