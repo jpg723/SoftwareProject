@@ -25,7 +25,7 @@ function DonationComments(props) {
         commentList.map(function(a,i){
         return(
                 <div className={styles.donation_comment_content}>
-                    <div className={styles.donation_comment_id}> {a.user_id}</div>
+                    <div className={styles.donation_comment_id}>- {a.user_id}님</div>
                     <div className={styles.donation_comment}> {a.comments}</div>
                 </div>
             )           

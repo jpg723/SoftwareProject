@@ -20,7 +20,7 @@
 /*기부 정보 박스------------------------------------*/
 .donationInfo{
   width: 500px;
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 /*기부 진행 상태--------------*/
@@ -69,12 +69,10 @@
 }
 /*기부 코멘트------------------------*/
 .comment_header{
-  border: 1px solid black;
   font-size: 30px;
   text-align: left;
 }
 .comments_box{
-  border: 1px solid red;
   width: 901px;
   margin-left: 250px;
   flex-direction: column;
@@ -84,15 +82,21 @@
 .donation_comment_content{
   border: 1px solid black;
   width: 900px;
-  display: flex;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: left;
 }
 
 .donation_comment_id{
   font-size: 18px;
-  margin-top: 10px;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 .donation_comment{
   margin-top: 20px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
   
   /*seller-store*/
