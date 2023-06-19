@@ -33,26 +33,37 @@
   
   <!-- <update id="updateDonation" parameterType="Donation">
    UPDATE DONATION SET 
-		donation_name = #{donation_name},
-		totalDonationPrice = #{totalDonationPrice},
-		close_date = #{close_date}
-		donation_detail = #{donation_detail}
-		donation_closeState = #{donation_closeState}
-		
-		WHERE donation_id = #{donation_id}		
+      donation_name = #{donation_name},
+      totalDonationPrice = #{totalDonationPrice},
+      close_date = #{close_date}
+      donation_detail = #{donation_detail}
+      donation_closeState = #{donation_closeState}
+      
+      WHERE donation_id = #{donation_id}      
   </update> -->
   
   <update id="updateDonation" parameterType="Donation">
    UPDATE DONATION SET 
-		totalDonationPrice = #{totalDonationPrice}
-		WHERE donation_id = #{donation_id}		
+      totalDonationPrice = #{totalDonationPrice}
+      WHERE donation_id = #{donation_id}      
   </update>
-
- <select id="rankingDonation" resultType="Donation">
-   select donation_id, COUNT(like_count)
-   from Donation
-   group by donation_id 
-   order by COUNT(like_count) DESC
+  
+  <select id="likeRanking" resultType="Donation">
+   select *
+   from DONATION
+   ORDER BY LIKE_COUNT
+  </select>
+  
+  <select id="closeRanking" resultType="Donation">
+   select *
+   from DONATION
+   ORDER BY CLOSE_DATE
+  </select>
+    
+  <select id="newProduct" resultType="Donation">
+   select *
+   from DONATION
+   ORDER BY DONATION_ID DESC
   </select>
   
 </mapper>

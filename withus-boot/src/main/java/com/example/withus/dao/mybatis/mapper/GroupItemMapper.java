@@ -38,4 +38,13 @@ public interface GroupItemMapper {
 
   //공동구매상품 전체 조회
   List<GroupItem> getGroupItemList();
+  
+  //찜개수순 조회
+  List<GroupItem> likeRanking();
+  
+  //마감일순 조회
+  List<GroupItem> closeRanking();
+  
+  //신상품순 조회
+  List<GroupItem> newProduct();
 }

@@ -5,19 +5,29 @@
 
   <cache />
   
-	<insert id="insertItem">
-	INSERT INTO ITEM(ITEM_NAME, ITEM_STATE, ITEM_DETAIL, ITEM_DATE, LIKE_COUNT, USER_ID, ITEMCATEGORY_ID,  IMG)
-	VALUES(#{item_name},#{item_state}, #{item_detail} , #{item_date}, #{like_count}, #{user_id}, #{itemCategory_id}, #{img}) 
-	</insert>
+   <insert id="insertItem">
+      INSERT INTO ITEM(ITEM_NAME, ITEM_STATE, ITEM_DETAIL, ITEM_DATE, LIKE_COUNT, USER_ID, ITEMCATEGORY_ID,  IMG)
+      VALUES(#{item_name},#{item_state}, #{item_detail} , #{item_date}, #{like_count}, #{user_id}, #{itemCategory_id}, #{img}) 
+   </insert>
 
     <select id="itemList" resultType="Item">
-    SELECT *FROM ITEM 
+       SELECT *FROM ITEM 
     </select>
 
- 	<select id="getItem" resultType="Item" parameterType="Integer">
-    SELECT  *
-    FROM ITEM
-    WHERE ITEM_ID = #{item_id}
-  </select>
+    <select id="getItem" resultType="Item" parameterType="Integer">
+       SELECT  *
+       FROM ITEM
+       WHERE ITEM_ID = #{item_id}
+     </select>
+     
+     <select id="likeRanking" resultType="Item">
+       SELECT *FROM ITEM 
+       ORDER BY LIKE_COUNT DESC
+    </select>
+    
+    <select id="newProduct" resultType="Item">
+       SELECT *FROM ITEM 
+       ORDER BY ITEM_DATE DESC
+    </select>
   
 </mapper>

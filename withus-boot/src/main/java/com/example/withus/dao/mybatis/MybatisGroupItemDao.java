@@ -32,4 +32,24 @@ public class MybatisGroupItemDao implements GroupItemDao {
 		// TODO Auto-generated method stub
 		return groupItemMapper.getGroupItemList();
 	}
+
+	@Override //찜개수순 조회
+	public List<GroupItem> likeRanking() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return groupItemMapper.likeRanking();
+	}
+
+	@Override //마감일순 조회
+	public List<GroupItem> closeRanking() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return groupItemMapper.closeRanking();
+	}
+
+	@Override //신상품순 조회
+	public List<GroupItem> newProduct() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return groupItemMapper.newProduct();
+	}
+	
+
 }

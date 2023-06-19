@@ -52,17 +52,19 @@ public class MybatisDonationDao implements DonationDao {
 		donationMapper.updateDonation(donation);
 	}
 
-	@Transactional
-	public List<Donation> rankingDonation() throws DataAccessException {
-	List<Donation> donations = donationMapper.rankingDonation();
-		
-		List<Donation> rankingdonations = null;
-		for(int i=0; i<5; i++) {
-			rankingdonations.add(donations.get(i));
-		}
-		
-		return rankingdonations;
+	@Override
+	public List<Donation> likeRanking() throws DataAccessException {
+		return donationMapper.likeRanking();
 	}
 
-	
+	@Override
+	public List<Donation> closeRanking() throws DataAccessException {
+		return donationMapper.closeRanking();
+	}
+
+	@Override
+	public List<Donation> newProduct() throws DataAccessException {
+		return donationMapper.newProduct();
+	}
+
 }

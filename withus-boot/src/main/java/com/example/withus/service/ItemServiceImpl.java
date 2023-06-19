@@ -8,30 +8,43 @@ import org.springframework.stereotype.Service;
 import com.example.withus.dao.ItemDao;
 import com.example.withus.domain.Item;
 
-
-
-
 @Service
 public class ItemServiceImpl implements ItemService {
 
    @Autowired
    private ItemDao itemDao;
 
-@Override
-public void insertItem(Item item) {
-	itemDao.insertItem(item);
-	
-}
+   @Override
+   public void insertItem(Item item) {
+	   itemDao.insertItem(item);
+   }
 
-@Override
-public List<Item> itemList() {
-	return itemDao.itemList();
-}
+   @Override
+   public List<Item> itemList() {
+	   return itemDao.itemList();
+   }
 
-@Override
-public Item getItem(int item_id) {
-	return itemDao.getItem(item_id);
-}
-   
-   
+   @Override
+   public Item getItem(int item_id) {
+	   return itemDao.getItem(item_id);
+   }
+
+   @Override
+   public List<Item> likeRanking() {
+	   // TODO Auto-generated method stub
+	   return itemDao.likeRanking();
+   }
+//
+//   @Override
+//   public List<Item> closeRanking() {
+//	   // TODO Auto-generated method stub
+//	   return itemDao.closeRanking();
+//   }
+
+   @Override
+   public List<Item> newProduct() {
+	   // TODO Auto-generated method stub
+	   return itemDao.newProduct();
+   }
+
 }

@@ -17,8 +17,26 @@
   
   <select id="GroupItemState" resultType="boolean">
     SELECT IF(GROUPTEM_STATE = 1, 1, 0)
-	FROM GROUPITEM
-	where GROUPITEM_ID = #{groupItem_id}
+   FROM GROUPITEM
+   where GROUPITEM_ID = #{groupItem_id}
+  </select>
+  
+  <select id="likeRanking" resultType="GroupItem">
+    SELECT *
+    FROM GROUPITEM
+    ORDER BY LIKE_COUNT DESC
+  </select>
+  
+  <select id="closeRanking" resultType="GroupItem">
+    SELECT *
+    FROM GROUPITEM
+    ORDER BY GROUPITEM_CLOSEDATE
+  </select>
+  
+   <select id="newProduct" resultType="GroupItem">
+    SELECT *
+    FROM GROUPITEM
+    ORDER BY GROUPITEM_ID DESC
   </select>
   
 </mapper>

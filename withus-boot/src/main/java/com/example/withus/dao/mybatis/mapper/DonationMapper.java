@@ -37,7 +37,13 @@ public interface DonationMapper {
 	  
 	void updateDonation(Donation donation);
 	  
-	List<Donation> rankingDonation() throws DataAccessException;
-	  
+	//찜개수순 조회
+	List<Donation> likeRanking();
+	
+	//마감일순 조회
+	List<Donation> closeRanking(); 
+	
+	//신상품순 조회
+	List<Donation> newProduct(); 
 	  
 }

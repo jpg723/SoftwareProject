@@ -30,4 +30,21 @@ public class MybatisItemDao implements ItemDao {
 		return itemMapper.getItem(item_id);
 	}
 
+	@Override
+	public List<Item> likeRanking() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return itemMapper.likeRanking();
+	}
+
+//	@Override
+//	public List<Item> closeRanking() throws DataAccessException {
+//		// TODO Auto-generated method stub
+//		return itemMapper.closeRanking();
+//	}
+
+	@Override
+	public List<Item> newProduct() throws DataAccessException {
+		// TODO Auto-generated method stub
+		return itemMapper.newProduct();
+	}
 }

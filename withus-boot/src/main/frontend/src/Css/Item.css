@@ -34,6 +34,9 @@
 .Item_list_content{
     margin: auto 3px;
     font-size: 17px;
+    background-color: white;
+    border: none;
+    color: black;
 }
 
 /*나눔 카테고리----------------*/

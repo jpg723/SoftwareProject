@@ -1,22 +1,13 @@
 import '../../Css/GroupItem.css';
 import styles from "../../Css/Product.module.css";
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
 import { Link } from 'react-router-dom';
 
-function GroupItemView(){
-  const [list , SetList] = useState([]);
-    
+function GroupItemView({list}){
+  
   const convertPrice = (price) =>{
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
-  }
-  useEffect(()=> {
-    axios.get('/groupItem').then((res)=>{
-      SetList(res.data)
-      console.log(res)
-    })
-    .catch(error => console.log(error))
-  },[])       
+  } 
 
   return (
     <div id="groupItem_view_main">

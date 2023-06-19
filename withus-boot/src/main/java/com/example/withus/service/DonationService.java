@@ -20,6 +20,12 @@ public interface DonationService {
 	//기부 수정
 	void updateDonation(Donation donation);
 	
-	//기부 좋아요 1~5위
-	List<Donation> rankingDonation();
+	//찜개수순 정렬
+	List<Donation> likeRanking();
+	
+	//마감일순 정렬
+	List<Donation> closeRanking();
+	
+	//신상품순 정렬
+	List<Donation> newProduct();
 }

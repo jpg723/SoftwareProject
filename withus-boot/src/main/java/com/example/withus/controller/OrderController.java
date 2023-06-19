@@ -58,8 +58,8 @@ public class OrderController {
       List<GroupItem> groupItem = groupItemService.getGroupItemList();
       System.out.println(groupItem);
       return groupItem;
-
    }
+   
    //공동구매상품 자세히 보기
    @GetMapping(value = "/groupItem/detail/{groupItem_id}")
     public GroupItem getGroupItem(@PathVariable("groupItem_id") int groupItem_id) {
@@ -67,6 +67,31 @@ public class OrderController {
       System.out.println(groupItem);
         return groupItem;
     }
+   
+   //공동구매상품 찜순으로 보기
+   @GetMapping("/groupItem/like")
+   public List<GroupItem> likeRanking(){
+      List<GroupItem> groupItem = groupItemService.likeRanking();
+      System.out.println(groupItem);
+      return groupItem;
+   }
+   
+   //공동구매상품 마감일순으로 보기
+   @GetMapping("/groupItem/closedate")
+   public List<GroupItem> closeRanking(){
+      List<GroupItem> groupItem = groupItemService.closeRanking ();
+      System.out.println(groupItem);
+      return groupItem;
+   }
+   
+
+   //공동구매상품 마감일순으로 보기
+   @GetMapping("/groupItem/new")
+   public List<GroupItem> newProduct(){
+      List<GroupItem> groupItem = groupItemService.newProduct();
+      System.out.println(groupItem);
+      return groupItem;
+   }
    
    //1인 주문하기
     @ResponseBody

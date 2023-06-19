@@ -32,15 +32,28 @@ public class DonationController {
       return donationService.getTotalDonations();
    }*/
    
-   //공동구매상품 전체보기
+   //기부 전체보기
    @GetMapping("/donationList")
    public List<Donation> donationList(){
-		/*
-		 * List<Donation> donationlist = donationService.getTotalDonations();
-		 * System.out.println(donationlist);
-		 */
       return donationService.getTotalDonations();
-
+   }
+   
+   //기부 찜개수 순으로 보기
+   @GetMapping("/donationList/like")
+   public List<Donation> likeRanking(){
+      return donationService.likeRanking();
+   }
+   
+   //기부 마감일순으로 보기
+   @GetMapping("/donationList/closedate")
+   public List<Donation> closeRanking(){
+      return donationService.closeRanking();
+   }
+   
+   //기부 최신순으로 보기
+   @GetMapping("/donationList/new")
+   public List<Donation> newProduct(){
+      return donationService.newProduct();
    }
 
    // 추가(세아) : donation 상세 조회
@@ -73,4 +86,5 @@ public class DonationController {
 	 * donationService.deleteDonation(donation_id); return "redirect:/donation"; }
 	 */
 
+   
 }

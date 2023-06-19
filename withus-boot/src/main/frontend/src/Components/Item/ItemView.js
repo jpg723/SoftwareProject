@@ -1,20 +1,10 @@
 import '../../Css/Item.css';
 import styles from "../../Css/Product.module.css";
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
 import { Link } from 'react-router-dom';
 
-function ItemView(){
-  const [list , SetList] = useState([]);
-   
-  useEffect(()=> {
-    axios.get('/item/list').then((res)=>{
-      SetList(res.data)
-      console.log(res)
-    })
-    .catch(error => console.log(error))
-  },[])       
-
+function ItemView({list}){
+    
   return (
     <div id="Item_view_main">
       {

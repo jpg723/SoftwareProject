@@ -32,6 +32,22 @@ public class GroupItemServiceImpl implements GroupItemService {
 		return groupItemDao.getGroupItemList();
 	}
 
+	@Override
+	public List<GroupItem> likeRanking() {
+		// TODO Auto-generated method stub
+		return groupItemDao.likeRanking();
+	}
+	
+	@Override
+	public List<GroupItem> closeRanking() {
+		// TODO Auto-generated method stub
+		return groupItemDao.closeRanking();
+	}
 
+	@Override
+	public List<GroupItem> newProduct() {
+		// TODO Auto-generated method stub
+		return groupItemDao.newProduct();
+	}
 	
 }

@@ -1,10 +1,40 @@
 import '../../Css/Item.css';
 import ItemView from './ItemView.js';
 import styles from "../../Css/Product.module.css";
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 function ItemMain() {
+    const [list , SetList] = useState([]);
+   
+  useEffect(()=> {
+    axios.get('/item/list').then((res)=>{
+      SetList(res.data)
+      console.log(res)
+    })
+    .catch(error => console.log(error))
+  },[])   
+
+  const handleListData = (e) => {
+    const value =e.target.value;
+   
+    let url;
+    if(value === "new")
+        url="new";
+    if(value ==="like")
+        url = "like"
+    if(value === "closedate")
+       url="closedate"
+
+    axios.get(`/item/list/${url}`).then((res)=>{
+        SetList(res.data)
+       console.log(res)
+    })
+    .catch(error => console.log(error))
+}
+
+
   return (
     <div>
         <h1 id="Item_header">나눔하기</h1>
@@ -22,15 +52,15 @@ function ItemMain() {
                 <div id="Item_view_header">
                     <Link to="/itemwrite" class="item_register"><div class="item_register">나눔하기</div></Link>
                     <div id="Item_list">
-                        <div class="groupItem_list_content">신상품순</div>
+                        <button class="groupItem_list_content" value="new" onClick={handleListData}>최신순</button>
                         <div class="groupItem_list_content">|</div>
-                        <div class="groupItem_list_content">찜개수 순</div>
-                        <div class="groupItem_list_content">|</div>
-                        <div class="groupItem_list_content">마감전순</div>
+                        <button class="groupItem_list_content" value="like" onClick={handleListData}>찜하기순</button>
+                        {/* <div class="groupItem_list_content">|</div>
+                        <button class="groupItem_list_content">마감전순</button> */}
                     </div>
                 </div>
                 <main className={styles.flex_wrap}>
-                    <ItemView/>                
+                    <ItemView list={list}/>                
                 </main>
             </div>
         </div>

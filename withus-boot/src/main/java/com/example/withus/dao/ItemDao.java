@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
+import com.example.withus.domain.GroupItem;
 import com.example.withus.domain.Item;
 
 public interface ItemDao {
@@ -13,4 +14,12 @@ public interface ItemDao {
 	
 	Item getItem(int item_id) throws DataAccessException;
 	
+	//찜개수순 정렬
+	List<Item> likeRanking() throws DataAccessException;
+		
+//	//마감일순 정렬
+//	List<Item> closeRanking() throws DataAccessException;
+	  
+	//신상품순 정렬
+	List<Item> newProduct() throws DataAccessException;
 }

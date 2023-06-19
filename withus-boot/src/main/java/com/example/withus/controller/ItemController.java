@@ -57,9 +57,20 @@ public class ItemController {
   //나눔상품 전체 리스트
     @GetMapping(value = "/item/list")
      public List<Item> getItemList() {
-       List<Item> itemList= itemService.itemList();
-         return itemList;
+         return itemService.itemList();
      }
+    
+    //나눔상품 찜개수순으로 보기
+    @GetMapping(value = "/item/list/like")
+    public List<Item> likeRanking() {
+    	return itemService.likeRanking();
+    }
+    
+    //나눔상품 최신순으로 보기
+    @GetMapping(value = "/item/list/new")
+    public List<Item> newProduct() {
+    	return itemService.newProduct();
+    }
     
   //나눔상품 자세히 보기
     @GetMapping(value = "/item/detail/{item_id}")
@@ -67,4 +78,6 @@ public class ItemController {
        Item item = itemService.getItem(item_id);
          return item;
      }
+    
+
 }

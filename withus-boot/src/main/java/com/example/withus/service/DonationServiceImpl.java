@@ -36,10 +36,22 @@ public class DonationServiceImpl implements DonationService {
 		donationDao.updateDonation(donation);
 	}
 
-	public List<Donation> rankingDonation() {
-		return donationDao.rankingDonation();
+	@Override
+	public List<Donation> likeRanking() {
+		// TODO Auto-generated method stub
+		return donationDao.likeRanking();
 	}
 
-	
+	@Override
+	public List<Donation> closeRanking() {
+		// TODO Auto-generated method stub
+		return donationDao.closeRanking();
+	}
+
+	@Override
+	public List<Donation> newProduct() {
+		// TODO Auto-generated method stub
+		return donationDao.newProduct();
+	}
 
 }
