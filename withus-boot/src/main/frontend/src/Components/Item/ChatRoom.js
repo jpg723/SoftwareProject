@@ -4,16 +4,21 @@ import SockJS from 'sockjs-client';
 import '../../Css/ChatRoom.css';
 
 var stompClient =null;
-const ChatRoom = () => {
+const ChatRoom = (props) => {
+    const seller = props.seller;
+    console.log(seller);
+
     const [privateChats, setPrivateChats] = useState(new Map());     
     const [publicChats, setPublicChats] = useState([]); 
-    const [tab,setTab] =useState("CHATROOM");
+    const [tab,setTab] =useState("판매자");
     const [userData, setUserData] = useState({
         username: '',
         receivername: '',
         connected: false,
         message: ''
       });
+    
+    
     useEffect(() => {
       console.log(userData);
     }, [userData]);
@@ -22,12 +27,14 @@ const ChatRoom = () => {
         let Sock = new SockJS('http://localhost:8080/ws');
         stompClient = over(Sock);
         stompClient.connect({},onConnected, onError);
+        
     }
 
     const onConnected = () => {
         setUserData({...userData,"connected": true});
         stompClient.subscribe('/chatroom/public', onMessageReceived);
         stompClient.subscribe('/user/'+userData.username+'/private', onPrivateMessage);
+        
         userJoin();
     }
 
@@ -123,13 +130,13 @@ const ChatRoom = () => {
         <div className="chat-box">
             <div className="member-list">
                 <ul>
-                    <li onClick={()=>{setTab("CHATROOM")}} className={`member ${tab==="CHATROOM" && "active"}`}>Chatroom</li>
-                    {[...privateChats.keys()].map((name,index)=>(
+                    <li onClick={()=>{setTab("판매자")}} className={`member ${tab==="판매자" && "active"}`}>{seller}</li>
+                    {/* {[...privateChats.keys()].map((name,index)=>(
                         <li onClick={()=>{setTab(name)}} className={`member ${tab===name && "active"}`} key={index}>{name}</li>
-                    ))}
+                    ))} */}
                 </ul>
             </div>
-            {tab==="CHATROOM" && <div className="chat-content">
+            {tab==="판매자" && <div className="chat-content">
                 <ul className="chat-messages">
                     {publicChats.map((chat,index)=>(
                         <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
@@ -141,11 +148,12 @@ const ChatRoom = () => {
                 </ul>
 
                 <div className="send-message">
-                    <input type="text" className="input-message" placeholder="enter the message" value={userData.message} onChange={handleMessage} /> 
-                    <button type="button" className="send-button" onClick={sendValue}>send</button>
+                    <input type="text" className="input-message" placeholder="메시지를 입력하세요" value={userData.message} onChange={handleMessage} /> 
+                    <button type="button" className="send-button" onClick={sendValue}>전송</button>
                 </div>
             </div>}
-            {tab!=="CHATROOM" && <div className="chat-content">
+            
+            {tab!=="판매자" && <div className="chat-content">
                 <ul className="chat-messages">
                     {[...privateChats.get(tab)].map((chat,index)=>(
                         <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
@@ -157,8 +165,8 @@ const ChatRoom = () => {
                 </ul>
 
                 <div className="send-message">
-                    <input type="text" className="input-message" placeholder="enter the message" value={userData.message} onChange={handleMessage} /> 
-                    <button type="button" className="send-button" onClick={sendPrivateValue}>send</button>
+                    <input type="text" className="input-message" placeholder="메시지를 입력하세요" value={userData.message} onChange={handleMessage} /> 
+                    <button type="button" className="send-button" onClick={sendPrivateValue}>전송</button>
                 </div>
             </div>}
         </div>
@@ -166,14 +174,14 @@ const ChatRoom = () => {
         <div className="register">
             <input
                 id="user-name"
-                placeholder="Enter your name"
+                placeholder="이름을 입력하세요"
                 name="userName"
                 value={userData.username}
                 onChange={handleUsername}
                 margin="normal"
               />
               <button type="button" onClick={registerUser}>
-                    connect
+                    채팅 시작
               </button> 
         </div>}
     </div>

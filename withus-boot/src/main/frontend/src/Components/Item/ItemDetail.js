@@ -2,7 +2,7 @@ import {useParams } from "react-router-dom";
 import styles from '../../Css/GroupItemDetail.module.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
  function ItemDetail(props) {
 
@@ -30,7 +30,9 @@ import axios from 'axios';
           <p>{item.item_state}</p>
           <p>{item.item_detail}</p>
           <div className={styles.btn} >
+            <Link to="/chat" state={{seller:item.user_id}}>
           <button  className={styles.btn_buy}>채팅하기</button> 
+          </Link>
           </div>
         </div>
       </div>

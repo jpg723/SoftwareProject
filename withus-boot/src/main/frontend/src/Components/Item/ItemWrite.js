@@ -55,6 +55,11 @@ function ItemWrite() {
     /*가입하기 버튼 클릭시*/
     function itemRegister_btn_click() {
         /*백엔드로 값 전달*/
+        if(sessionStorage.getItem("id")===null) {
+                     alert("로그인을 먼저 해주세요!")
+        }
+        else{ 
+                     
             axios(
                 {
                 url: '/item/register',
@@ -62,7 +67,7 @@ function ItemWrite() {
                 data: {
                     data1:item_title, data2:item_image, data3: item_content, data4: userId, data5: category
                 } , 
-                baseURL: 'http://localhost:8080',
+                //baseURL: 'http://localhost:8080',
                 //withCredentials: true,
                 }
             ).then(function (response) {
@@ -70,7 +75,7 @@ function ItemWrite() {
             });
 
             alert("등록완료");
-       
+        }       
     }
 
 
@@ -107,7 +112,7 @@ function ItemWrite() {
                 </div>
                 <div class="board_inputCheck">{checkItem_title}</div>
                 <div class="board_inputCheck">{checkItem_content}</div>
-                <div id="post_submit">
+                <div id="post_submit">                    
                     <button id="itemregister_btn" type="submit"  onClick={() => itemRegister_btn_click()}>나눔 등록</button>
                 </div>
             </div>

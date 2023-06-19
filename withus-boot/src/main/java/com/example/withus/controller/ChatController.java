@@ -16,6 +16,7 @@ public class ChatController {
     @MessageMapping("/message")
     @SendTo("/chatroom/public")
     public Message receiveMessage(@Payload Message message){
+    	System.out.println(message.toString());
         return message;
     }
 
