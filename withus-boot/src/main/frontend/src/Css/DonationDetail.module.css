@@ -56,8 +56,9 @@
 }
 
 .donation_btn_box{
-  width: 200px;
-  margin-top: 25px;
+  margin-top: 21px;
+  display: flex;
+  height: 50px;
 }
 
 .btn_donation{
@@ -67,6 +68,27 @@
   border-radius: 5px;
   width: 200px;
 }
+
+/*찜버튼---------------------------------------*/
+.btn_donationLike {
+  margin-left: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.btn_donationLike_icon{
+  width: 45px;
+  height: 45px;
+}
+
 /*기부 코멘트------------------------*/
 .comment_header{
   font-size: 30px;
