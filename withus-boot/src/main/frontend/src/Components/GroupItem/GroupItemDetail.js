@@ -98,7 +98,7 @@ import on_heart from '../../img/on_heart.png';
           console.log(response.data);
       });
 
-      document.location.href = "/cart/"+sessionStorage.getItem("id");
+      document.location.href = "/mypage-mycart";
   }
 
   function check_like() {  

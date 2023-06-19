@@ -75,7 +75,11 @@ function ItemWrite() {
             });
 
             alert("등록완료");
+
         }       
+
+            document.location.href = "/item";
+
     }
 
 

@@ -50,7 +50,11 @@ function App() {
         <Route path="/mypage-mycart" element={<MyCart />} />
         <Route path="/itemwrite" element={<ItemWrite />} />
         <Route path="/item/detail/:id" element={<ItemDetail />} />
+
         <Route path="/chat" element={<Chat />} />
+
+      
+
       </Routes>
     </div>
   );
