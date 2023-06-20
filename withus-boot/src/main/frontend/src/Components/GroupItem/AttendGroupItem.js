@@ -22,11 +22,16 @@ function AttendGroupItem(props) {
 
     const [groupBuymodalOpen, setgroupBuyModalOpen] = useState(false);
 
-    const opengroupBuyModal = () => {
+    const [selectedGroupId, setSelectedGroupId] = useState(-1);
+    
+    
+    const opengroupBuyModal = (i) => {
+      console.log(i);
       setgroupBuyModalOpen(true);
     };
     const closegroupBuyModal = () => {
       setgroupBuyModalOpen(false);
+      setSelectedGroupId(-1);
     };
 
     const [modalOpen1, setModalOpen1] = useState(false);
@@ -62,7 +67,7 @@ function AttendGroupItem(props) {
               data: {
                data1: sessionStorage.getItem("id"), data2:id, data3:name, data4:message
               } , 
-              baseURL: 'http://localhost:8080',
+              //baseURL: 'http://localhost:8080',
               //withCredentials: true,
               }
           ).then(function (response) {
@@ -126,16 +131,21 @@ function AttendGroupItem(props) {
             return(              
                 <div className="groupBox2">
                   <img class="boxicon" src={boxiconImg}></img>
-                  <div className="groupitem-username">{attendgroupList[i].user_name}</div>                 
-                  <div className="groupitem-count">({attendgroupList[i].totalGroupItem_count}/4)</div>
-                  <div className="message">{attendgroupList[i].message}</div>                                   
-                  <div className="groupBuy-btnBox">  {attendgroupList[i].totalGroupItem_count === 4 ? <div>주문종료</div>
-                    : <button className="groupBuyBtn" onClick={opengroupBuyModal}>주문참여</button>}</div>
-                  {attendgroupList[i].attend_group_id}
-                  <Modal open={groupBuymodalOpen} close={closegroupBuyModal} header="주문자 정보">
-                  {attendgroupList[i].attend_group_id}
-                    <AttendGroupOrder item={id} attendId={attendgroupList[i].attend_group_id}/> 
-                  </Modal>
+                  <div className="groupitem-username">{a.user_name}</div>                 
+                  <div className="groupitem-count">({a.totalGroupItem_count}/4)</div>
+                  <div className="message">{a.message}</div>                                   
+                  <div className="groupBuy-btnBox">  {a.totalGroupItem_count === 4 ? <div>주문종료</div>
+                    : <button className="groupBuyBtn" onClick={()=>{
+                      setSelectedGroupId(i); 
+                      opengroupBuyModal();}}>주문참여</button>}</div>
+                  {
+                    groupBuymodalOpen===true && selectedGroupId ===i ?
+                    <Modal open={groupBuymodalOpen} close={closegroupBuyModal} header="주문자 정보">
+                    <AttendGroupOrder item={id} attendId={a.attend_group_id}/> 
+                  </Modal> : null
+          
+                  }
+                  
         
         
                 </div>

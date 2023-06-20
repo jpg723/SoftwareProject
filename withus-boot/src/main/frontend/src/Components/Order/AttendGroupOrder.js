@@ -65,7 +65,7 @@ function AttendGroupOrder(props) {
                 data: {
                  data1: orderPrice, data2:count, data3:props.item, data4:userId, data5:props.attendId
                 } , 
-                baseURL: 'http://localhost:8080',
+                //baseURL: 'http://localhost:8080',
                 //withCredentials: true,
                 }
             ).then(function (response) {

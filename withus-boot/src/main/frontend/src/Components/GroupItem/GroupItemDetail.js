@@ -106,7 +106,11 @@ import on_heart from '../../img/on_heart.png';
       axios(
         {
         url: '/groupItem/getLike/' + id +  '/' + sessionStorage.getItem("id"),
+<<<<<<< Updated upstream
         method: 'get',
+=======
+        method: 'get'//,
+>>>>>>> Stashed changes
         //baseURL: 'http://localhost:8080',
         //withCredentials: true,
         }
