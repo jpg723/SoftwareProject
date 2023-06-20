@@ -4,12 +4,15 @@
     margin-top: 30px;
 }
 
+/*카테고리---------------------*/
 #mypage_category{
     margin-left: 150px;
+    width: 200px;
 }
 
 #mypage_cate{
     font-size: 25px;
+    text-align: left;
 }
 
 .mypageCate_content{
@@ -17,10 +20,13 @@
     font-size: 20px;
     text-decoration-line: none;
     color: black;
+    text-align: left;
 }
 
+/*마이페이지 왼쪽 화면---------------------*/
 #mypage_view{
-    margin-left: 50px;
+    margin-left: 20px;
+    width: 802px;
 }
 
 #mypage_header{
