@@ -22,5 +22,10 @@
     VALUES(#{title}, #{content}, #{sender_id}, #{receiver_id}, #{read_chk})
   </insert>
   
+  <update id="readCheck">
+    UPDATE MESSAGE
+    SET READ_CHK = 1
+    WHERE MESSAGE_ID = #{message_id}
+  </update>
  
 </mapper>

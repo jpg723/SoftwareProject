@@ -25,6 +25,7 @@ import SearchResult from './Components/Main/SearchResult';
 import FindId from './Components/Member/FindId';
 import FindPW from './Components/Member/FindPW';
 import SendMessage from './Components/Message/SendMessage';
+import Messages from './Components/Message/Messages';
 
 function App() {
   //카트
@@ -55,8 +56,14 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/message" element={<SendMessage />} />
         <Route path="/search" element={<SearchResult />} />
+
         <Route path="/member/findId" element={<FindId />} />
         <Route path="/member/findPW" element={<FindPW />} />
+
+        <Route path="/mypage-message" element={<Messages />} />
+        
+      
+
       </Routes>
     </div>
   );

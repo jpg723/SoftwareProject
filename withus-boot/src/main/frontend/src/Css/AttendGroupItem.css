@@ -37,6 +37,13 @@
   display: flex;
 }
 
+.message-header{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 1000px;
+}
+
 .groupBuy-header-content1{
   border: 1px solid rgb(255, 102, 130);
   width: 200px;
