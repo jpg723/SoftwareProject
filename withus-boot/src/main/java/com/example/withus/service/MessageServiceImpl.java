@@ -29,6 +29,12 @@ public class MessageServiceImpl implements MessageService {
 	public Message getMessage(int id) {
 		return messageDao.getMessage(id);
 	}
+
+	@Override
+	public void readCheck(int message_id) {
+		messageDao.readCheck(message_id);
+		
+	}
 	
 
 }
