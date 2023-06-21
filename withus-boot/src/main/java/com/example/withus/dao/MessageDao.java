@@ -19,4 +19,6 @@ public interface MessageDao {
 	//메시지 자세히 보기
 	Message getMessage(int id) throws DataAccessException;
 
+	//읽음표시 체크
+	void readCheck(int message_id);
 }
