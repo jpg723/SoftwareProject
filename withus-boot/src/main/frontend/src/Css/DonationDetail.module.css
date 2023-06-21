@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'MBC1961GulimM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .DonationDetailmain {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 55px;
   display: flex;
   height: 100%;
 }
@@ -10,6 +23,8 @@
   margin-left: 250px;
   width: 350px;
   height: 420px;
+  box-shadow: 3px 3px 3px 3px lightgray;
+  border-radius: 10px;
 }
   
 .donation_img img {
@@ -25,74 +40,78 @@
 
 /*기부 진행 상태--------------*/
 .donation_closeState{
+  margin-top: 10px;
+  font-family: 'ChosunGu';
   text-align: left;
   color: gray;
-  font-size: 15px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 /*기부 이름*/
 .donation_name {
+  font-family: 'MBC1961GulimM';
+  margin-top: 20px;
   text-align: left;
-  font-size: 36px;
+  font-size: 45px;
   line-height: 45px;
   color: #000000;
 }
 
+/*총 기부액*/
 .donation_content01{
+  font-family: 'ChosunGu';
   margin-top: 20px;
   text-align: left;
-}
-.donation_total_box{
-  display: flex;
-  margin-top: 5px;
-  font-size: 40px;
+  color: gray;
+  font-size: 25px;
 }
 
+.donation_total_box{
+  font-family: 'MBC1961GulimM';
+  display: flex;
+  margin-top: 20px;
+  font-size: 50px;
+  color: rgb(255, 102, 130);
+}
+
+/*기부 설명*/
 .donation_detail{
+  font-family: 'ChosunGu';
   text-align: left;
   margin-top: 20px;
-  font-size: 18px;
-  height: 150px;
+  font-size: 25px;
+  height: 130px;
 }
 
 .donation_btn_box{
-  margin-top: 21px;
   display: flex;
   height: 50px;
 }
 
 .btn_donation{
-  background-color: #417bba;
+  font-family: 'ChosunGu';
+  background-color: rgb(255, 102, 130);
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 5px;
   width: 200px;
-}
-
-/*찜버튼---------------------------------------*/
-.btn_donationLike {
-  margin-left: 20px;
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
-  background: none;
   border: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 22px;
-  color: #ffffff;
 }
 
-.btn_donationLike_icon{
-  width: 45px;
-  height: 45px;
+/*기부하기 버튼 모달창---------------------------------------*/
+.donation_order_modal{
+  font-family: 'MBC1961GulimM';
+  font-size: 35px;
+  margin-top: 10px;
 }
 
 /*기부 코멘트------------------------*/
 .comment_header{
-  font-size: 30px;
+  margin-top: 30px;
+  font-family: 'MBC1961GulimM';
+  font-size: 50px;
   text-align: left;
+
 }
 .comments_box{
   width: 901px;
@@ -103,245 +122,31 @@
 }
 
 .donation_comment_content{
-  border: 1px solid black;
+  border: 1px solid lightgray;
   width: 900px;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: left;
+  box-shadow: 3px 3px 3px 3px lightgray;
 }
 
 .donation_comment_id{
-  font-size: 18px;
+  font-family: 'ChosunGu';
+  font-size: 20px;
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: 10px;
+  color: black;
 }
+
 .donation_comment{
-  margin-top: 20px;
+  font-family: 'ChosunGu';
+  font-size: 22px;
   margin-left: 15px;
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
   
-  /*seller-store*/
-  .seller_store{
-    margin-top: 20px;
-    text-align: left;
-    padding-left: 50px;
-    font-size: 17px;
-    color: gray;
-  }
-    
-  /*상품가격*/
-  .groupItemInfo .price {
-    padding-left: 50px;
-    text-align: left;
-    margin-top: 20px;
-    font-size: 36px;
-    line-height: 45px;
-    color: #000000;
-  }
-    
-  .product_info .unit {
-    font-size: 18px;
-    line-height: 23px;
-    color: #000000;
-  }
-  
-  /*상품 문구*/
-  .groupItemtext{
-    margin-top: 20px;
-    text-align: left;
-    padding-left: 50px;
-    font-size: 17px;
-  }  
-   
-  /*구분선*/
-  .line {
-    margin-top: 20px;
-    margin-left: 50px;
-    width: 600px;
-    height: 2px;
-    background: #c4c4c4;
-  }
-  
-  /*배송지*/
-  .delivery{
-    margin-top: 20px;
-    display: flex;
-  }
-  .deliveryAddress1{
-    text-align: left;
-    padding-left: 50px;
-    font-size: 17px;
-    color: gray;
-  }
-  
-  .deliveryAddress2{
-    margin-left: 50px;
-    text-align: left;
-    font-size: 17px;
-    color: black;
-  }
-  
-  /*혼자 주문하기*/
-  .aloneBuy{
-    border: 1px solid #ee5f41;
-    width: 200px;
-    height: 30px;
-    margin-top: 20px;
-    padding-top: 5px;
-    margin-left: 50px;
-    text-align: center;
-    font-size: 17px;
-    color: #ee5f41;
-    border-radius: 5px;
-  }
-  
-  /*상품 개수 설정 버튼*/
-  .amount {
-    margin-top: 20px;
-    margin-left: 50px;
-    position: relative;
-    width: 150px;
-    height: 50px;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    margin-bottom: 30px;
-  }
-  
-  .amount .minus {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 14px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-    
-  .amount .count {
-    position: absolute;
-    width: 56px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #c4c4c4;
-    border-top:none;
-    border-bottom:none;
-  }
-    
-  .amount .count span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-    
-  .amount .plus {
-    position: absolute;
-    width: 20px;
-    height: 40px;
-    top: 50%;
-    right: 14px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-    
-  /*상품 총 금액, 수량---------------------------------------*/
-  .sum {
-    display: flex;
-    margin-left: 50px;
-  }
-  
-  /*상품 총 수량---------------------------------------------*/
-  .sum .total {
-    padding-top: 5px;
-    font-size: 18px;
-    color: #767676;
-  }
-  
-  .sum .total_count {
-    padding-top: 5px;
-    margin-left: 20px;
-    font-size: 18px;
-    line-height: 23px;
-    color: #ee5f41;
-  }
-  /*구분선*/
-  .sum .total_count::after {
-    content: "|";
-    width: 5px;
-    height: 23px;
-    color: #c4c4c4;
-    padding: 0px 11px;
-  }
-  
-  /*상품 총 금액---------------------------------------------*/
-  .sum .total_price {
-    margin-left: 30px;
-    display: flex;
-    font-size: 30px;
-    color: #ee5f41;
-  }
-    
-  .sum .total_unit {
-    margin-left: 10px;
-    padding-top: 5px;
-    font-size: 18px;
-    line-height: 23px;
-    color: black;
-  }
-  
-  /*버튼-------------------------------------------------*/
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /*주문하기 버튼-------------------------------------------------*/
-  .btn .btn_buy {
-    margin-top: 20px;
-    margin-left: 50px;
-    width: 360px;
-    height: 60px;
-    border-radius: 5px;
-    background: #ee5f41;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 22px;
-    color: #ffffff;
-    margin-right: 44px;
-  }
-   
-  /*장바구니 버튼-------------------------------------------------*/ 
-  .btn .btn_cart {
-    margin-top: 20px;
-    width: 200px;
-    height: 60px;
-    border-radius: 5px;
-    background: #767676;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 22px;
-    color: #ffffff;
-  }
-  
-  /*공동구매 박스-------------------------------------------------------*/
-  .groupItemInfo2{
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 1050px;
-  }
-  
-  .desc {
-    margin-top: 140px;
-  }
-   
+
   @media (max-width: 1440px) {
     .main {
       flex-direction: column;

@@ -5,8 +5,6 @@ import Modal from '../Modal/Modals.js';
 import '../../Css/Donation.css';
 import axios from 'axios';
 import DonationComments from "./DonationComments";
-import off_heart from '../../img/off_heart.png';
-import on_heart from '../../img/on_heart.png';
 
  function DonationDetail(props) {
 
@@ -104,7 +102,7 @@ import on_heart from '../../img/on_heart.png';
                 </div>
 
                 <Modal open={modalOpen2} close={closeModal2} header="기부하기">
-                    <main> {props.children} </main>기부 정보
+                    <main className={styles.donation_order_modal}> {props.children}기부 정보</main>
                     <form id = "order_form">
                         <div class="order_content"> 
                             <div class="order_content1">

@@ -13,9 +13,14 @@ function DonationView({donationList}) {
                 <Link to={'/donationList/detail/'+donationList[i].donation_id}> 
                 <img className="donation_image" src={process.env.PUBLIC_URL+ '/' + donationList[i].img}></img>
                 </Link>
-                <span className="donation_info">
+                <div className="donation_info">
                     <div className="donation_name"> {donationList[i].donation_name}</div>
-                </span>
+                    <div class="donation-price-box">
+                        <div class="donation-price-box-content">지금까지</div>
+                        <div className="donation-view-totalPrice"> {donationList[i].totalDonationPrice}원</div>
+                    </div>
+                    <div class="donation-view-state">{donationList[i].donation_state === 0 ? <div>진행중</div> : <div>종료</div>}</div>
+                </div>
                 
             </div>
     )           
