@@ -55,9 +55,16 @@ public class MessageController {
   
   //받은 메시지 목록
    @GetMapping(value = "/message/{receiver_id}")
-   public List<Message> carts(@PathVariable("receiver_id") String receiver_id) {
-      
+   public List<Message> getMessageList(@PathVariable("receiver_id") String receiver_id) {
+   
        return messageService.getMessageList(receiver_id);
+   }
+   
+   //읽음 처리
+   @GetMapping(value = "/message/read/{message_id}")
+   public void messageReaded(@PathVariable("message_id") int message_id) {
+   
+       messageService.readCheck(message_id);
    }
    
 }
