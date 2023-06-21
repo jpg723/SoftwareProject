@@ -1,7 +1,6 @@
 import { Routes, Route} from 'react-router-dom';
 import "./App.css";
 import Header from './Components/Main/Header.js';
-import MainCategory from './Components/Main/MainCategory.js';
 import Main from './Components/Main/Main.js';
 import Item from './Components/Item/ItemMain.js';
 import GroupItem from './Components/GroupItem/GroupItemMain.js';
@@ -31,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <MainCategory/>
       <Routes>
         <Route path="/" element={<Main />}/>
         <Route path="/item" element={<Item />}/>

@@ -1,5 +1,19 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 #register_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 45px;
 }
 
 #register_line{
@@ -23,9 +37,11 @@
     width: 150px;
 }
 
+/*회원가입 입력란 제목*/
 .register_name{
-    margin: 15px auto;
-    font-size: 17px;
+    margin: 22px auto;
+    font-size: 20px;
+    font-family: 'ChosunGu';
 }
 
 .register_content2{
@@ -34,6 +50,7 @@
     margin: auto 0px;
 }
 
+/*입력란*/
 .register_inputBox{
     display: flex;
     margin: 5px 20px auto; 
@@ -46,6 +63,7 @@
 }
 
 .register_input{
+    font-family: 'ChosunGu';
     border: none;
     outline: none;
     margin: auto 0;
@@ -130,16 +148,18 @@
     margin-top: 50px;
 }
 
+/*회원가입 버튼*/
 #register_btn{
     border: none;
-    margin: 4px 215px;
+    margin: 4px 60px;
     height: 50px;
-    width: 200px;
-    font-size: 17px;
-    background-color: #ee5f41;
-    border-radius: 4px;
+    width: 500px;
+    font-size: 25px;
+    background-color: rgb(255, 102, 130);
+    border-radius: 10px;
     color: white;
     text-align: center;
+    font-family: 'ChosunGu';;
 }
 
 .radio_btn{
@@ -148,7 +168,9 @@
     width: 20px;
 }
 
+/*유효성 검사 문구*/
 .inputCheck{
+    font-family: 'ChosunGu';
     width: 400px;
     margin-left: 170px;
     margin-top: 5px;

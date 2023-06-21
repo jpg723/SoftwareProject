@@ -1,6 +1,21 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*헤더*/
 #groupItem_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 45px;
+    padding-top: 30px;
 }
 
 /*-----------------------------------------------------
@@ -17,6 +32,7 @@
     display: flex;
 }
 
+/*물품 순서 선택*/
 #groupItem_list{
     display: flex;
     margin-left: auto;
@@ -24,15 +40,15 @@
 }
 
 .groupItem_list_content{
-    margin: auto 3px;
-    font-size: 17px;
+    font-family: 'ChosunGu';
     background-color: white;
-    border: none;
-    color: black;
+    margin: auto 3px;
+    font-size: 20px;
+    color: gray;
 }
 
 /*-----------------------------------------------------
-공동구매 상품 리스트*/
+공동구매 상품 리스트 출력 화면*/
 #groupItem_view_main{
     margin-left: 20px;
     height: 100%;
@@ -44,16 +60,14 @@
     flex-wrap: wrap;
 }
 
-.groupItem{
-    margin-left: 50px;
-    width: 249px;
-    height: 450px;
-}
+/*상품 이미지---------------*/
 .groupItem_image{
     width: 249px;
     height: 320px;
+    border-radius: 10px;
 }
-
+/*-----------------------------------------------------
+공동구매 상품 상세페이지 화면*/
 .groupItem_info{
     width: 249px;
     height: 94.2px;

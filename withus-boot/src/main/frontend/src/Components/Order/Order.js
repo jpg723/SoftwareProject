@@ -55,10 +55,6 @@ function order(props) {
         }
     }
     
-    
-
-
-
     /*가입하기 버튼 클릭시*/
     function orderBtn_click() {
         /*백엔드로 값 전달*/
@@ -135,7 +131,7 @@ function order(props) {
             </div>
             <div class="inputCheck">{checkPhone}</div>                     
             <div id="order_bottom">
-                <button id="order_btn" type="submit" 
+                <button id="along_order_btn" type="submit" 
                 onClick={() => orderBtn_click()}
                 >결제하기</button>
             </div>

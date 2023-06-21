@@ -1,16 +1,31 @@
+@font-face {
+  font-family: 'MBC1961GulimM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .groupItemDetailmain {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   height: 100%;
 }
 
 /*그룹아이템 이미지------------------------------------*/
 .product_img {
+  margin-top: 30px;
   margin-left: 130px;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 450px;
   border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px lightgray;
 }
   
 .product_img img {
@@ -26,25 +41,28 @@
 
 /*상품이름*/
 .groupItemInfo .product_name {
+  font-family: 'MBC1961GulimM';
   text-align: left;
   padding-left: 50px;
   margin-top: 20px;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 45px;
   color: #000000;
 }
 
 /*seller-store*/
 .seller_store{
+  font-family: 'ChosunGu';
   margin-top: 20px;
   text-align: left;
   padding-left: 50px;
-  font-size: 17px;
+  font-size: 20px;
   color: gray;
 }
   
 /*상품가격*/
 .groupItemInfo .price {
+  font-family: 'MBC1961GulimM';
   padding-left: 50px;
   text-align: left;
   margin-top: 20px;
@@ -61,62 +79,37 @@
 
 /*상품 문구*/
 .groupItemtext{
+  font-family: 'ChosunGu';
   margin-top: 20px;
   text-align: left;
   padding-left: 50px;
-  font-size: 17px;
+  font-size: 20px;
 }  
- 
-/*구분선*/
-.line {
-  margin-top: 20px;
-  margin-left: 50px;
-  width: 600px;
-  height: 2px;
-  background: #c4c4c4;
-}
-
-/*배송지*/
-.delivery{
-  margin-top: 20px;
-  display: flex;
-}
-.deliveryAddress1{
-  text-align: left;
-  padding-left: 50px;
-  font-size: 17px;
-  color: gray;
-}
-
-.deliveryAddress2{
-  margin-left: 50px;
-  text-align: left;
-  font-size: 17px;
-  color: black;
-}
 
 /*혼자 주문하기*/
 .aloneBuy{
-  border: 1px solid #ee5f41;
+  border: 1px solid rgb(255, 102, 130);
   width: 200px;
   height: 30px;
   margin-top: 20px;
-  padding-top: 5px;
+  padding-top: 10px;
   margin-left: 50px;
   text-align: center;
-  font-size: 17px;
-  color: #ee5f41;
+  font-size: 18px;
+  color: rgb(255, 102, 130);
   border-radius: 5px;
+  font-family: 'ChosunGu';
 }
 
 /*상품 개수 설정 버튼*/
 .amount {
+  font-family: 'MBC1961GulimM';
   margin-top: 20px;
   margin-left: 50px;
   position: relative;
   width: 150px;
-  height: 50px;
-  border: 1px solid #c4c4c4;
+  height: 40px;
+  border: 1px solid lightgray;
   border-radius: 5px;
   margin-bottom: 30px;
 }
@@ -161,6 +154,7 @@
   
 /*상품 총 금액, 수량---------------------------------------*/
 .sum {
+  font-family: 'ChosunGu';
   display: flex;
   margin-left: 50px;
 }
@@ -168,39 +162,40 @@
 /*상품 총 수량---------------------------------------------*/
 .sum .total {
   padding-top: 5px;
-  font-size: 18px;
-  color: #767676;
+  font-size: 23px;
+  color: black;
 }
 
 .sum .total_count {
-  padding-top: 5px;
+  font-family: 'MBC1961GulimM';
+  padding-top: 8px;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 23px;
-  color: #ee5f41;
-}
-/*구분선*/
-.sum .total_count::after {
-  content: "|";
-  width: 5px;
-  height: 23px;
-  color: #c4c4c4;
-  padding: 0px 11px;
+  color: rgb(255, 102, 130);
+  margin-right: 40px;
 }
 
 /*상품 총 금액---------------------------------------------*/
+.sum .total_price_title {
+  padding-top: 5px;
+  font-size: 23px;
+  color: black;
+}
+
 .sum .total_price {
-  margin-left: 30px;
-  display: flex;
-  font-size: 30px;
-  color: #ee5f41;
+  font-family: 'MBC1961GulimM';
+  padding-top: 8px;
+  margin-left: 20px;
+  font-size: 25px;
+  line-height: 23px;
+  color: rgb(255, 102, 130);
 }
   
 .sum .total_unit {
-  margin-left: 10px;
+  margin-left: 5px;
   padding-top: 5px;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 23px;
   color: black;
 }
 
@@ -213,39 +208,38 @@
 
 /*주문하기 버튼-------------------------------------------------*/
 .btn .btn_buy {
+  font-family: 'ChosunGu';
   margin-top: 20px;
   margin-left: 50px;
   width: 360px;
   height: 60px;
   border-radius: 5px;
-  background: #ee5f41;
+  background: rgb(255, 102, 130);
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 25px;
   line-height: 22px;
   color: #ffffff;
 }
  
 /*장바구니 버튼-------------------------------------------------*/ 
 .btn .btn_cart {
+  font-family: 'ChosunGu';
   margin-top: 20px;
   margin-left: 20px;
   width: 200px;
   height: 60px;
   border-radius: 5px;
-  background: #767676;
+  background: lightgray;
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 25px;
   line-height: 22px;
-  color: #ffffff;
+  color: black;
 }
 
 /*찜버튼---------------------------------------*/
 .btn_like {
-  margin-top: 20px;
   margin-left: 20px;
   width: 45px;
   height: 45px;
