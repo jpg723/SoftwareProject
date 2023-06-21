@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*전송 폼*/
+#SendMessageForm{
+    border: 1px solid lightgray;
+    width: 1000px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.sendForm_header{
+    margin-top: 30px;
+    font-family: 'MBC1961GulimM';
+    font-size: 50px;
+}
+/*받은 사람 이름*/
+.receiver_id_box{
+    font-family: 'ChosunGu';
+    margin-top: 10px;
+    font-size: 25px;
+    padding-left: 150px;
+    text-align: left;
+}
+
+/*쪽지 제목 입력 박스*/
+.send-message-title-inputBox{
+    display: flex;
+}
+
+/*쪽지 제목*/
+.send-message-title{
+    font-family: 'ChosunGu';
+    margin-top: 40px;
+    font-size: 25px;
+    padding-left: 150px;
+    text-align: left;
+}
+
+.send-message-title-input{
+    font-family: 'ChosunGu';
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 600px;
+    font-size: 25px;
+}
+
+/*쪽지 내용*/
+.send-message-content-inputBox{
+    display: flex;
+}
+.send-message-content{
+    font-family: 'ChosunGu';
+    margin-top: 40px;
+    font-size: 25px;
+    padding-left: 150px;
+    text-align: left;
+}
+
+.send-message-content-input{
+    font-family: 'ChosunGu';
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.message-sned-btn{
+    font-family: 'ChosunGu';
+    background-color: rgb(255, 102, 130);
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
