@@ -26,6 +26,7 @@ import FindId from './Components/Member/FindId';
 import FindPW from './Components/Member/FindPW';
 import SendMessage from './Components/Message/SendMessage';
 import Messages from './Components/Message/Messages';
+import MessageDetail from './Components/Message/MessageDetail';
 
 function App() {
   //카트
@@ -54,11 +55,19 @@ function App() {
         <Route path="/itemwrite" element={<ItemWrite />} />
         <Route path="/item/detail/:id" element={<ItemDetail />}/>
         <Route path="/chat" element={<Chat />} />
-        <Route path="/message" element={<SendMessage />} />
         <Route path="/search" element={<SearchResult />} />
         <Route path="/member/findId" element={<FindId />} />
         <Route path="/member/findPW" element={<FindPW />} />
+
         <Route path="/mypage-message" element={<Messages />} />
+
+
+        <Route path="/message" element={<SendMessage />} />
+        <Route path="/mypage-message" element={<Messages />} />
+        <Route path="/message/detail/:id" element={<MessageDetail />}/>
+      
+
+
       </Routes>
     </div>
   );

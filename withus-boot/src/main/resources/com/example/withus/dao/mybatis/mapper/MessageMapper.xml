@@ -14,7 +14,7 @@
   <select id="getMessage" resultType="Message" parameterType="Integer">
     SELECT  *
     FROM MESSAGE
-    WHERE ID = #{id}
+    WHERE MESSAGE_ID = #{message_id}
   </select>
   
   <insert id="insertMessage">

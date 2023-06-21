@@ -3,6 +3,7 @@ import '../../Css/AttendGroupItem.css';
 import '../../Css/Order.css';
 import boxiconImg from '../../img/boxicon.avif';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Messages() {
 
@@ -29,15 +30,16 @@ function Messages() {
           <div className="groupBox">      
             {
               messageList.map(function(a,i){
-                return(              
-                    <div className="groupBox2">
+                return(     
+                    <Link to={'/message/detail/'+a.message_id}>          
+                    <div className="groupBox2" >
                       <img class="boxicon" src={boxiconImg}></img>
                       <div className="groupitem-username">{a.sender_id}</div>                 
                       <div className="message">{a.title}</div>                                   
                       <div className="groupBuy-btnBox">  {a.read_chk === 1 ? <div>읽음</div>
                         :  <div>읽지않음</div>}</div>
                         </div>
-
+                        </Link>
                     )
                     })   
                 } 

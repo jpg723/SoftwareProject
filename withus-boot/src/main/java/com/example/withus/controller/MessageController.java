@@ -53,11 +53,18 @@ public class MessageController {
         return message;
      }
   
-  //받은 메시지 목록
+  //받은 메시지 전체 목록
    @GetMapping(value = "/message/{receiver_id}")
    public List<Message> getMessageList(@PathVariable("receiver_id") String receiver_id) {
    
        return messageService.getMessageList(receiver_id);
+   }
+   
+ //받은 메시지 자세히 보기
+   @GetMapping(value = "/message/detail/{message_id}")
+   public Message getMessage(@PathVariable("message_id") int message_id) {
+   
+       return messageService.getMessage(message_id);
    }
    
    //읽음 처리

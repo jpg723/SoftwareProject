@@ -53,7 +53,7 @@ const SendMessage = () => {
       <div id="SendMessageForm">
         <div class="sendForm_header">쪽지보내기</div>
         <div class="receiver_id_box">
-          <div>수신자 | {receiverId}</div>
+          <div>보내는 사람 | {receiverId}</div>
         </div>       
         <div>
           <div class="send-message-title-inputBox">
