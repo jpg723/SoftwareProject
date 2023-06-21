@@ -83,7 +83,7 @@ import styles from '../../Css/GroupItemDetail.module.css';
                   <button className="chat-btn">채팅하기</button> 
                 </div>
               </Link>
-              <Link to="/message" state={{seller:item.user_id}}>
+              <Link to="/message" state={{receiver:item.user_id}}>
                 <div className="chat-btn-box">
                   <button className="chat-btn">쪽지보내기</button> 
                 </div>
