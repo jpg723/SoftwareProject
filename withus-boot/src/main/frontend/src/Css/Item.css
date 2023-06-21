@@ -47,6 +47,7 @@
     border: 1px solid rgb(255, 102, 130);
     border-radius: 5px;
     width: 130px;
+    height: 40px;
 }
 
 /*나눔 상품 출력 방법 선택*/
@@ -128,38 +129,47 @@
     border: none;
 }
 
+/*나눔 제목*/
 .item_name{
+    font-family: 'MBC1961GulimM';
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+/*구분선*/
+.item-view-line{
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    width: 180px;
+    margin-top: 5px;
+}
+
+/*나눔 카테고리*/
+.item_category{
     font-family: 'ChosunGu';
     text-align: left;
     font-size: 20px;
     margin-left: 10px;
     margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
 }
-
-.groupItem_name{
-    width: 239px;
-    height: 23.2px;
-    color: #333333;
-    font-size: 16px;
-    margin: 0 0 8px;
+/*나눔 거래 진행 상태*/
+.item-view-state{
+    font-family: 'ChosunGu';
+    text-align: left;
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    color: gray;
 }
-
-.groupItem_price{
-    width: 239px;
-    height: 24px;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.groupItem_likeCount{
-    width: 239px;
-    height: 25px;
-    padding: 5px 0 0;
-    color: black;
-    font-size: 14px;
-}
-
-.groupItem_state{
+/*나눔 상세페이지 거래 진행 상태*/
+.item_state{
     width: 110px;
     height: 25px;
     margin: 5px 0px auto auto;

@@ -4,11 +4,11 @@ import '../../Css/Order.css';
 import boxiconImg from '../../img/boxicon.avif';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import '../../Css/Message.css';
 
 function Messages() {
 
     const [messageList , SetMessageList] = useState([]);
-
 
     useEffect(()=> {
         axios.get('/message/'+sessionStorage.getItem("id")).then((res)=>{
@@ -18,33 +18,30 @@ function Messages() {
         .catch(error => console.log(error))
       },[])
 
-
       console.log(messageList);
 
       return (
         <div>
-          <div className="line2"></div>
-          <div className="message-header">
-            <div className="groupBuy-header-content1">쪽지함</div>
-          </div>
+          <div class="receive-message-box">받은 쪽지함</div>
           <div className="groupBox">      
             {
               messageList.map(function(a,i){
                 return(     
-                    <Link to={'/message/detail/'+a.message_id}>          
-                    <div className="groupBox2" >
-                      <img class="boxicon" src={boxiconImg}></img>
-                      <div className="groupitem-username">{a.sender_id}</div>                 
-                      <div className="message">{a.title}</div>                                   
-                      <div className="groupBuy-btnBox">  {a.read_chk === 1 ? <div>읽음</div>
-                        :  <div>읽지않음</div>}</div>
-                        </div>
-                        </Link>
-                    )
-                    })   
-                } 
-          
-        </div>
+                  <div>
+                    <Link to={'/message/detail/'+a.message_id} className="message-content">       
+                        <div class="message-sender-name">{a.sender_id}</div> 
+                        <div class="message-content-line">|</div>             
+                        <div class="message-send-content">{a.title}</div>  
+                        <div class="message-content-line">|</div>                                 
+                        <div class="message-check">  {a.read_chk === 1 ? <div>읽음</div>
+                          :  <div>읽지않음</div>}</div>
+                    </Link>   
+                    <div class="messsage-one-line"></div>   
+                  </div>              
+                )
+              })   
+            }        
+          </div>
     </div>
     
   );

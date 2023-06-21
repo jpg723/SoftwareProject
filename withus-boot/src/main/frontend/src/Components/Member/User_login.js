@@ -81,7 +81,7 @@ function User_login() {
     }
 
     return (
-      <div>
+      <div id="login-page">
         <h1 id="login_header">로그인</h1>
           <div id="login_line"></div>
           <form id="login_form">

@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.message-header{
+    margin-top: 50px;
+}
+.m-header-content1{
+    font-family: 'ChosunGu';
+    border: 1px solid rgb(255, 102, 130);
+    color: rgb(255, 102, 130);
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding-top: 7px;
+    background-color: white;
+}
+
+/*받은 쪽지함-------------------------------------*/
+.receive-message-box{
+    font-family: 'MBC1961GulimM';
+    text-align: left;
+    padding-left: 180px;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+/*메세지 박스*/
+.message-content{
+    text-decoration-line: none;
+    color: black;
+    font-family: 'ChosunGu';
+    font-size: 22px;
+    width: 950px;
+    height: 50px;
+    display: flex;
+}
+
+/*보낸사람 이름*/
+.message-sender-name{
+    width: 180px;
+    text-align: center;
+    text-align: left;
+    padding-top: 12px;
+    margin-left: 30px;
+}
+
+/*구분선*/
+.message-content-line{
+    padding-top: 12px;
+    margin-left: 10px;
+    width: 10px;
+}
+
+/*보낸 내용*/
+.message-send-content{
+    margin-left: 30px;
+    padding-top: 12px;
+    width: 600px;
+    text-align: left;
+}
+
+/*읽음 확인*/
+.message-check{
+    width: 100px;
+    margin-left: 10px;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+/*구분선*/
+.messsage-one-line{
+    width: 950px;
+    border:1px solid lightgray;
+    margin: 0 auto;
+}
