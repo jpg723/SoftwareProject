@@ -83,6 +83,11 @@ import styles from '../../Css/GroupItemDetail.module.css';
                   <button className="chat-btn">채팅하기</button> 
                 </div>
               </Link>
+              <Link to="/message" state={{seller:item.user_id}}>
+                <div className="chat-btn-box">
+                  <button className="chat-btn">쪽지보내기</button> 
+                </div>
+              </Link>
               <button className="btn_itemLike" onClick={() => likeBtn_click()}><img className="btn_itemLike_icon" src={likeState?on_heart:off_heart}></img></button>
             </div>
           </div>

@@ -30,7 +30,7 @@ import com.example.withus.domain.Message;
 @Mapper
 public interface MessageMapper {
 	    //메시지 보내기
-		void inserMessage(Message message);
+		void insertMessage(Message message);
 		
 		//받은 메시지 불러오기
 		List<Message> getMessageList(String receiver_id);

@@ -23,6 +23,7 @@ import ItemWrite from './Components/Item/ItemWrite';
 import ItemDetail from './Components/Item/ItemDetail';
 import Chat from './Components/Item/Chat';
 import SearchResult from './Components/Main/SearchResult';
+import SendMessage from './Components/Message/SendMessage';
 
 function App() {
   //카트
@@ -51,14 +52,13 @@ function App() {
         <Route path="/mypage-mycart" element={<MyCart />} />
         <Route path="/itemwrite" element={<ItemWrite />} />
         <Route path="/item/detail/:id" element={<ItemDetail />} />
-        <Route path="/chat" element={<Chat />} />
-<<<<<<< Updated upstream
-=======
+        <Route path="/chat" element={<Chat />} />    
+        <Route path="/message" element={<SendMessage />} />
         <Route path="/search" element={<SearchResult />} />
 
       
 
->>>>>>> Stashed changes
+
       </Routes>
     </div>
   );

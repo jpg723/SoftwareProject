@@ -11,7 +11,7 @@ import com.example.withus.domain.Message;
 
 public interface MessageDao {
 	//메시지 보내기
-	void inserMessage(Message message) throws DataAccessException;
+	void insertMessage(Message message) throws DataAccessException;
 	
 	//받은 메시지 불러오기
 	List<Message> getMessageList(String receiver_id) throws DataAccessException;

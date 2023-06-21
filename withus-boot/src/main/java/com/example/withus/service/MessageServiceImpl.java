@@ -16,8 +16,8 @@ public class MessageServiceImpl implements MessageService {
 	private MessageDao messageDao;
 
 	@Override
-	public void inserMessage(Message message) {
-		messageDao.inserMessage(message);
+	public void insertMessage(Message message) {
+		messageDao.insertMessage(message);
 	}
 
 	@Override
