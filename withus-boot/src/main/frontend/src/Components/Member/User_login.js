@@ -99,9 +99,9 @@ function User_login() {
             <div class="inputLoginCheck">{checkPw}</div>   
             <div class="login_content">
               <div id="find">
-                <div class="find_content">아이디 찾기</div>
+                <Link to="/member/findId"><div class="find_content">아이디 찾기</div></Link>
                 <div class="find_content">|</div>
-                <div class="find_content">비밀번호 찾기</div>
+                <Link to="/member/findPW"><div class="find_content">비밀번호 찾기</div></Link>
               </div>
             </div>
             <div class="login_content">

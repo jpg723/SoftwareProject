@@ -21,10 +21,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.example.withus.domain.Donation;
 import com.example.withus.domain.DonationOrders;
 import com.example.withus.domain.GroupItem;
+import com.example.withus.domain.Item;
 import com.example.withus.domain.Like;
 import com.example.withus.domain.Order;
 import com.example.withus.service.DonationOrdersService;
 import com.example.withus.service.GroupItemService;
+import com.example.withus.service.ItemService;
 import com.example.withus.service.LikeService;
 
 @RestController
@@ -35,6 +37,27 @@ public class LikeController {
    private LikeService likeService;
    @Autowired
    private GroupItemService groupItemService;
+   @Autowired
+   private ItemService itemService;
+   
+   //내가 찜한 생필품 조회
+   @GetMapping(value="/Items/{user_id}")
+   public List<Item> getMyItems (@PathVariable("user_id") String user_id) { 
+	   
+       List<Item> ItemIds = likeService.getItemLikes(user_id);
+       List<Item> results = new ArrayList<Item>();
+       
+       System.out.println(ItemIds.size());
+       
+       for(int i=0; i<ItemIds.size(); i++) {
+    	   int id = ItemIds.get(i).getItem_id();
+    	   Item Item = itemService.getItem(id);
+    	   results.add(Item);
+       }
+       
+       return results;
+   }
+   
    //내가 찜한 공동구매 상품 조회
    @GetMapping(value="/groupItems/{user_id}")
    public List<GroupItem> getMyGroupItems (@PathVariable("user_id") String user_id) { 
@@ -42,10 +65,11 @@ public class LikeController {
        List<GroupItem> groupItemIds = likeService.getGroupItemLikes(user_id);
        List<GroupItem> results = new ArrayList<GroupItem>();
        
+       System.out.println(groupItemIds.size());
+       
        for(int i=0; i<groupItemIds.size(); i++) {
     	   int id = groupItemIds.get(i).getGroupItem_id();
     	   GroupItem groupItem = groupItemService.getGroupItem(id);
-    	   System.out.println(groupItem.getGroupItem_name());
     	   results.add(groupItem);
        }
        
@@ -63,6 +87,19 @@ public class LikeController {
        
        return likeService.getGroupItemLike(like);
    }
+   
+   //공동구매 찜하기 조회
+   @GetMapping(value="/Item/getLike/{id}/{user_id}")
+   public List<Like> getItemLike (@PathVariable("user_id") String user_id, @PathVariable("id") int id) {
+	   Like like = new Like();       
+       like.setItem_id(id);
+       like.setUser_id(user_id);
+       Date day = new Date();
+       like.setLike_date(day);
+       
+       return likeService.getItemLike(like);
+   }
+   
     //공동구매 찜하기
     @GetMapping(value="/groupItem/like/{id}/{user_id}") 
       public void GroupItemLike (@PathVariable("user_id") String user_id, @PathVariable("id") int id)  {

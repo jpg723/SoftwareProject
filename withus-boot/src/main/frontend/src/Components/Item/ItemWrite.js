@@ -67,7 +67,7 @@ function ItemWrite() {
                 data: {
                     data1:item_title, data2:item_image, data3: item_content, data4: userId, data5: category
                 } , 
-                //baseURL: 'http://localhost:8080',
+                baseURL: 'http://localhost:8080',
                 //withCredentials: true,
                 }
             ).then(function (response) {

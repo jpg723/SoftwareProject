@@ -10,5 +10,6 @@ import com.example.withus.domain.Member;
 
 public interface MemberDao {
 	Member findByIdAndPassword(String user_id, String password) throws DataAccessException;
-
+	String findId(Member member) throws DataAccessException;
+	String findPW(Member member) throws DataAccessException;
 }

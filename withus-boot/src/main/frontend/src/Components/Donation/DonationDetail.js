@@ -42,51 +42,6 @@ import on_heart from '../../img/on_heart.png';
        setModalOpen2(false);
      };
 
-/*      function getComments() {
-        useEffect(()=> {
-            axios.get('/donation/comments/'+ id ).then((res)=>{
-                SetcommentList(res.data)
-                console.log(res)
-            })
-            .catch(error => console.log(error))
-          },[]);
-     } */
-
-     const [likeState, setLikeState] = useState(false);
-     console.log("초기상태" + likeState);
-     function likeBtn_click() {
-       /*좋아요가 안 눌러져 있을 경우 */
-       if(likeState === false && sessionStorage.getItem("id") !== null){
-         setLikeState(true);
-         /*axios(
-           {
-           url: '/groupItem/like/' + id +  '/' + sessionStorage.getItem("id"),
-           method: 'get',
-           baseURL: 'http://localhost:8080',
-           //withCredentials: true,
-           }
-         ).then(function (response) {
-           console.log(response.data);
-         });*/
-       }
-       else if(likeState === true && sessionStorage.getItem("id") !== null){
-         setLikeState(false);
-         /*axios(
-           {
-           url: '/groupItem/like/cancel/' + id +  '/' + sessionStorage.getItem("id"),
-           method: 'get',
-           baseURL: 'http://localhost:8080',
-           //withCredentials: true,
-           }
-         ).then(function (response) {
-           console.log(response.data);
-         });*/
-       }
-       else{
-         alert("로그인을 해주세요!");
-       }
-     }
-
     function donationOrder () {
         /*백엔드로 값 전달*/
             if(sessionStorage.getItem("id") === null) {
@@ -145,7 +100,6 @@ import on_heart from '../../img/on_heart.png';
                     <div className={styles.donation_detail}>{donation.donation_detail}</div>
                     <div className={styles.donation_btn_box}>
                         <button className={styles.btn_donation}  onClick={openModal2}>기부하기</button>
-                        <button className={styles.btn_donationLike} onClick={() => likeBtn_click()}><img className={styles.btn_donationLike_icon} src={likeState?on_heart:off_heart}></img></button>
                     </div>
                 </div>
 

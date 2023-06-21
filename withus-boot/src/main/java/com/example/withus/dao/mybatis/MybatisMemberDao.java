@@ -24,6 +24,18 @@ public class MybatisMemberDao implements MemberDao {
 		return memberMapper.findByIdAndPassword(user_id, password);
 	}
 
+	@Override
+	public String findId(Member member) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return memberMapper.findId(member);
+	}
+
+	@Override
+	public String findPW(Member member) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return memberMapper.findPW(member);
+	}
+
 
 	
 }

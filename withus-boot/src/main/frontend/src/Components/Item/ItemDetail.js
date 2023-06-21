@@ -11,17 +11,48 @@ import styles from '../../Css/GroupItemDetail.module.css';
 
   let { id } = useParams();
   const [item, setItem] = useState("");
+  const [likeList, setLikeList] = useState("");
 
   useEffect(()=>{
     axios.get("/item/detail/"+id).then((response)=>{
         if(response.data){
             console.log(response.data);
             setItem(response.data);
+            check_like();
         }else{
             alert("failed to");
         }
     });
   }, []);
+
+  function check_like() {  
+    if(sessionStorage.getItem("id") !== null) {
+      axios(
+        {
+        url: '/Item/getLike/' + id +  '/' + sessionStorage.getItem("id"),
+        method: 'get',
+        //baseURL: 'http://localhost:8080',
+        withCredentials: true,
+        }
+      ).then(function (response) {
+        console.log(response.data);
+        setLikeList(response.data);
+
+        if(response.data.length > 0) {
+          setLikeState(true);
+          console.log("좋아요 여부" + likeList);
+        }
+        else {
+          setLikeState(false);
+          console.log("좋아요 안함" + likeList);
+        }
+
+      });
+    }
+    else {
+      setLikeState(false);
+    }
+  }
 
   const [likeState, setLikeState] = useState(false);
   console.log("초기상태" + likeState);
@@ -29,29 +60,29 @@ import styles from '../../Css/GroupItemDetail.module.css';
     /*좋아요가 안 눌러져 있을 경우 */
     if(likeState === false && sessionStorage.getItem("id") !== null){
       setLikeState(true);
-      /*axios(
+      axios(
         {
-        url: '/groupItem/like/' + id +  '/' + sessionStorage.getItem("id"),
+        url: '/Item/' + id +  '/' + sessionStorage.getItem("id") + '/like',
         method: 'get',
-        baseURL: 'http://localhost:8080',
-        //withCredentials: true,
+        //baseURL: 'http://localhost:8080',
+        withCredentials: true,
         }
       ).then(function (response) {
         console.log(response.data);
-      });*/
+      });
     }
     else if(likeState === true && sessionStorage.getItem("id") !== null){
       setLikeState(false);
-      /*axios(
+      axios(
         {
-        url: '/groupItem/like/cancel/' + id +  '/' + sessionStorage.getItem("id"),
+        url: '/Item/like/cancel/' + id +  '/' + sessionStorage.getItem("id"),
         method: 'get',
-        baseURL: 'http://localhost:8080',
-        //withCredentials: true,
+        //baseURL: 'http://localhost:8080',
+        withCredentials: true,
         }
       ).then(function (response) {
         console.log(response.data);
-      });*/
+      });
     }
     else{
       alert("로그인을 해주세요!");

@@ -3,7 +3,9 @@ package com.example.withus.controller;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,11 +14,14 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.withus.domain.Item;
 import com.example.withus.domain.Member;
 import com.example.withus.service.MemberService;
 
@@ -32,6 +37,44 @@ public class MemberController {
 	String[] member = new String[10];
 	int i = 0;
 	boolean login_check = false;
+	
+	@ResponseBody
+	   @RequestMapping(value="/findPW", method=RequestMethod.POST)
+	   public String findPW (HttpServletRequest request, @RequestBody Map<String, Object> paramMap) { 
+		   
+		String[] Info = new String[2];
+		int i = 0;
+		for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
+			 Info[i] = pair.getValue().toString();
+			 System.out.println(Info[i]);
+			 i++;
+		}
+		
+		Member member = new Member();
+		member.setEmail(Info[0]);
+		member.setUser_id(Info[1]);
+		
+		return memberService.findPW(member);
+	   }
+	
+	   @ResponseBody
+	   @RequestMapping(value="/findId", method=RequestMethod.POST)
+	   public String findId (HttpServletRequest request, @RequestBody Map<String, Object> paramMap) { 
+		   
+		String[] Info = new String[2];
+		int i = 0;
+		for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
+			 Info[i] = pair.getValue().toString();
+			 System.out.println(Info[i]);
+			 i++;
+		}
+		
+		Member member = new Member();
+		member.setEmail(Info[0]);
+		member.setUser_name(Info[1]);
+		
+		return memberService.findId(member);
+	   }
 	
 	@ResponseBody
 	@RequestMapping(value="register.do", method=RequestMethod.POST)

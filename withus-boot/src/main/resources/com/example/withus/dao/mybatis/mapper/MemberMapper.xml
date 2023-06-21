@@ -8,8 +8,22 @@
     SELECT *
     FROM MEMBER
     WHERE USER_ID = #{user_id}
-      AND PASSWORD = #{password}
+    AND PASSWORD = #{password}
   </select>
 
+  <!-- 아이디 찾기 / 이름 & 이메일 주소 -->
   
+  <select id="findId" parameterType="MEMBER" resultType="String">
+  	SELECT USER_ID
+    FROM MEMBER
+    WHERE EMAIL = #{email}
+    AND USER_NAME = #{user_name}
+  </select>
+  
+  <select id="findPW" parameterType="MEMBER" resultType="String">
+  	SELECT PASSWORD
+    FROM MEMBER
+    WHERE EMAIL = #{email}
+    AND USER_ID = #{user_id}
+  </select>
 </mapper>

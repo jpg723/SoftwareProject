@@ -18,6 +18,13 @@ import com.example.withus.dao.mybatis.mapper.LikeMapper;
 public class MybatisLikeDao implements LikeDao {
 	@Autowired
 	private LikeMapper likeMapper;
+	int id = 0;
+	
+	@Override
+	public List<Like> getItemLike(Like like) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return likeMapper.getItemLike(like);
+	}
 
 	@Override
 	public List<Like> getGroupItemLike(Like like) throws DataAccessException {
@@ -26,8 +33,8 @@ public class MybatisLikeDao implements LikeDao {
 	}
 	
 	@Override
-	public List<Item> getItemLikes(Map<String, Integer> params) throws DataAccessException {
-		return likeMapper.getItemLikes(params);
+	public List<Item> getItemLikes(String user_id) throws DataAccessException {
+		return likeMapper.getItemLikes(user_id);
 	}
 
 	@Override
@@ -37,21 +44,25 @@ public class MybatisLikeDao implements LikeDao {
 
 	@Override
 	public void insertItemLike(Like like) throws DataAccessException {
+		updateItemLike(like.getItem_id());
 		likeMapper.insertItemLike(like);
 	}
 
 	@Override
 	public void insertGroupItemLike(Like like) throws DataAccessException {
+		updateGroupItemLike(like.getGroupItem_id());
 		likeMapper.insertGroupItemLike(like);
 	}
 
 	@Override
 	public void removeItemLike(Like like) throws DataAccessException {
+		minusItemLike(like.getItem_id());
 		likeMapper.removeItemLike(like);
 	}
 
 	@Override
 	public void removeGroupItemLike(Like like) throws DataAccessException {
+		minusGroupItemLike(like.getGroupItem_id());
 		likeMapper.removeGroupItemLike(like);
 	}
 
@@ -77,6 +88,30 @@ public class MybatisLikeDao implements LikeDao {
 		}
 		
 		return rankingItems;
+	}
+
+	@Override
+	public void updateGroupItemLike(int id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		likeMapper.updateGroupItemLike(id);
+	}
+	
+	@Override
+	public void updateItemLike(int id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		likeMapper.updateItemLike(id);
+	}
+
+	@Override
+	public void minusGroupItemLike(int id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		likeMapper.minusGroupItemLike(id);
+	}
+
+	@Override
+	public void minusItemLike(int id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		likeMapper.minusItemLike(id);
 	}
 
 	

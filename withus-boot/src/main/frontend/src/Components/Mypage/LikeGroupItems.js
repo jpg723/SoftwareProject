@@ -4,15 +4,21 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'; 
 import { Link } from 'react-router-dom';
 import styles from "../../Css/Product.module.css";
-import MypageCategory from './MypageCategory.js';
 
 function LikeGroupItems() {
+
   const [list , SetList] = useState([]);
     
   const convertPrice = (price) =>{
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
   }
+
   useEffect(()=> {
+    
+    if(sessionStorage.getItem("id") === null) {
+        return;
+    }
+
     axios.get('/groupItems/' + sessionStorage.getItem("id")).then((res)=>{
       SetList(res.data)
       console.log(res)
@@ -21,15 +27,16 @@ function LikeGroupItems() {
   },[])       
 
   return (
+    <div><h3>공동구호물품</h3>
     <div id="groupItem_view_main">
+      
       {
+        
         list.map(function(a,i){
             return(
               <div className={styles.product}>  
-                <Link to={'/groupItem/detail/'+list[i].groupItem_id} className="/groupItem">  
-                  <div className={styles.product_image}>       
-                  <img className="groupItem_image" src={process.env.PUBLIC_URL+'/' + list[i].img}></img>
-                  </div>
+                <Link to={'/groupItem/detail/'+list[i].groupItem_id} className="/groupItem">       
+                  <img className="groupItem_image" style={{width:"200px", height:"300px", border:"1px solid"}} src={process.env.PUBLIC_URL+'/' + list[i].img}></img>
                 </Link>
                 <div className={styles.product_name}>{list[i].groupItem_name}</div>
                 <div className={styles.product_price}>
@@ -45,7 +52,7 @@ function LikeGroupItems() {
             )           
         })
       }
-    </div>   
+    </div>   </div>
   );
 }
 export default LikeGroupItems;

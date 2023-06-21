@@ -29,9 +29,19 @@ import com.example.withus.domain.Like;
 @Mapper
 public interface LikeMapper {
 
-	List<Like> getGroupItemLike(Like like);
+  void minusGroupItemLike (int id);
   
-  List<Item> getItemLikes(Map<String, Integer> params);
+  void minusItemLike (int id);
+  
+  void updateItemLike(int id);
+  
+  void updateGroupItemLike(int id);
+  
+  List<Like> getItemLike(Like like);
+  
+  List<Like> getGroupItemLike(Like like);
+  
+  List<Item> getItemLikes(String user_id);
   
   List<GroupItem> getGroupItemLikes(String user_id);
 

@@ -19,6 +19,18 @@ public class MemberServiceImpl implements MemberService {
 		// TODO Auto-generated method stub
 		return memberDao.findByIdAndPassword(user_id, password);
 	}
+
+	@Override
+	public String findId(Member member) {
+		// TODO Auto-generated method stub
+		return memberDao.findId(member);
+	}
+
+	@Override
+	public String findPW(Member member) {
+		// TODO Auto-generated method stub
+		return memberDao.findPW(member);
+	}
 	
 	
 

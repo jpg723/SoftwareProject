@@ -12,9 +12,19 @@ import com.example.withus.domain.Order;
 
 public interface LikeDao {
 
+	void minusGroupItemLike(int id) throws DataAccessException;
+	
+	void minusItemLike(int id) throws DataAccessException;
+	
+	void updateGroupItemLike(int id) throws DataAccessException;
+	
+	void updateItemLike(int id) throws DataAccessException;
+	
+	List<Like> getItemLike(Like like) throws DataAccessException;
+	
 	List<Like> getGroupItemLike(Like like) throws DataAccessException; 
 	
-	List<Item> getItemLikes(Map<String, Integer> params) throws DataAccessException;
+	List<Item> getItemLikes(String user_id) throws DataAccessException;
 
 	List<GroupItem> getGroupItemLikes(String user_id) throws DataAccessException;
 	 

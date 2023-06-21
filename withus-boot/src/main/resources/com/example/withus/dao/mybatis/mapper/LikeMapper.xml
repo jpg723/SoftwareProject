@@ -19,10 +19,10 @@
    order by COUNT(groupitem_id) DESC
   </select>
   
-  <select id="getItemLikes" parameterType="java.util.Map" resultType="Item">
-   select like_id, user_id, item_id, like_date
+  <select id="getItemLikes" parameterType="String" resultType="Item">
+   select *
    from LIKE_ITEM
-   where #{item_id} is not null and user_id=#{user_id}
+   where item_id is not null and user_id=#{user_id}
   </select>
   
   <select id="getGroupItemLikes" parameterType="String" resultType="GroupItem">
@@ -35,6 +35,12 @@
    select *
    from LIKE_ITEM
    where GROUPITEM_ID = #{groupItem_id} and USER_ID = #{user_id}
+  </select>
+  
+  <select id="getItemLike" parameterType="Like" resultType="Like">
+   select *
+   from LIKE_ITEM
+   where ITEM_ID = #{item_id} and USER_ID = #{user_id}
   </select>
   
   <insert id="insertItemLike" useGeneratedKeys="false" keyProperty="like_id" parameterType="Like">
@@ -52,6 +58,30 @@
    insert into LIKE_ITEM(like_id, user_id, groupItem_id, like_date)
    values(#{like_id}, #{user_id}, #{groupItem_id}, #{like_date})
   </insert>
+  
+  <update id="updateGroupItemLike" parameterType="int">
+   UPDATE GROUPITEM SET 
+      like_count = like_count + 1
+      WHERE groupitem_id = #{groupitem_id}      
+  </update>
+  
+  <update id="minusGroupItemLike" parameterType="int">
+   	  UPDATE GROUPITEM SET 
+      like_count = like_count - 1
+      WHERE groupitem_id = #{groupitem_id}      
+  </update>
+  
+  <update id="updateItemLike" parameterType="int">
+   	  UPDATE ITEM SET 
+      like_count = like_count + 1
+      WHERE item_id = #{item_id}      
+  </update>
+  
+  <update id="minusItemLike" parameterType="int">
+   UPDATE ITEM SET 
+      like_count = like_count - 1
+      WHERE item_id = #{item_id}      
+  </update>
   
   <delete id="removeItemLike" parameterType="Like">
    delete from LIKE_ITEM

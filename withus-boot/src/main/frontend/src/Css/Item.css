@@ -70,6 +70,18 @@
     flex-wrap: wrap;
 }
 
+#Item_view_main1{
+    margin-left: 20px;
+    margin-top: 0%;
+    height: 100%;
+    width: 900px;
+    padding: 20px 0px;
+    display: flex;
+    /*화면 넘어가면 줄바꿈*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .groupItem{
     margin-left: 50px;
     width: 249px;

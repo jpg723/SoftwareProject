@@ -23,6 +23,8 @@ import ItemWrite from './Components/Item/ItemWrite';
 import ItemDetail from './Components/Item/ItemDetail';
 import Chat from './Components/Item/Chat';
 import SearchResult from './Components/Main/SearchResult';
+import FindId from './Components/Member/FindId';
+import FindPW from './Components/Member/FindPW';
 
 function App() {
   //카트
@@ -52,13 +54,9 @@ function App() {
         <Route path="/itemwrite" element={<ItemWrite />} />
         <Route path="/item/detail/:id" element={<ItemDetail />} />
         <Route path="/chat" element={<Chat />} />
-<<<<<<< Updated upstream
-=======
         <Route path="/search" element={<SearchResult />} />
-
-      
-
->>>>>>> Stashed changes
+        <Route path="/member/findId" element={<FindId />} />
+        <Route path="/member/findPW" element={<FindPW />} />
       </Routes>
     </div>
   );

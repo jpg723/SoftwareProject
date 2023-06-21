@@ -19,8 +19,8 @@ public class LikeServiceImpl implements LikeService {
 	@Autowired
 	private LikeDao likeDao;
 
-	public List<Item> getItemLikes(Map<String, Integer> params) {
-		return likeDao.getItemLikes(params);
+	public List<Item> getItemLikes(String user_id) {
+		return likeDao.getItemLikes(user_id);
 	}
 
 	public List<GroupItem> getGroupItemLikes(String user_id) {
@@ -53,5 +53,9 @@ public class LikeServiceImpl implements LikeService {
 
 	public List<Like> getGroupItemLike(Like like) {
 		return likeDao.getGroupItemLike(like);
+	}
+
+	public List<Like> getItemLike(Like like) {
+		return likeDao.getItemLike(like);
 	}
 }
