@@ -3,7 +3,7 @@ package com.example.withus.controller;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.withus.domain.Donation;
 import com.example.withus.domain.DonationOrders;
+import com.example.withus.domain.MyDonation;
 import com.example.withus.service.DonationOrdersService;
 import com.example.withus.service.DonationService;
 
@@ -29,6 +30,28 @@ public class DonationOrdersController {
 	private DonationOrdersService donationOrdersService;
 	@Autowired
 	private DonationService donationService;
+	
+	@GetMapping(value = "/myDonation/{user_id}")
+	 public List<MyDonation> getMyDonations (@PathVariable("user_id") String user_id) {
+		 List<MyDonation> myDonations = new ArrayList<MyDonation>();
+		
+	     List<DonationOrders> MyDonation1 = donationOrdersService.getTotalDonationOrders(user_id);
+	     for(int i = 0; i < MyDonation1.size(); i++) {
+	    	 Donation MyDonation2 = donationService.getDonation(MyDonation1.get(i).getDonation_id());
+	    	 MyDonation myDonation = new MyDonation();
+	    	 myDonation.setDonation_id(MyDonation1.get(i).getDonation_id());
+	    	 myDonation.setDonation_name(MyDonation2.getDonation_name());
+	    	 myDonation.setImg(MyDonation2.getImg());
+	    	 myDonation.setDonationadd_date(MyDonation1.get(i).getDonationadd_date());
+	    	 myDonation.setUser_id(user_id);
+	    	 myDonation.setDonation_price(MyDonation1.get(i).getDonation_price());
+	    	 myDonation.setComments(MyDonation1.get(i).getComments());
+	    	 myDonation.setDonation_price(MyDonation1.get(i).getDonation_price());
+	    	 myDonations.add(myDonation);
+	     }	     
+	     return myDonations;
+	 }
+	 
 	
 	 @GetMapping(value = "/donation/comments/{id}")
 	 public List<DonationOrders> getDonationOrdersForComment (@PathVariable("id") int donation_id) {
