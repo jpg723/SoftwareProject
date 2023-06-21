@@ -126,7 +126,7 @@ function AttendGroupOrder(props) {
                     </div>
                 </div>
             </div>
-            <div class="inputCheck">{checkName}</div>
+            <div class="inputCheck_groupOrder">{checkName}</div>
             <div class="attend-group-order_content">
                 <div class="attend-group-order_content1">
                     <div class="attend-group-order_name">이메일</div>
@@ -138,7 +138,7 @@ function AttendGroupOrder(props) {
                     </div>
                 </div>
             </div>
-            <div class="inputCheck">{checkEmail}</div>
+            <div class="inputCheck_groupOrder">{checkEmail}</div>
             <div class="attend-group-order_content">
                 <div class="attend-group-order_content1">
                     <div class="attend-group-order_name">전화번호</div>
@@ -150,7 +150,7 @@ function AttendGroupOrder(props) {
                     </div>
                 </div>
             </div>
-            <div class="inputCheck">{checkPhone}</div>    
+            <div class="inputCheck_groupOrder">{checkPhone}</div>    
             <div class="attned-group-order_content">
                 <div className="group-buy-count-box">
                     <img

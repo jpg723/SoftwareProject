@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'MBC1961GulimM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .attendGroup {
   width: 600px;
   height: 20px;
@@ -16,8 +29,8 @@
   margin: 0 auto;
   margin-top: 20px;
   width: 1050px;
-  height: 2px;
-  background: #c4c4c4;
+  height: 1.5px;
+  background: lightgray;
 }
 /*공동구매 박스 헤더------------------------------------------*/
 .groupBuy-header{
@@ -25,37 +38,32 @@
 }
 
 .groupBuy-header-content1{
-  border: 1px solid #ee5f41;
+  border: 1px solid rgb(255, 102, 130);
   width: 200px;
   height: 30px;
   margin-top: 20px;
-  padding-top: 5px;
+  padding-top: 12px;
   margin-left: 50px;
   text-align: center;
-  font-size: 17px;
-  color: #ee5f41;
+  font-size: 20px;
+  color: rgb(255, 102, 130);
   border-radius: 5px;
+  font-family: 'ChosunGu';
 }
 
-.groupStartBtn{
+/*공동구매 방만들기*/
+.groupStart_btn{
+  font-family: 'ChosunGu';
+  margin-left: 20px;
   margin-top: 20px;
-  width: 100px;
-  height: 35px;
+  padding-top: 12px;
+  width: 200px;
+  height: 45px;
   border-radius: 5px;
-  background: #ee5f41;
+  background: rgb(255, 102, 130);
   border: none;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
   color: #ffffff;
-}
-.message{
-  margin-top: 15px;
-  width: 300px;
-  height: 30px;
-  text-align: center;
-  font-size: 17px;
-  color: #ee5f41;
-  border-radius: 5px;
 }
 
 .groupBuy-header-content2{
@@ -68,6 +76,9 @@
   margin: 0 auto;
   margin-top: 20px;
   width: 950px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 3px 3px lightgray;
 }
 
 .groupBox2{
@@ -78,18 +89,10 @@
   height: 50px;
 }
 
-/*박스 아이콘----------------------------*/
-.boxicon{
-  margin-top: auto;
-  margin-left: 20px;
-  margin-bottom: auto;
-  width: 35px;
-  height: 35px;
-}
-
 /*공동구매자 이름----------------------------*/
 .groupitem-username{
-  font-size: 20px;
+  font-family: 'ChosunGu';
+  font-size: 22px;
   margin-top: auto;
   margin-left: 15px;
   margin-bottom: auto;
@@ -98,26 +101,44 @@
 
 /*공동구매 참여자 수----------------------------*/
 .groupitem-count{
-  font-size: 20px;
+  font-family: 'ChosunGu';
+  font-size: 22px;
   margin-top: auto;
   margin-left: 10px;
   margin-bottom: auto;
   padding-top: 2px; 
+  color: black;
+}
+
+/*공동구매 코멘트----------------------------*/
+.groupitem-message{
+  font-family: 'ChosunGu';
+  font-size: 22px;
+  margin-top: auto;
+  margin-left: 30px;
+  margin-bottom: auto;
+  padding-top: 2px; 
+  color: gray;
 }
 
 /*공동구매 참여 버튼----------------------------*/
 .groupBuy-btnBox{
+  font-family: 'ChosunGu';
   margin: auto 0 auto auto;
   width: 100px;
 }
+
 .groupBuyBtn{
+  font-family: 'ChosunGu';
   width: 100px;
   height: 35px;
   border-radius: 5px;
-  background: #ee5f41;
+  background: rgb(255, 102, 130);
   border: none;
   font-size: 16px;
-  font-weight: bold;
   color: #ffffff;
 }
 
+.group_order_modal{
+  font-family: 'MBC1961GulimM';
+}

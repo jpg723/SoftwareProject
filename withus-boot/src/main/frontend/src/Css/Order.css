@@ -1,10 +1,26 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*공동구매 물품 혼자 구매 헤더*/
 #order_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 30px;
 }
 
 /*구분선----------------------------------------------------*/
 #order_line{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     width: 400px;
     margin: 0 auto;
 }
@@ -28,8 +44,9 @@
 }
 
 .order_name{
-    margin: 15px auto;
-    font-size: 17px;
+    font-family: 'ChosunGu';
+    margin: 20px auto;
+    font-size: 20px;
 }
 
 /*입력박스----------------------------------------------------*/
@@ -37,13 +54,14 @@
     width: 350px;
     display: flex;
     margin: auto 0px;
+    font-family: 'ChosunGu';
 }
 .start_content2{
     width: 400px;
     display: flex;
     margin: auto 0px;
 }
-
+/*공동구매 방 이름 입력창*/
 .order_inputBox{
     display: flex;
     margin: 5px 20px auto; 
@@ -55,7 +73,19 @@
     padding: 0 0 0 14px;
 }
 
+.order_input{
+    font-family: 'ChosunGu';
+    border: none;
+    outline: none;
+    margin: auto 0;
+    font-size: 15.5px;
+    width: 300px;
+    height: 18.4px;
+}
+
+/*공동구매 방 메세지 입력창*/
 .start_inputBox{
+    font-family: 'ChosunGu';
     margin-top: 20px;
     display: flex;
     margin: 5px 20px auto; 
@@ -67,73 +97,80 @@
     padding: 0 0 0 14px;
 }
 
-.order_input{
-    border: none;
-    outline: none;
-    margin: auto 0;
-    font-size: 16px;
-    width: 300px;
-    height: 18.4px;
-}
-
 .start_input{
+    font-family: 'ChosunGu';
     border: none;
     outline: none;
     margin: auto 0;
-    font-size: 14px;
+    font-size: 15.5px;
     width: 500px;
     height: 18.4px;
 }
 
-/*주문 수량-------------------------------------------*/
+/*공동구매 혼자주문 수량-------------------------------------------*/
 .order-count-content{
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: 'ChosunGu';
+    margin-top: 10px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .order-count{
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: 'ChosunGu';
+    margin-top: 10px;
     margin-left: 15px;
-    font-size: 20px;
-    color: #ee5f41;
+    font-size: 22px;
+    color: rgb(255, 102, 130);
 }
 
-/*주문 가격---------------------------------------------*/
+/*혼자 공동구매 주문 가격---------------------------------------------*/
 .order-price-content{
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: 'ChosunGu';
+    margin-top: 10px;
     margin-left: auto;
     margin-right: 0px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .order-price{
-    margin-top: auto;
-    margin-bottom: auto;
+    font-family: 'ChosunGu';
+    margin-top: 10px;
     margin-left: 15px;
-    font-size: 20px;
-    color: #ee5f41;
+    font-size: 22px;
+    color: rgb(255, 102, 130);
 }
 
 .order-price-content2{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 3px;
-    font-size: 20px;
+    font-family: 'ChosunGu';
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 22px;
+    color: black;
 }
 
-/*주문 버튼-------------------------------------------*/
+/*공동구매 주문 버튼-------------------------------------------*/
 #order_btn{
     border: none;
     margin: 20px 0 0 20px;
     height: 50px;
     width: 200px;
-    font-size: 17px;
-    background-color: #ee5f41;
+    font-size: 20px;
+    background-color: rgb(255, 102, 130);
     border-radius: 4px;
     color: white;
     text-align: center;
+    font-family: 'ChosunGu';
+}
+
+#along_order_btn{
+    border: none;
+    margin: 2px 0 0 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    background-color: rgb(255, 102, 130);
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-family: 'ChosunGu';
 }

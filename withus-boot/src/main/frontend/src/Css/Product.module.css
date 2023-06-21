@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'MBC1961GulimM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .filter {
   display: flex;
   width: 85%;
@@ -41,16 +53,22 @@
     font-size: 12px;
   }
 }
+
 /*아이템 박스---------------------*/
 .product {
   margin-left: 15px;
   flex: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px lightgray;
 }
 /*아이템 이미지---------------------*/  
 .product_image {
+  border-radius: 10px;
   width: 280px;
-  height: 380px;
+  height: 300px;
   margin-bottom: 16px;
 }
   
@@ -63,21 +81,25 @@
 .product_name {
   text-align: left;
   margin-bottom: 10px;
+  margin-left: 10px;
   font-size: 20px;
   color: #000000;
+  font-family: 'ChosunGu';
 }
 
 
 /*할인된 아이템 가격--------------*/  
 .product_price{
+  font-family: 'MBC1961GulimM';
   display: flex;
 }
 
 /*할인률---------------------*/
 .product_discount{
+  margin-left: 10px;
   color: red;
   font-size: 21px;
-  font-weight: bold;
+  font-family: 'MBC1961GulimM';
 }
 
 .price {
@@ -96,17 +118,21 @@
 
 /*원래 아이템 가격----------------*/
 .origin_price {
+  margin-top: 5px;
+  margin-left: 10px;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   color: gray;
   text-decoration: line-through;
+  font-family: 'ChosunGu';
 }
-  
+
+
 .origin_unit {
   text-align: left;
-  font-size: 17px;
+  font-size: 20px;
   color: gray;
-  text-decoration: line-through;
+  font-family: 'ChosunGu';
 }
   
 @media (max-width: 968px) {

@@ -1,7 +1,6 @@
 import { Routes, Route} from 'react-router-dom';
 import "./App.css";
 import Header from './Components/Main/Header.js';
-import MainCategory from './Components/Main/MainCategory.js';
 import Main from './Components/Main/Main.js';
 import Item from './Components/Item/ItemMain.js';
 import GroupItem from './Components/GroupItem/GroupItemMain.js';
@@ -25,6 +24,7 @@ import Chat from './Components/Item/Chat';
 import SearchResult from './Components/Main/SearchResult';
 import FindId from './Components/Member/FindId';
 import FindPW from './Components/Member/FindPW';
+import SendMessage from './Components/Message/SendMessage';
 
 function App() {
   //카트
@@ -32,7 +32,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <MainCategory/>
       <Routes>
         <Route path="/" element={<Main />}/>
         <Route path="/item" element={<Item />}/>
@@ -52,8 +51,9 @@ function App() {
         <Route path="/mypage-myinfo" element={<MyInfo />} />
         <Route path="/mypage-mycart" element={<MyCart />} />
         <Route path="/itemwrite" element={<ItemWrite />} />
-        <Route path="/item/detail/:id" element={<ItemDetail />} />
+        <Route path="/item/detail/:id" element={<ItemDetail />}/>
         <Route path="/chat" element={<Chat />} />
+        <Route path="/message" element={<SendMessage />} />
         <Route path="/search" element={<SearchResult />} />
         <Route path="/member/findId" element={<FindId />} />
         <Route path="/member/findPW" element={<FindPW />} />

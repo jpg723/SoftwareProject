@@ -160,18 +160,10 @@ import on_heart from '../../img/on_heart.png';
             <div className={styles.product_name}>{groupItem.groupItem_name}</div>
             <div className={styles.seller_store}>{groupItem.groupItem_detail}</div>
             <div className={styles.price}>
-              {/* {convertPrice(groupItem.groupItem_price*groupItem.groupItem_rate/100+"")}  */}
               {convertPrice(groupItem.groupItem_price+"")}
               <span className={styles.unit}>원</span>
             </div>
             <div className={styles.groupItemtext}>{groupItem.groupItem_price}원에서 {groupItem.groupItem_rate}% 할인된 금액에 후원해보세요!</div>  
-            <div className={styles.line}></div>
-            <div className={styles.delivery}>
-              <div className={styles.deliveryAddress1}>배송지</div>
-              <div className={styles.deliveryAddress2}>초록우산 어린이재단</div>
-            </div>
-
-            <div className={styles.line}></div>
             <div className={styles.aloneBuy}>혼자 구호물품 기부하기</div>
             <div className={styles.amount}>
               <img
@@ -208,7 +200,7 @@ import on_heart from '../../img/on_heart.png';
 
             <button className={styles.btn_cart} onClick={openModal2}>장바구니</button>
             <Modal open={modalOpen2} close={closeModal2} header="장바구니 추가">
-              <main> {props.children} </main>장바구니에 추가하시겠습니까?   
+              <main class="cart_text"> {props.children} </main>장바구니에 추가하시겠습니까?   
               <div id="order_bottom">
                 <button id="order_btn" type="submit" onClick={() => insertBtn_click()}>추가</button>
               </div>  

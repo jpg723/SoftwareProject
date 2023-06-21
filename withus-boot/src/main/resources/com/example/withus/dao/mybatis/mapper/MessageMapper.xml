@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.withus.dao.mybatis.mapper.MessageMapper">
+  <cache />
+
+
+<select id="getMessageList" resultType="Message">
+    SELECT *
+    FROM MESSAGE
+    WHERE RECEIVER_ID = #{receiver_id}
+  </select>
+  
+  <select id="getMessage" resultType="Message" parameterType="Integer">
+    SELECT  *
+    FROM MESSAGE
+    WHERE ID = #{id}
+  </select>
+  
+  <insert id="insertMessage">
+    INSERT INTO MESSAGE (TITLE, CONTENT, SENDER_ID, RECEIVER_ID, READ_CHK)
+    VALUES(#{title}, #{content}, #{sender_id}, #{receiver_id}, #{read_chk})
+  </insert>
+  
+ 
+</mapper>

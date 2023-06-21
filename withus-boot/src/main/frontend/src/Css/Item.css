@@ -1,17 +1,33 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*헤더*/
 #Item_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 45px;
+    padding-top: 30px;
 }
 
 /*-----------------------------------------------------
-공동구매 메인페이지*/
+나눔 물품 구매 메인페이지*/
 #Item_main{
     display: flex;
     height: 100%;
 }
 
 /*-----------------------------------------------------
-공동구매 메인페이지 헤더*/
+나눔 물품 구매 메인페이지 헤더*/
 #Item_view_header{
     margin-left: 20px;
     width: 900px;
@@ -20,15 +36,24 @@
 
 /*나눔 등록 버튼*/
 .item_register{
-    margin-left: 10px;
-    font-size: 17px;
-    text-decoration-line: none;
-    color: black;
+    margin-left: 8px;
 }
+
+.item_register_btn{
+    font-family: 'ChosunGu';
+    color: rgb(255, 102, 130);
+    background-color: white;
+    font-size: 20px;
+    border: 1px solid rgb(255, 102, 130);
+    border-radius: 5px;
+    width: 130px;
+}
+
+/*나눔 상품 출력 방법 선택*/
 #Item_list{
     display: flex;
     margin-left: auto;
-    margin-right: 0px;
+    margin-right: 25px;
 }
 
 .Item_list_content{
@@ -46,21 +71,24 @@
 }
 
 #item_cate{
-    width: 100px;
-    margin: 0 auto;
-    font-size: 23px;
+    font-family: 'ChosunGu';
+    width: 180px;
+    font-size: 35px;
 }
 
 .itemCate_content{
-    width: 80px;
-    margin: 20px 65px 0px;
-    font-size: 20px;
+    font-family: 'ChosunGu';
+    width: 160px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 28px;
+    text-align: left;
 }
 
 /*-----------------------------------------------------
 공동구매 상품 리스트*/
 #Item_view_main{
-    margin-left: 20px;
+    margin-left: 5px;
     height: 100%;
     width: 900px;
     padding: 20px 0px;
@@ -69,6 +97,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 
 #Item_view_main1{
     margin-left: 20px;
@@ -91,12 +120,20 @@
     width: 249px;
     height: 320px;
 }
+/*나눔 이미지*/
+#previewimg{
+    width: 200px;
+    height: 270px;
+    border-radius: 10px;
+    border: none;
+}
 
-.groupItem_info{
-    width: 249px;
-    height: 94.2px;
-    margin: 0;
-    padding: 14px 10px 0 0;
+.item_name{
+    font-family: 'ChosunGu';
+    text-align: left;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .groupItem_name{

@@ -19,8 +19,8 @@ public class MybatisMessageDao implements MessageDao {
    private MessageMapper messageMapper;
 
 @Override
-public void inserMessage(Message message) throws DataAccessException {
-	messageMapper.inserMessage(message);
+public void insertMessage(Message message) throws DataAccessException {
+	messageMapper.insertMessage(message);
 	
 }
 

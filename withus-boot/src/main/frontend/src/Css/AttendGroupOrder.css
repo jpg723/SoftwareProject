@@ -1,10 +1,26 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*공동구매 참여 모달창 헤더 제목*/
 #attend-group-order_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 30px;
 }
 
 /*구분선----------------------------------------------------*/
 #attend-group-order_line{
-    border: 1px solid black;
+    border: 1px solid lightgray;
     width: 400px;
     margin: 0 auto;
 }
@@ -24,7 +40,10 @@
 
 /*입력박스이름----------------------------------------------------*/
 .attend-group-order_content1{
-    width: 100px;
+    font-family: 'ChosunGu';
+    width: 150px;
+    font-size: 40px;
+    margin-top: 8px;
 }
 
 .attend-group-order_name{
@@ -51,6 +70,7 @@
 }
 
 .attend-group-order_input{
+    font-family: 'ChosunGu';
     border: none;
     outline: none;
     margin: auto 0;
@@ -58,16 +78,28 @@
     width: 300px;
     height: 18.4px;
 }
+/*유효성 문구*/
+.inputCheck_groupOrder{
+    font-family: 'ChosunGu';
+    width: 400px;
+    margin-left: 120px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 13.5px;
+    color: red;
+}
 /*주문 수량-------------------------------------------*/
 .group-buy-count-box{
+    font-family: 'MBC1961GulimM';
     margin-top: 20px;
     margin-left: 10px;
     position: relative;
     width: 150px;
-    height: 50px;
+    height: 45px;
     border: 1px solid #c4c4c4;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .group-buy-count-box .minus {
@@ -113,6 +145,7 @@
     display: flex;
 }
 .attend-group-order-count-content{
+    font-family: 'ChosunGu';
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
@@ -120,15 +153,17 @@
 }
 
 .attend-group-order-count{
+    font-family: 'ChosunGu';
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
     font-size: 20px;
-    color: #ee5f41;
+    color: rgb(255, 102, 130);
 }
 
 /*주문 가격---------------------------------------------*/
 .attend-group-order-price-content{
+    font-family: 'ChosunGu';
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
@@ -137,11 +172,12 @@
 }
 
 .attend-group-order-price{
+    font-family: 'ChosunGu';
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
     font-size: 20px;
-    color: #ee5f41;
+    color: rgb(255, 102, 130);
 }
 
 .attend-group-order-price-content2{
@@ -153,12 +189,13 @@
 
 /*주문 버튼-------------------------------------------*/
 #attend-group-order_btn{
+    font-family: 'ChosunGu';
     border: none;
     margin: 15px 0 0 20px;
     height: 50px;
-    width: 200px;
-    font-size: 17px;
-    background-color: #ee5f41;
+    width: 250px;
+    font-size: 25px;
+    background-color: rgb(255, 102, 130);
     border-radius: 4px;
     color: white;
     text-align: center;
