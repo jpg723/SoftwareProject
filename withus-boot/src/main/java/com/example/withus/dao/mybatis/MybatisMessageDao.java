@@ -34,6 +34,12 @@ public Message getMessage(int id) throws DataAccessException {
 	return messageMapper.getMessage(id);
 }
 
+@Override
+public void readCheck(int message_id) throws DataAccessException {
+	messageMapper.readCheck(message_id);
+	
+}
+
   
    
 }

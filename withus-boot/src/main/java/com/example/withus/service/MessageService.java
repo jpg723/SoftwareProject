@@ -15,4 +15,7 @@ public interface MessageService {
 	
 	//메시지 자세히 보기
 	Message getMessage(int id);
+	
+	//읽음 체크
+	void readCheck(int message_id);
 }
