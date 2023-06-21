@@ -57,16 +57,19 @@
     display: flex;
     width: 200px;
     margin-left: auto;
-    margin-right: 0px;
+    margin-right: 50px;
     font-family: 'ChosunGu';
     font-size: 16px;
     color: gray;
 }
 
 .find_content{
+    width: 100px;
     margin: 3px;
     font-size: 16px;
     font-family: 'ChosunGu';
+    text-decoration-line: none;
+    color: gray;
 }
 
 /*-----------------------------------------
