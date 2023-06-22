@@ -58,16 +58,10 @@ function App() {
         <Route path="/search" element={<SearchResult />} />
         <Route path="/member/findId" element={<FindId />} />
         <Route path="/member/findPW" element={<FindPW />} />
-
         <Route path="/mypage-message" element={<Messages />} />
-
-
         <Route path="/message" element={<SendMessage />} />
         <Route path="/mypage-message" element={<Messages />} />
         <Route path="/message/detail/:id" element={<MessageDetail />}/>
-      
-
-
       </Routes>
     </div>
   );
