@@ -18,6 +18,9 @@ public interface OrderService {
    //1인 주문하기
    void insertOrder(Order order);
    
+   //장바구니에서 문하기
+   void insertCartOrder(Order order);
+   
    //공동 주문하기
    void insertAttendOrder(Order order);
    

@@ -15,6 +15,8 @@ public interface OrderMapper {
   
   void insertOrder(Order order);
   
+  void insertCartOrder(Order order);
+  
   void insertAttendOrder(Order order);
   
   int cancelOrder(int order_id);

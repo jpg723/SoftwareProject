@@ -14,7 +14,7 @@ import DonationMain from './Components/Donation/DonationMain.js';
 import Likepage from './Components/Mypage/Likepage';
 import MyWritepage from './Components/Mypage/MyWritepage';
 import MyDonation from './Components/Mypage/MyDonation';
-import MyItem from './Components/Mypage/MyItem';
+import MyOrder from './Components/Mypage/MyOrder';
 import MyGroupItem from './Components/Mypage/MyGroupItem';
 import MyInfo from './Components/Mypage/MyInfo';
 import MyCart from './Components/Mypage/MyCart';
@@ -51,7 +51,7 @@ function App() {
         <Route path="/mypage-likeItem" element={<Likepage />}/>
         <Route path="/mypage-mywrite" element={<MyWritepage />} />
         <Route path="/mypage-mydonation" element={<MyDonation />} />
-        <Route path="/mypage-myitem" element={<MyItem />} />
+        <Route path="/mypage-myorder" element={<MyOrder />} />
         <Route path="/mypage-mygroupitem" element={<MyGroupItem />} />
         <Route path="/mypage-myinfo" element={<MyInfo />} />
         <Route path="/mypage-mycart" element={<MyCart />} />

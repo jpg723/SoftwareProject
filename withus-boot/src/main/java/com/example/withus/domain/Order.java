@@ -20,6 +20,7 @@ public class Order implements Serializable {
   private int totalitem_count;
   private double totalitem_price;
   private String ship_status;
+  private int order_count;
 
   //추가
   private int attend_id;
@@ -114,7 +115,6 @@ public String getShip_status() {
 	}
   
 
-
   public int getGroupitem_id() {
 	return groupitem_id;
 	}
@@ -124,52 +124,31 @@ public String getShip_status() {
 	}
 
 public void initOrder1(User user, GroupItem groupItem) {
-	  //user_id = user.gettUser_id();
-//	receiver_name = user.getUsername();
-//	receiver_phone = user.getPhone();
-//    address1 = user.getAddress1();
-//    address2 = user.getAddress2();   
-//	groupitem_id = groupItem.getItemId();
     totalitem_price = groupItem.getGroupItem_price();
     totalitem_count = groupItem.getGroupItem_num();
     ship_status = "P";
   }
-//
-//  public void initOrder2(User user, Cart cart) {
-//	  //user_id = user.gettUser_id();
-////	receiver_name = user.getUsername();
-////	receiver_phone = user.getPhone();
-//	order_date = new Date(); 
-////    address1 = user.getAddress1();
-////    address2 = user.getAddress2();   
-//    totalitem_price = cart.getSubTotal();
-// 
-//    int count=0;
-//    Iterator<CartItem> i = cart.getAllCartItems();
-//    while (i.hasNext()) {
-//    	count++;
-//      CartItem cartItem = (CartItem) i.next();
-//      addLineItem(cartItem);
-//    }
-//    
-//    totalitem_count = count;
-//    ship_status = "P";
-//  }
-
-//  public void addLineItem(CartItem cartItem) {
-//    LineItem lineItem = new LineItem(lineItems.size() + 1, cartItem);
-//    addLineItem(lineItem);
-//  }
 
 
+
+public int getOrder_count() {
+	return order_count;
+}
+
+public void setOrder_count(int order_count) {
+	this.order_count = order_count;
+}
 
 @Override
 public String toString() {
 	return "Order [order_id=" + order_id + ", user_id=" + user_id + ", groupitem_id=" + groupitem_id + ", order_date="
 			+ order_date + ", address1=" + address1 + ", address2=" + address2 + ", receiver_name=" + receiver_name
-			+ ", receiver_phone=" + receiver_phone + ", total_count=" + totalitem_count + ", total_price=" + totalitem_price
-			+ ", ship_status=" + ship_status ;
+			+ ", receiver_phone=" + receiver_phone + ", totalitem_count=" + totalitem_count + ", totalitem_price="
+			+ totalitem_price + ", ship_status=" + ship_status + ", order_count=" + order_count + ", attend_id="
+			+ attend_id + "]";
 }
-  
+
+
+
   
 }

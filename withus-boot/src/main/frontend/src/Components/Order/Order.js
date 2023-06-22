@@ -55,7 +55,7 @@ function order(props) {
         }
     }
     
-    /*가입하기 버튼 클릭시*/
+    /*주문하기 버튼 클릭시*/
     function orderBtn_click() {
         /*백엔드로 값 전달*/
         if(

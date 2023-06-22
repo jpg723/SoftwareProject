@@ -6,7 +6,7 @@
   <cache />
 
  <select id="getCartItemList" parameterType="String" resultType="CARTITEM">
-    SELECT g.groupItem_id, g.groupItem_name, g.groupItem_price,c.quantity, g.groupItem_rate, g.img
+    SELECT g.groupItem_id, g.groupItem_name, g.groupItem_price,c.cart_id, c.quantity, g.groupItem_rate, g.img
     FROM CARTITEM c, GROUPITEM g
     WHERE c.USER_ID = #{user_id} AND c.GROUPITEM_ID=g.GROUPITEM_ID
   </select>
@@ -17,6 +17,8 @@
     WHERE USER_ID = #{user_id} AND GROUPITEM_ID = #{groupItem_id}
   </select>
 
+
+  
   <insert id="insertGroupItem">
     INSERT INTO CARTITEM (GROUPITEM_ID, USER_ID,QUANTITY)
     VALUES(#{groupItem_id}, #{user_id}, #{quantity})

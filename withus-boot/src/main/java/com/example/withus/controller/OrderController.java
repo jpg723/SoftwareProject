@@ -179,31 +179,38 @@ public class OrderController {
          }
    
    //카트->주문하기
-    @RequestMapping("/order/confirmOrder.do")
-      protected ModelAndView confirmOrder(
-            @ModelAttribute("orderForm") OrderForm orderForm, 
-            SessionStatus status) {
-          orderService.insertOrder(orderForm.getOrder());
-         ModelAndView mav = new ModelAndView("ViewOrder");
-         mav.addObject("order", orderForm.getOrder());
-         mav.addObject("message", "주문해주셔서 감사합니다.");
-         status.setComplete(); 
-         return mav;
-      }
+       @ResponseBody
+       @RequestMapping(value="/cart/order", method=RequestMethod.POST) 
+         public Order initCartItemOrder(HttpServletRequest request,
+               @RequestBody Map<String, Object> paramMap
+               )  {
+          String[] orderInfo = new String[5];
+          int i = 0;
+          for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
+             orderInfo[i] = pair.getValue().toString();
+             System.out.println(orderInfo[i]);
+               i++;
+            }
+          Order order = new Order();
+          order.setUser_id(orderInfo[3]); 
+          order.setTotalitem_price(Integer.parseInt(orderInfo[0]));
+          order.setTotalitem_count(Integer.parseInt(orderInfo[1]));
+          order.setGroupitem_id(Integer.parseInt(orderInfo[2]));
+          order.setOrder_count(Integer.parseInt(orderInfo[4]));
+          order.setShip_status("s");
+          Date day = new Date();
+           order.setOrder_date(day);
+          orderService.insertCartOrder(order);
+          
+          return order;
+         }
    
-    //주문 취소
-      @PostMapping(value = "/orders/{order_id}/cancel")
-       public String cancelOrder(@PathVariable("order_id") int order_id) {
-           orderService.cancelOrder(order_id);
-           return "redirect:/orders";
-       }
+
       
-      //주문 목록
-       @GetMapping("/orders")
-        public String orderList(@ModelAttribute("userSession") UserSession userSession, Model model){
-            List<Order> orders = orderService.getOrdersByUserId(userSession.getAccount().getUser_id());
-            model.addAttribute("orders", orders);
-            return "order/orderList";
+      //주문 내역
+       @GetMapping("/orders/{id}")
+        public List<Order> orderList(@PathVariable("id") String id){
+            return orderService.getOrdersByUserId(id);
         }
       
    

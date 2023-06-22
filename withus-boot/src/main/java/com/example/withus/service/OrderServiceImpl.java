@@ -42,4 +42,9 @@ public class OrderServiceImpl implements OrderService {
       orderDao.insertAttendOrder(order);
    }
 
+   @Override
+   public void insertCartOrder(Order order) {
+	   orderDao.insertCartOrder(order);
+}
+
 }

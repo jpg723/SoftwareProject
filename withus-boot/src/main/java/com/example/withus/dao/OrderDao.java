@@ -15,6 +15,8 @@ public interface OrderDao {
 
   void insertOrder(Order order) throws DataAccessException;
 
+  void insertCartOrder(Order order) throws DataAccessException;
+  
   void insertAttendOrder(Order order) throws DataAccessException;
   
   int cancelOrder(int order_id) throws DataAccessException;

@@ -11,6 +11,7 @@ import org.springframework.beans.support.PagedListHolder;
 @SuppressWarnings("serial")
 public class CartItem implements Serializable {
 
+  private int cart_id;
   private int groupItem_id;
   private int quantity;
   private String groupItem_name;
@@ -18,6 +19,13 @@ public class CartItem implements Serializable {
   private int groupItem_rate;
   private String img;
   
+  
+public int getCart_id() {
+	return cart_id;
+}
+public void setCart_id(int cart_id) {
+	this.cart_id = cart_id;
+}
 public int getGroupItem_id() {
 	return groupItem_id;
 }
@@ -58,9 +66,12 @@ public void setImg(String img) {
 }
 @Override
 public String toString() {
-	return "CartItem [groupItem_id=" + groupItem_id + ", quantity=" + quantity + ", groupItem_name=" + groupItem_name
-			+ ", groupItem_price=" + groupItem_price + ", groupItem_rate=" + groupItem_rate + ", img=" + img + "]";
+	return "CartItem [cart_id=" + cart_id + ", groupItem_id=" + groupItem_id + ", quantity=" + quantity
+			+ ", groupItem_name=" + groupItem_name + ", groupItem_price=" + groupItem_price + ", groupItem_rate="
+			+ groupItem_rate + ", img=" + img + "]";
 }
+
+
 
 
   

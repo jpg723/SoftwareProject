@@ -64,6 +64,11 @@ public class MybatisOrderDao implements OrderDao {
       orderMapper.insertAttendOrder(order);
    }
 
+@Override
+public void insertCartOrder(Order order) throws DataAccessException {
+	orderMapper.insertCartOrder(order);
+}
+
 
    
 }

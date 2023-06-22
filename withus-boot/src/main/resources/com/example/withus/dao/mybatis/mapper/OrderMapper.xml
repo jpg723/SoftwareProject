@@ -22,6 +22,11 @@
     INSERT INTO ORDERS (user_id, ORDER_DATE, TOTALITEM_COUNT, TOTALITEM_PRICE, SHIP_STATE, GROUPITEM_ID, ATTEND_ID)
     VALUES(#{user_id}, #{order_date}, #{totalitem_count}, #{totalitem_price} , #{ship_status}, #{groupitem_id}, #{attend_id})
   </insert>
+  
+  <insert id="insertCartOrder">
+    INSERT INTO ORDERS (user_id, ORDER_DATE, TOTALITEM_COUNT, TOTALITEM_PRICE, SHIP_STATE, GROUPITEM_ID, ATTEND_ID, ORDER_COUNT)
+    VALUES(#{user_id}, #{order_date}, #{totalitem_count}, #{totalitem_price} , #{ship_status}, #{groupitem_id}, #{attend_id}, #{order_count})
+  </insert>
 
   <update id="cancleOrder" parameterType="Order">
       update orders set ship_status = 'C' where order_id = #{order_id}

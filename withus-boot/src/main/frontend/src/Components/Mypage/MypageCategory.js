@@ -13,7 +13,7 @@ function Mypage() {
             <Link to="/mypage-mywrite" class="mypageCate_content"><div class="mypageCate_content">| 내가 쓴 나눔글</div></Link>
             <Link to="/mypage-mydonation" class="mypageCate_content"><div class="mypageCate_content">|  기부 내역</div></Link>
             <Link to="/mypage-mycart" class="mypageCate_content"><div class="mypageCate_content">|  장바구니</div></Link>
-            <Link to="/mypage-myitem" class="mypageCate_content"><div class="mypageCate_content">|  나눔 내역</div></Link>
+            <Link to="/mypage-myorder" class="mypageCate_content"><div class="mypageCate_content">|  주문 내역</div></Link>
             <Link to="/mypage-mygroupitem" class="mypageCate_content"><div class="mypageCate_content">| 공동구매 참여 내역</div></Link>
             <Link to="/mypage-myinfo" class="mypageCate_content"><div class="mypageCate_content">|  개인정보수정</div></Link>
         </div>
