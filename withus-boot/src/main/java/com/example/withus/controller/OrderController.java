@@ -147,7 +147,7 @@ public class OrderController {
           attendGroupItemService.updateTotalCount(Integer.parseInt(orderInfo[4]));
           return order;
          }
-       
+       //공동구매내역
        @GetMapping(value="/groupItem/grouporder/{user_id}")
          public List<MyGroupItems> getGroupOrder(@PathVariable("user_id") String user_id)  {
     	   	
