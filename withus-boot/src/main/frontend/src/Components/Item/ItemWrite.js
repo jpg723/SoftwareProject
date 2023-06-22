@@ -6,9 +6,9 @@ function ItemWrite() {
     const [item_title, setItem_title] = useState("");
     const [item_image, setItem_image] = useState();
     const [item_content, setItem_content] = useState("");
-    const[checkItem_title, setCheckItem_title] = useState(" ");
-    const[checkItem_image, setCheckItem_image] = useState(" ");
-    const[checkItem_content, setCheckItem_content] = useState(" ");
+    const [checkItem_title, setCheckItem_title] = useState(" ");
+    const [checkItem_image, setCheckItem_image] = useState(" ");
+    const [checkItem_content, setCheckItem_content] = useState(" ");
     const userId = sessionStorage.getItem("id");
 
     //선택한 카테고리
@@ -52,7 +52,7 @@ function ItemWrite() {
         }
     }
 
-    /*가입하기 버튼 클릭시*/
+    /*가버튼 클릭시*/
     function itemRegister_btn_click() {
         /*백엔드로 값 전달*/
         if(sessionStorage.getItem("id")===null) {
@@ -67,7 +67,7 @@ function ItemWrite() {
                 data: {
                     data1:item_title, data2:item_image, data3: item_content, data4: userId, data5: category
                 } , 
-                baseURL: 'http://localhost:8080',
+                //baseURL: 'http://localhost:8080',
                 //withCredentials: true,
                 }
             ).then(function (response) {

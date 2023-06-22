@@ -100,12 +100,12 @@ import styles from '../../Css/GroupItemDetail.module.css';
           <div className="item-state">{item.item_state === 0 ? <div>진행중</div> : <div>나눔 종료</div>}</div>
           <div className="item-name">{item.item_name}</div>
           <div className="item-category">
-            {item.itemCategory_id === 0 ? <div>식품</div> : null}
-            {item.itemCategory_id === 1 ? <div>의류</div> : null}
-            {item.itemCategory_id === 2 ? <div>침구류</div> : null}
-            {item.itemCategory_id === 3 ? <div>생활용품</div> : null}
-            {item.itemCategory_id === 4 ? <div>가전제품</div> : null}
-            {item.itemCategory_id === 5 ? <div>미용</div> : null}
+            {item.itemCategory_id === 1 ? <div>식품</div> : null}
+            {item.itemCategory_id === 2 ? <div>의류</div> : null}
+            {item.itemCategory_id === 3 ? <div>침구류</div> : null}
+            {item.itemCategory_id === 4 ? <div>생활용품</div> : null}
+            {item.itemCategory_id === 5 ? <div>가전제품</div> : null}
+            {item.itemCategory_id === 6 ? <div>미용</div> : null}
           </div>
             <div className="item-detail">{item.item_detail}</div>
             <div className="item-content1">
