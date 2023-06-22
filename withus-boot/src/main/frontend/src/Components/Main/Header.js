@@ -61,7 +61,7 @@ function Header() {
               </Link>
                   {/* 로그인이 되어있다면 */}
                   {isLogin ? (
-                    <Link to={`/mypage-message`} className="login"><button class="login_btn">
+                    <Link to="/mypage-likeItem" className="login"><button class="login_btn">
                         {sessionStorage.getItem("name")}님</button></Link>
                         ) : (
                         <Link to="/login" class="login"><button class="login_btn">Log In</button></Link>
