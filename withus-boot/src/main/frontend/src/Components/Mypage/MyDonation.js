@@ -30,13 +30,13 @@ function MyDonation() {
           <div id="mypage_line"></div>
         
     
-    <div id="Item_view_main" style={{width:"30%", height:"300px", float: "left", display: "column"}}>
+    <div id="Item_view_main" style={{width:"30%", height:"300px", float: "left", flexDirection:"row", flexWrap:"wrap", display: "row"}}>
     {
       list.map(function(a,i){
           return(
-            <div className={styles.product1} style={{display: "row"}}> 
+            <div className={styles.product1} style={{flexDirection:"row", flexWrap:"wrap"}}> 
               <div>
-              <img className="donation_image" src={process.env.PUBLIC_URL+ '/' + list[i].img}></img>
+              <img className="donation_image" src={process.env.PUBLIC_URL + '/' + list[i].img}></img>
               </div>           
               <div>
               <div className={styles.product_name}>{list[i].donation_name}</div>

@@ -9,13 +9,13 @@
     FROM ATTENDGROUPITEM
   </select>
 
-<select id="attendLists" resultType="AttendGroupItem">
+  <select id="attendLists" resultType="AttendGroupItem">
     SELECT  *
     FROM ATTENDGROUPITEM
     WHERE GROUPITEM_ID = #{groupItem_id}
   </select>
   
-  <select id="getGroupItem" resultType="GroupItem" parameterType="Integer">
+  <select id="getGroupItem" resultType="AttendGroupItem" parameterType="Integer">
     SELECT  *
     FROM ATTENDGROUPITEM
     WHERE ATTEND_GROUP_ID = #{attend_group_id}

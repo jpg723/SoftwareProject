@@ -21,6 +21,16 @@ public class Order implements Serializable {
   private double totalitem_price;
   private String ship_status;
 
+  //추가
+  private int attend_id;
+
+  public int getAttend_id() {
+	return attend_id;
+  }
+
+  public void setAttend_id(int attend_id) {
+	this.attend_id = attend_id;
+  }
 
   public int getOrder_id() {
 	return order_id;

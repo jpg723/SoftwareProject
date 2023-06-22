@@ -60,7 +60,7 @@ function order(props) {
         /*백엔드로 값 전달*/
         if(
             checkName === "" && checkEmail === "" && checkPhone === ""  ){
-            axios(
+            axios( 
                 {
                 url: '/groupItem/order',
                 method: 'post',

@@ -3,7 +3,7 @@ package com.example.withus.controller;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -19,7 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.example.withus.domain.AttendGroupItem;
 import com.example.withus.domain.GroupItem;
+import com.example.withus.domain.MyGroupItems;
 import com.example.withus.domain.Order;
 import com.example.withus.service.AttendGroupItemService;
 import com.example.withus.service.CartService;
@@ -137,16 +140,42 @@ public class OrderController {
           order.setTotalitem_count(Integer.parseInt(orderInfo[1]));
           order.setGroupitem_id(Integer.parseInt(orderInfo[2]));
           order.setShip_status("s");
+          order.setAttend_id(Integer.parseInt(orderInfo[4]));
           Date day = new Date();
            order.setOrder_date(day);
           orderService.insertOrder(order);
           attendGroupItemService.updateTotalCount(Integer.parseInt(orderInfo[4]));
           return order;
          }
+       
+       @GetMapping(value="/groupItem/grouporder/{user_id}")
+         public List<MyGroupItems> getGroupOrder(@PathVariable("user_id") String user_id)  {
+    	   	
+    	    List<Order> orders =  orderService.getOrdersByUserId(user_id);
+    	   	List<MyGroupItems> myGroupItems = new ArrayList<MyGroupItems>();
+    	   	
+    	   	for(int i = 0; i<orders.size(); i++) {
+    	   		if(orders.get(i).getAttend_id() > 0 ) {
+    	   			MyGroupItems my1 = new MyGroupItems();
+    	   			//order
+    	   			my1.setGroupitem_id(orders.get(i).getGroupitem_id());
+    	   			my1.setUser_id(orders.get(i).getUser_id());
+    	   			//groupitem
+    	   			my1.setImg(groupItemService.getGroupItem(orders.get(i).getGroupitem_id()).getImg());
+    	   			//attendgroupitem
+    	   			AttendGroupItem attend = attendGroupItemService.getGroupItem(orders.get(i).getAttend_id());
+    	   			my1.setAttend_group_id(orders.get(i).getAttend_id());
+    	   			my1.setUser_name(attend.getUser_name());
+    	   			my1.setGroupitem_name(groupItemService.getGroupItem(orders.get(i).getGroupitem_id()).getGroupItem_name());
+    	   			my1.setTotalGroupItem_count(attend.getTotalGroupItem_count());
+    	   			my1.setMessage(attend.getMessage());
+    	   			myGroupItems.add(my1);
+    	   		}
+    	   	}
+    	   	return myGroupItems;
+         }
    
    //카트->주문하기
-      
-
     @RequestMapping("/order/confirmOrder.do")
       protected ModelAndView confirmOrder(
             @ModelAttribute("orderForm") OrderForm orderForm, 

@@ -19,8 +19,8 @@
   </select>
 
   <insert id="insertOrder">
-    INSERT INTO ORDERS (user_id, ORDER_DATE, TOTALITEM_COUNT, TOTALITEM_PRICE, SHIP_STATE, GROUPITEM_ID)
-    VALUES(#{user_id}, #{order_date}, #{totalitem_count}, #{totalitem_price} , #{ship_status}, #{groupitem_id})
+    INSERT INTO ORDERS (user_id, ORDER_DATE, TOTALITEM_COUNT, TOTALITEM_PRICE, SHIP_STATE, GROUPITEM_ID, ATTEND_ID)
+    VALUES(#{user_id}, #{order_date}, #{totalitem_count}, #{totalitem_price} , #{ship_status}, #{groupitem_id}, #{attend_id})
   </insert>
 
   <update id="cancleOrder" parameterType="Order">

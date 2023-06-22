@@ -4,6 +4,7 @@ import styles from '../../Css/DonationDetail.module.css';
 import Modal from '../Modal/Modals.js';
 import '../../Css/Donation.css';
 import axios from 'axios';
+import User_login from '../Member/User_login';
 
 function FindId() {
 
@@ -16,12 +17,10 @@ function FindId() {
             if(email === "") {
                 alert("이메일을 입력하세요");
                 setModalOpen1(false);
-                return;
             }
             else if (name === "") {
                 alert("성함을 입력하세요");
                 setModalOpen1(false);
-                return;
             }
             else {
             axios(
@@ -45,10 +44,9 @@ function FindId() {
                 }
             }); 
             setModalOpen1(false);
+            
             }
         }
-    
-
 
     const closeModal1 = () => {
         setModalOpen1(false);
@@ -90,7 +88,7 @@ function FindId() {
                             <button id="order_btn" type="submit" onClick={() => find()}>확인</button>
                         </div> 
                     </form> 
-                </Modal>
+        </Modal>
     );
     
 }

@@ -9,7 +9,7 @@ function DonationView({donationList}) {
     {
     donationList.map(function(a,i){
     return(
-            <div className="donation">
+            <div className="donation" style={{flexDirection:"row", flexWrap:"wrap"}}>
                 <Link to={'/donationList/detail/'+donationList[i].donation_id}> 
                 <img className="donation_image" src={process.env.PUBLIC_URL+ '/' + donationList[i].img}></img>
                 </Link>
