@@ -21,5 +21,11 @@ public interface ItemMapper {
 	
 	List<Item> newProduct();
 	
+
 	List<Item> itemCategoryList(int itemcategory_id);
+
+	List<Item> myItemList(String user_id);
+	
+	void itemFinish(int item_id);
+
 }

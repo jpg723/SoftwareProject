@@ -2,6 +2,8 @@ package com.example.withus.service;
 
 import java.util.List;
 
+import org.springframework.dao.DataAccessException;
+
 import com.example.withus.domain.Item;
 
 
@@ -19,4 +21,7 @@ public interface ItemService {
 	List<Item> newProduct();
 	
 	List<Item> itemCategoryList(int itemcategory_id);
+	List<Item> myItemList(String user_id);
+	
+	void itemFinish(int item_id);
 }
