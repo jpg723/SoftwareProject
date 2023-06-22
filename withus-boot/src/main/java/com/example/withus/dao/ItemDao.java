@@ -22,4 +22,6 @@ public interface ItemDao {
 	  
 	//신상품순 정렬
 	List<Item> newProduct() throws DataAccessException;
+	
+	List<Item> itemCategoryList(int itemcategory_id) throws DataAccessException;
 }

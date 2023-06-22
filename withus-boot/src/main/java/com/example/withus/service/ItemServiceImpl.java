@@ -47,4 +47,10 @@ public class ItemServiceImpl implements ItemService {
 	   return itemDao.newProduct();
    }
 
+@Override
+public List<Item> itemCategoryList(int itemcategory_id) {
+	// TODO Auto-generated method stub
+	return itemDao.itemCategoryList(itemcategory_id);
+}
+
 }

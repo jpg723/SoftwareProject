@@ -40,13 +40,13 @@ function ItemMain() {
             <h1 id="Item_header">나눔하기</h1>
             <div id="Item_main">
                 <div id="item_category">
-                    <div id="item_cate">카테고리</div>
-                    <div class="itemCate_content">| 식품</div>
-                    <div class="itemCate_content">| 의류</div>
-                    <div class="itemCate_content">| 침구류</div>
-                    <div class="itemCate_content">| 생활용품</div>
-                    <div class="itemCate_content">| 가전제품</div>
-                    <div class="itemCate_content">| 미용</div>
+                    <div id="item_cate">카테고리</div>                
+                    <Link to={'/item/category/' + [1]}><div class="itemCate_content">| 식품</div></Link>
+                    <Link to={'/item/category/' + [2]}><div class="itemCate_content">| 의류</div></Link>
+                    <Link to={'/item/category/' + [3]}><div class="itemCate_content">| 침구류</div></Link>
+                    <Link to={'/item/category/' + [4]}><div class="itemCate_content">| 생활용품</div></Link>
+                    <Link to={'/item/category/' + [5]}><div class="itemCate_content">| 가전제품</div></Link>
+                    <Link to={'/item/category/' + [7]}><div class="itemCate_content">| 미용</div></Link>
                 </div>
                 <div id="Item_view">
                     <div id="Item_view_header">

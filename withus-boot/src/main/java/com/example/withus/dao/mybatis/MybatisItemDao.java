@@ -47,4 +47,10 @@ public class MybatisItemDao implements ItemDao {
 		// TODO Auto-generated method stub
 		return itemMapper.newProduct();
 	}
+
+	@Override
+	public List<Item> itemCategoryList(int itemcategory_id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return itemMapper.itemCategoryList(itemcategory_id);
+	}
 }

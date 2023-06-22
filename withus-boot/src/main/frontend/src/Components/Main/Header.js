@@ -38,18 +38,14 @@ function Header() {
       setIsLogin(false);
     }
 
-    
-    
-
   return (
-
     <div>
       <div id="header">
           <div id="header_top">
               <div class="headerTop_content" name={isLogin}>   
               <Link to={`/message-box`} >
-              <div className="messages">
-              <img  src={message}></img>
+              <div className="messages" style={{marginTop:"33%"}}>
+              <img  src={message} style={{marginLeft:"25%"}}></img>
               {newMessageList.length >=1 ? (
                 <div className="new_message">
                   <p>{newMessageList.length}</p>

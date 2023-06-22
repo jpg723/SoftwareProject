@@ -14,6 +14,12 @@
        SELECT *FROM ITEM 
     </select>
 
+	<select id="itemCategoryList" resultType="Item" parameterType="int">
+       SELECT *
+       FROM ITEM 
+       WHERE ITEMCATEGORY_ID = #{itemcategory_id}
+    </select>
+    
     <select id="getItem" resultType="Item" parameterType="Integer">
        SELECT  *
        FROM ITEM

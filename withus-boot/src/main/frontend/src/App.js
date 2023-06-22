@@ -28,7 +28,7 @@ import Messages from './Components/Message/Messages';
 import MessageDetail from './Components/Message/MessageDetail';
 import MessageDetailSended from './Components/Message/MessageDetailSended';
 import MessageBox from './Components/Message/MessageBox';
-
+import ItemCategory from './Components/Item/ItemCategory';
 
 function App() {
   //카트
@@ -39,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />}/>
         <Route path="/item" element={<Item />}/>
+        <Route path="/item/category/:itemcategory_id" element={<ItemCategory/>}/>
         <Route path="/groupItem" element={<GroupItem />}/>
         <Route path="/groupItem/detail/:id" element={<GroupItemDetail />}/>
         <Route path="/groupItem/order" element={<Order />}/>

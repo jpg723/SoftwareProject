@@ -17,4 +17,6 @@ public interface ItemService {
 //	List<Item> closeRanking();
 	
 	List<Item> newProduct();
+	
+	List<Item> itemCategoryList(int itemcategory_id);
 }

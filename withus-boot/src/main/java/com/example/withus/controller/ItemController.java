@@ -79,5 +79,9 @@ public class ItemController {
          return item;
      }
     
-
+    //나눔 카테고리 정렬
+    @GetMapping(value = "/item/category/{itemcategory_id}")
+    public List<Item> getItemCategory (@PathVariable("itemcategory_id") int itemcategory_id) {
+        return itemService.itemCategoryList(itemcategory_id);
+    }
 }

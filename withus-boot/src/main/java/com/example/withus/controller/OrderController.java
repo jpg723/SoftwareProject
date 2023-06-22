@@ -147,6 +147,7 @@ public class OrderController {
           attendGroupItemService.updateTotalCount(Integer.parseInt(orderInfo[4]));
           return order;
          }
+       
        //공동구매내역
        @GetMapping(value="/groupItem/grouporder/{user_id}")
          public List<MyGroupItems> getGroupOrder(@PathVariable("user_id") String user_id)  {
@@ -154,12 +155,14 @@ public class OrderController {
     	    List<Order> orders =  orderService.getOrdersByUserId(user_id);
     	   	List<MyGroupItems> myGroupItems = new ArrayList<MyGroupItems>();
     	   	
-    	   	for(int i = 0; i<orders.size(); i++) {
-    	   		if(orders.get(i).getAttend_id() > 0 ) {
+    	   	for(int i = 0; i < orders.size(); i++) {
+    	   		System.out.println(i);
+    	   		if(orders.get(i).getAttend_id() > 0) {
     	   			MyGroupItems my1 = new MyGroupItems();
     	   			//order
     	   			my1.setGroupitem_id(orders.get(i).getGroupitem_id());
     	   			my1.setUser_id(orders.get(i).getUser_id());
+    	   			System.out.println(orders.get(i).getUser_id());
     	   			//groupitem
     	   			my1.setImg(groupItemService.getGroupItem(orders.get(i).getGroupitem_id()).getImg());
     	   			//attendgroupitem
