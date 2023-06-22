@@ -39,6 +39,16 @@ public void readCheck(int message_id) throws DataAccessException {
 	
 }
 
+@Override
+public List<Message> getSendedMessageList(String sender_id) throws DataAccessException {
+	return messageMapper.getSendedMessageList(sender_id);
+}
+
+@Override
+public List<Message> getUnrededList(String receiver_id) throws DataAccessException {
+	return messageMapper.getUnrededList(receiver_id);
+}
+
   
    
 }

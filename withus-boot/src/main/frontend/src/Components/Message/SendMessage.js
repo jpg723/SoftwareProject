@@ -44,7 +44,7 @@ const SendMessage = () => {
             console.log(response.data);
         });
 
-        alert("메시지가 판매자에게 전송됐습니다!");
+        alert("메시지가 성공적으로 전송됐습니다!");
         document.location.href = "/item";
       }
     }

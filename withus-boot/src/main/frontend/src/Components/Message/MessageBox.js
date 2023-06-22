@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../../Css/Message.css';
 import Messages from './Messages';
+import SendedMessages from './MessageSended';
 
 function MessageBox() {
 
@@ -19,7 +20,7 @@ function MessageBox() {
                 <div><button className="m-header-content1" onClick={offSendMessage}>받은 쪽지함</button></div>
                 <div><button className="m-header-content1" onClick={onSendMessage}>보낸 쪽지함</button></div>
             </div>
-            {sendMessage ? null : <Messages/>}
+            {sendMessage ? <SendedMessages/> : <Messages/>}
         </div>    
   );
 }

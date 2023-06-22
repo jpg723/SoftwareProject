@@ -11,6 +11,12 @@
     WHERE RECEIVER_ID = #{receiver_id}
   </select>
   
+  <select id="getSendedMessageList" resultType="Message">
+    SELECT *
+    FROM MESSAGE
+    WHERE SENDER_ID = #{sender_id}
+  </select>
+  
   <select id="getMessage" resultType="Message" parameterType="Integer">
     SELECT  *
     FROM MESSAGE
@@ -27,5 +33,11 @@
     SET READ_CHK = 1
     WHERE MESSAGE_ID = #{message_id}
   </update>
+  
+  <select id="getUnrededList" resultType="Message">
+    SELECT *
+    FROM MESSAGE
+    WHERE RECEIVER_ID = #{receiver_id} AND READ_CHK = 0
+  </select>
  
 </mapper>
