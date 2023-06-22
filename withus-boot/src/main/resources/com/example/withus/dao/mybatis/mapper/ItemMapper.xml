@@ -29,5 +29,17 @@
        SELECT *FROM ITEM 
        ORDER BY ITEM_DATE DESC
     </select>
+    
+    <select id="myItemList" resultType="Item" parameterType="String">
+   	   SELECT  *
+  	   FROM ITEM
+       WHERE USER_ID = #{user_id}
+    </select>
+    
+    <update id="itemFinish">
+   	 UPDATE ITEM
+   	 SET ITEM_STATE = 1
+   	 WHERE ITEM_ID = #{item_id}
+  </update>
   
 </mapper>

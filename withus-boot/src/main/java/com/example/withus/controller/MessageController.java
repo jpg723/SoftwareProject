@@ -70,7 +70,6 @@ public class MessageController {
    //받은 메시지 중 읽지 않은 메시지 불러오기
    @GetMapping(value = "/message/unreaded/{receiver_id}")
    public List<Message> getUnreadedList(@PathVariable("receiver_id") String receiver_id) {
-   
        return messageService.getUnrededList(receiver_id);
    }
    

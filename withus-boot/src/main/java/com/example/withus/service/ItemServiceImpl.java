@@ -31,7 +31,6 @@ public class ItemServiceImpl implements ItemService {
 
    @Override
    public List<Item> likeRanking() {
-	   // TODO Auto-generated method stub
 	   return itemDao.likeRanking();
    }
 //
@@ -43,8 +42,17 @@ public class ItemServiceImpl implements ItemService {
 
    @Override
    public List<Item> newProduct() {
-	   // TODO Auto-generated method stub
 	   return itemDao.newProduct();
    }
+
+@Override
+public List<Item> myItemList(String user_id) {
+	return itemDao.myItemList(user_id);
+}
+
+@Override
+public void itemFinish(int item_id) {
+	itemDao.itemFinish(item_id);
+}
 
 }

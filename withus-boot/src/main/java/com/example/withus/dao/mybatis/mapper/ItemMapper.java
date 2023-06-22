@@ -20,4 +20,8 @@ public interface ItemMapper {
 //	List<Item> closeRanking();
 	
 	List<Item> newProduct();
+	
+	List<Item> myItemList(String user_id);
+	
+	void itemFinish(int item_id);
 }

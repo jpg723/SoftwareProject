@@ -41,7 +41,7 @@ function MyGroupItem() {
         list.map(function(a,i){
             return(
               <div class="mypage-like-groupItem" style={{width:"250px", height:"300px", marginTop:"-5%"}}>  
-                <Link to={'/groupItem/detail/'+list[i].groupItem_id} class="like-groupItem-box">       
+                <Link to={'/groupItem/detail/'+list[i].groupitem_id} class="like-groupItem-box">       
                   <img className="groupItem_image" style={{width:"250px", height:"300px"}} src={process.env.PUBLIC_URL+'/' + list[i].img}></img>
                 </Link>
                 <div></div>

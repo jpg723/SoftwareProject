@@ -74,10 +74,21 @@ public class ItemController {
     
   //나눔상품 자세히 보기
     @GetMapping(value = "/item/detail/{item_id}")
-     public Item getGroupItem(@PathVariable("item_id") int item_id) {
+     public Item getItem(@PathVariable("item_id") int item_id) {
        Item item = itemService.getItem(item_id);
          return item;
      }
     
+    //내가 작성한 나눔상품 리스트
+    @GetMapping(value = "/item/list/{user_id}")
+    public List<Item> getMyItemList(@PathVariable("user_id") String user_id) {
+      return itemService.myItemList(user_id);
+    }
+    
+    //나눔 종료하기
+    @GetMapping(value = "/item/finish/{item_id}")
+    public void setFinishItemstate(@PathVariable("item_id") int item_id) {
+      itemService.itemFinish(item_id);
+    }
 
 }

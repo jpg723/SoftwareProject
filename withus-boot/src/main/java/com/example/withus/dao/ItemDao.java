@@ -22,4 +22,10 @@ public interface ItemDao {
 	  
 	//신상품순 정렬
 	List<Item> newProduct() throws DataAccessException;
+	
+	//내가 올린 나눔글 리스트
+	List<Item> myItemList(String user_id) throws DataAccessException;
+	
+	//나눔 종료
+	void itemFinish(int item_id) throws DataAccessException;
 }
