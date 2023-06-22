@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import '../../Css/AttendGroupItem.css';
-import '../../Css/Order.css';
+import '../../Css/SendMessage.css';
 import boxiconImg from '../../img/boxicon.avif';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -28,14 +28,23 @@ function Messages() {
               messageList.map(function(a,i){
                 return(     
                   <div>
-                    <Link to={'/message/detail/'+a.message_id} className="message-content">       
-                        <div class="message-sender-name">{a.sender_id}</div> 
-                        <div class="message-content-line">|</div>             
-                        <div class="message-send-content">{a.title}</div>  
-                        <div class="message-content-line">|</div>                                 
-                        <div class="message-check">  {a.read_chk === 1 ? <div>읽음</div>
-                          :  <div>읽지않음</div>}</div>
-                    </Link>   
+                    {
+                      a.read_chk === 0 ? (<Link to={'/message/detail/'+a.message_id} className="message-content">       
+                      <div class="message-sender-name-new">{a.sender_id}</div> 
+                      <div class="message-content-line">|</div>             
+                      <div class="message-send-content-new">{a.title}</div>  
+                      <button class="message-detail-btn">보기</button>                                  
+                  </Link>)
+                  : (<Link to={'/message/detail/'+a.message_id} className="message-content">       
+                  <div class="message-sender-name">{a.sender_id}</div> 
+                  <div class="message-content-line">|</div>             
+                  <div class="message-send-content">{a.title}</div>  
+                  <button class="message-detail-btn">보기</button>                                  
+                  
+              </Link>)
+
+                    }
+                   
                     <div class="messsage-one-line"></div>   
                   </div>              
                 )

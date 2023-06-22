@@ -2,10 +2,8 @@ import {useParams } from "react-router-dom";
 import '../../Css/SendMessage.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
-
- function MessageDetail() {
+ function MessageDetailSended() {
 
   let { id } = useParams();
   const [message, setMessage] = useState("");
@@ -28,7 +26,7 @@ import { Link } from 'react-router-dom';
 
   return (
     <div id="SendMessageForm">
-      <div class="sendForm_header">받은 쪽지</div>
+      <div class="sendForm_header">보낸 쪽지</div>
       <div class="receiver_id_box">
         <div>보내는 사람 | {message.sender_id}</div>
       </div>       
@@ -42,11 +40,9 @@ import { Link } from 'react-router-dom';
       <div class="send-message-content-inputBox">
         <div class="send-message-content">내용 | {message.content}</div>   
       </div>
-      </div>
-      <Link to="/message" state={{receiver:message.sender_id}}>
-      <button class="message-sned-btn">답장</button>      
-      </Link>   
+      </div>    
+      <button class="message-sned-btn">삭제</button>      
     </div>
   );
 }
-export default MessageDetail;
+export default MessageDetailSended;

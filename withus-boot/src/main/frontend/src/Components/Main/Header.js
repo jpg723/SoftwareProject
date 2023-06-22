@@ -2,6 +2,8 @@ import '../../Css/Main.css';
 import {Link} from 'react-router-dom';
 import React, { useState, useEffect, useCallback} from 'react';
 import MainCategory from './MainCategory.js';
+import message from '../../img/message.PNG';
+import axios from 'axios';
 
 function Header() {
     const [isLogin, setIsLogin] = useState(false); //로그인 관리
@@ -18,6 +20,17 @@ function Header() {
       }
     });
 
+    const [newMessageList , SetNewMessageList] = useState([]);
+
+    useEffect(()=> {
+      axios.get('/message/unreaded/'+sessionStorage.getItem("id")).then((res)=>{
+        SetNewMessageList(res.data)
+        console.log(res)
+      })
+      .catch(error => console.log(error))
+    },[])
+
+
     const onLogout = () => {
       alert("로그아웃");
       sessionStorage.removeItem("id");
@@ -25,15 +38,30 @@ function Header() {
       setIsLogin(false);
     }
 
+    
+    
+
   return (
 
     <div>
       <div id="header">
           <div id="header_top">
-              <div class="headerTop_content" name={isLogin}>            
+              <div class="headerTop_content" name={isLogin}>   
+              <Link to={`/message-box`} >
+              <div className="messages">
+              <img  src={message}></img>
+              {newMessageList.length >=1 ? (
+                <div className="new_message">
+                  <p>{newMessageList.length}</p>
+                  </div>
+              ) : (
+                ""
+              )}
+              </div>
+              </Link>
                   {/* 로그인이 되어있다면 */}
                   {isLogin ? (
-                    <Link to={`/mypage-likeItem`} className="login"><button class="login_btn">
+                    <Link to={`/mypage-message`} className="login"><button class="login_btn">
                         {sessionStorage.getItem("name")}님</button></Link>
                         ) : (
                         <Link to="/login" class="login"><button class="login_btn">Log In</button></Link>

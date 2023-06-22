@@ -237,3 +237,19 @@
 .main-line{
     border: 1px solid black;
 }
+
+/*쪽지함------------*/
+.messages {
+    position: relative;
+    width: 80px;
+    height: 30px;
+  }
+.messages .new_message {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 0;
+    background-color: #eb5757;
+    border-radius: 50%;
+  }

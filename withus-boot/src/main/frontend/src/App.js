@@ -26,7 +26,9 @@ import FindPW from './Components/Member/FindPW';
 import SendMessage from './Components/Message/SendMessage';
 import Messages from './Components/Message/Messages';
 import MessageDetail from './Components/Message/MessageDetail';
+import MessageDetailSended from './Components/Message/MessageDetailSended';
 import MessageBox from './Components/Message/MessageBox';
+
 
 function App() {
   //카트
@@ -61,6 +63,7 @@ function App() {
         <Route path="/message" element={<SendMessage />} />
         <Route path="/mypage-message" element={<Messages />} />
         <Route path="/message/detail/:id" element={<MessageDetail />}/>
+        <Route path="/message/detail/sended/:id" element={<MessageDetailSended />}/>
       </Routes>
     </div>
   );

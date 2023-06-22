@@ -60,10 +60,30 @@ public class MessageController {
        return messageService.getMessageList(receiver_id);
    }
    
- //받은 메시지 자세히 보기
+   //보낸 메시지 전체 목록
+   @GetMapping(value = "/message/sended/{sender_id}")
+   public List<Message> getMessageSendedList(@PathVariable("sender_id") String sender_id) {
+   
+       return messageService.getSendedMessageList(sender_id);
+   }
+   
+   //받은 메시지 중 읽지 않은 메시지 불러오기
+   @GetMapping(value = "/message/unreaded/{receiver_id}")
+   public List<Message> getUnreadedList(@PathVariable("receiver_id") String receiver_id) {
+   
+       return messageService.getUnrededList(receiver_id);
+   }
+   
+   //받은 메시지 자세히 보기
    @GetMapping(value = "/message/detail/{message_id}")
    public Message getMessage(@PathVariable("message_id") int message_id) {
    
+       return messageService.getMessage(message_id);
+   }
+   
+   //보낸 메시지 자세히 보기
+   @GetMapping(value = "/message/detail/sended/{message_id}")
+   public Message getMessageSended(@PathVariable("message_id") int message_id) {
        return messageService.getMessage(message_id);
    }
    
