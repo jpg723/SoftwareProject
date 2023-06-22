@@ -10,6 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
+#login-page{
+    margin-top: 60px;
+}
 #login_header{
     font-family: 'MBC1961GulimM';
     text-align: center;

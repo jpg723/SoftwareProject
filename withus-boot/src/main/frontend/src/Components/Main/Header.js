@@ -5,7 +5,6 @@ import MainCategory from './MainCategory.js';
 
 function Header() {
     const [isLogin, setIsLogin] = useState(false); //로그인 관리
-    const [search, setSearch] = useState(""); //통합검색
    
     useEffect(() => {
       if (sessionStorage.getItem("name") === null) {

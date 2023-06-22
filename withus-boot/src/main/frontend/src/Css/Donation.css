@@ -1,6 +1,21 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*헤더*/
 #donation_header{
+    font-family: 'MBC1961GulimM';
     text-align: center;
+    font-size: 45px;
+    padding-top: 30px;
 }
 
 /*-----------------------------------------------------
@@ -24,11 +39,13 @@
 }
 
 .donation_list_content{
+    font-family: 'ChosunGu';
     margin: auto 3px;
     font-size: 17px;
     background-color: white;
     border: none;
-    color: black;
+    font-size: 20px;
+    color: gray;
 }
 
 /*-----------------------------------------------------
@@ -44,10 +61,14 @@
     margin-left: 50px;
     width: 249px;
     height: 100%;
+    box-shadow: 3px 3px 3px 3px lightgray;
+    border-radius: 10px;
 }
+/*기부 이미지*/
 .donation_image{
     width: 249px;
     height: 320px;
+    border-radius: 10px;
 }
 
 .donation_info{
@@ -57,27 +78,43 @@
     padding: 14px 10px 0 0;
 }
 
+/*기부 제목*/
 .donation_name{
+    font-family: 'MBC1961GulimM';
     width: 239px;
     height: 23.2px;
-    color: #333333;
-    font-size: 16px;
-    margin: 0 0 8px;
-}
-
-.donation_price{
-    width: 239px;
-    height: 24px;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.donation_likeCount{
-    width: 239px;
-    height: 25px;
-    padding: 5px 0 0;
     color: black;
-    font-size: 14px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+/*총 기부 금액*/
+.donation-price-box{
+    display: flex;
+    margin-top: 5px;
+}
+
+.donation-price-box-content{
+    font-family: 'ChosunGu';
+    font-size: 17px;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.donation-view-totalPrice{
+    font-family: 'MBC1961GulimM';
+    font-size: 20px;
+    text-align: left;
+    margin-left: 10px;
+    color: rgb(255, 102, 130);
+}
+
+/*기부 진행 상태*/
+.donation-view-state{
+    font-family: 'ChosunGu';
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 160px;
 }
 
 .donation_state{

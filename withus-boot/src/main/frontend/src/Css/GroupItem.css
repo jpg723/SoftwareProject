@@ -40,6 +40,7 @@
 }
 
 .groupItem_list_content{
+    border: none;
     font-family: 'ChosunGu';
     background-color: white;
     margin: auto 3px;

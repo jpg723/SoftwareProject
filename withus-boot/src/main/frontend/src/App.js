@@ -20,13 +20,13 @@ import MyInfo from './Components/Mypage/MyInfo';
 import MyCart from './Components/Mypage/MyCart';
 import ItemWrite from './Components/Item/ItemWrite';
 import ItemDetail from './Components/Item/ItemDetail';
-import Chat from './Components/Item/Chat';
 import SearchResult from './Components/Main/SearchResult';
 import FindId from './Components/Member/FindId';
 import FindPW from './Components/Member/FindPW';
 import SendMessage from './Components/Message/SendMessage';
 import Messages from './Components/Message/Messages';
 import MessageDetail from './Components/Message/MessageDetail';
+import MessageBox from './Components/Message/MessageBox';
 
 function App() {
   //카트
@@ -54,11 +54,10 @@ function App() {
         <Route path="/mypage-mycart" element={<MyCart />} />
         <Route path="/itemwrite" element={<ItemWrite />} />
         <Route path="/item/detail/:id" element={<ItemDetail />}/>
-        <Route path="/chat" element={<Chat />} />
         <Route path="/search" element={<SearchResult />} />
         <Route path="/member/findId" element={<FindId />} />
         <Route path="/member/findPW" element={<FindPW />} />
-        <Route path="/mypage-message" element={<Messages />} />
+        <Route path="/message-box" element={<MessageBox />} />
         <Route path="/message" element={<SendMessage />} />
         <Route path="/mypage-message" element={<Messages />} />
         <Route path="/message/detail/:id" element={<MessageDetail />}/>

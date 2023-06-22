@@ -9,6 +9,7 @@ function Mypage() {
         <div id="mypage_category">
             <div id="mypage_cate">마이페이지</div>
             <Link to="/mypage-likeItem" class="mypageCate_content"><div class="mypageCate_content">|  찜한 상품</div></Link>
+            <Link to="/message-box" class="mypageCate_content"><div class="mypageCate_content">| 쪽지함</div></Link>
             <Link to="/mypage-mywrite" class="mypageCate_content"><div class="mypageCate_content">| 내가 쓴 나눔글</div></Link>
             <Link to="/mypage-mydonation" class="mypageCate_content"><div class="mypageCate_content">|  기부 내역</div></Link>
             <Link to="/mypage-mycart" class="mypageCate_content"><div class="mypageCate_content">|  장바구니</div></Link>

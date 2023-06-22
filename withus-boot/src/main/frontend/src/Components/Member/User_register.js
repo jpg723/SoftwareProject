@@ -176,7 +176,7 @@ function User_register() {
     }
 
     return (
-    <div>
+    <div id="register-page">
         <h1 id="register_header">회원가입</h1>
         <div id="register_line"></div>
         <form id="register_form">

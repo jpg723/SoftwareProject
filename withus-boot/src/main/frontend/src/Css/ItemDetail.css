@@ -1,5 +1,18 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #item-main{
-    margin-top: 40px;
+    margin-top: 55px;
 }
 
 #item-info{
@@ -11,42 +24,50 @@
     width: 300px;
     height: 400px;
     margin-left: 250px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px lightgray;
 }
 /*상품 정보-------------------*/
 #item-content{
+    margin-top: 10px;
     margin-left: 100px;
 }
 
 /*거래 상태---------------------*/
 .item-state{
+    font-family: 'ChosunGu';
     text-align: left;
     color: gray;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 /*상품 제목--------------------*/
 .item-name{
-    font-size: 35px;
+    font-family: 'MBC1961GulimM';
+    font-size: 40px;
     text-align: left;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 /*상품 카테고리-------------------*/
 .item-category{
+    font-family: 'ChosunGu';
     text-align: left;
     margin-top: 10px;
     color: gray;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 /*상품 설명---------------------*/
 .item-detail{
+    font-family: 'ChosunGu';
     text-align: left;
     margin-top: 20px;
-    height: 200px;
+    height: 150px;
     width: 460px;
-    font-size: 18px;
+    font-size: 25px;
 }
+
 .item-content1{
     display: flex;
 }
@@ -57,16 +78,20 @@
     margin-top: 25px;
 }
 .chat-btn{
-    background-color: #417bba;
+    font-family: 'ChosunGu';
+    background-color: rgb(255, 102, 130);
+    border: none;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 5px;
+    margin-top: 15px;
     width: 200px;
+    height: 45px;
 }
 
 /*찜버튼---------------------------------------*/
 .btn_itemLike {
-    margin-top: 17px;
+    margin-top: 40px;
     margin-left: 20px;
     width: 45px;
     height: 45px;

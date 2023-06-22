@@ -93,27 +93,22 @@ import styles from '../../Css/GroupItemDetail.module.css';
     <div id= "item-main">
       <div id="item-info">
         <div id="item-image">
-          <img src={item.img} style={{width:"300px", height:"400px"}}/>
+          <img src={item.img} style={{width:"300px", height:"400px", borderRadius:"10px"}}/>
         </div>
         <div className="col-md-6">
           <div id="item-content">
           <div className="item-state">{item.item_state === 0 ? <div>진행중</div> : <div>나눔 종료</div>}</div>
           <div className="item-name">{item.item_name}</div>
           <div className="item-category">
-            {item.itemCategory_id === 1 ? <div>식품</div> : null}
-            {item.itemCategory_id === 2 ? <div>의류</div> : null}
-            {item.itemCategory_id === 3 ? <div>침구류</div> : null}
-            {item.itemCategory_id === 4 ? <div>생활용품</div> : null}
-            {item.itemCategory_id === 5 ? <div>가전제품</div> : null}
-            {item.itemCategory_id === 6 ? <div>미용</div> : null}
+            {item.itemCategory_id === 0 ? <div>식품</div> : null}
+            {item.itemCategory_id === 1 ? <div>의류</div> : null}
+            {item.itemCategory_id === 2 ? <div>침구류</div> : null}
+            {item.itemCategory_id === 3 ? <div>생활용품</div> : null}
+            {item.itemCategory_id === 4 ? <div>가전제품</div> : null}
+            {item.itemCategory_id === 5 ? <div>미용</div> : null}
           </div>
             <div className="item-detail">{item.item_detail}</div>
             <div className="item-content1">
-              <Link to="/chat" state={{seller:item.user_id}}>
-                <div className="chat-btn-box">
-                  <button className="chat-btn">채팅하기</button> 
-                </div>
-              </Link>
               <Link to="/message" state={{receiver:item.user_id}}>
                 <div className="chat-btn-box">
                   <button className="chat-btn">쪽지보내기</button> 
