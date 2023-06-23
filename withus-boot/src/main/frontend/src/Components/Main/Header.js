@@ -43,9 +43,9 @@ function Header() {
       <div id="header">
           <div id="header_top">
               <div class="headerTop_content" name={isLogin}>   
-              <Link to={`/message-box`} >
-              <div className="messages" style={{marginTop:"33%"}}>
-              <img  src={message} style={{marginLeft:"25%"}}></img>
+              <Link to={`/message-box`} className="messages">
+              <div className="messages">
+              <img  src={message} class="message-image"style={{marginLeft:"25%"}}></img>
               {newMessageList.length >=1 ? (
                 <div className="new_message">
                   <p>{newMessageList.length}</p>
