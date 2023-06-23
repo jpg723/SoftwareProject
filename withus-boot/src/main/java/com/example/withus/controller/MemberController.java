@@ -3,9 +3,7 @@ package com.example.withus.controller;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Date;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.withus.domain.Item;
 import com.example.withus.domain.Member;
+import com.example.withus.domain.Order;
 import com.example.withus.service.MemberService;
 
 @RestController
@@ -130,5 +129,40 @@ public class MemberController {
 
     	return "로그인 실패";
     }
+	
+	@ResponseBody
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public Member updateMember(HttpServletRequest request,
+			@RequestBody Map<String, Object> paramMap) {
+		String[] memberInfo = new String[10];
+		int i = 0;
+		for (Map.Entry<String, Object> pair : paramMap.entrySet()) {
+			memberInfo[i] = pair.getValue().toString();
+			System.out.println(memberInfo[i]);
+			i++;
+		}
+	       
+		Member member = new Member();
+	    member.setPassword(memberInfo[0]); 
+	    member.setUser_name(memberInfo[1]);
+	    member.setEmail(memberInfo[2]);
+	    member.setPhone(memberInfo[3]);
+	    member.setZip(memberInfo[4]);
+	    member.setAddress1(memberInfo[5]);
+	    member.setAddress2(memberInfo[6]);
+	    member.setGender(Integer.parseInt(memberInfo[7]));
+	    member.setBirth(memberInfo[8]); 
+	    member.setUser_id(memberInfo[9]);
+	    System.out.println("수정:" + member);
+	    memberService.updateMember(member);
+	    
+	    return member;
+	}
+	
+	@GetMapping(value="/info/{user_id}") 
+	public Member memberInfo(@PathVariable("user_id") String user_id) {
+		return memberService.memberInfo(user_id);
+	}
+	
 
 }
