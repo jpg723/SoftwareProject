@@ -16,7 +16,8 @@ function  MyInfo(){
                 console.log(response.data);
                 setMember(response.data);
             }else{
-                alert("failed to");
+                alert("로그인이 필요합니다!");
+                document.location.href = "/login";
             }
         });
       }, []);
