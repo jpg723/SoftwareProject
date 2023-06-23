@@ -84,6 +84,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 25px;
+    border: none;
 }
 
 .message-detail-btn{
@@ -95,4 +96,5 @@
     margin-bottom: 20px;
     margin-right: 20px;
     font-size: 25px;
+    border: none;
 }

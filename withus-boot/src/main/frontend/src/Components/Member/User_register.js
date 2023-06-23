@@ -190,9 +190,11 @@ function User_register() {
                         onChange={updateUserId}></input>
                     </div>
                 </div>
+                {/*
                 <div class="register_content3">
                     <button class="register_check_btn">중복확인</button>
                 </div>
+                */}
             </div>
             <div class="inputCheck">{checkUserId}</div>
             <div class="register_content">
@@ -241,9 +243,11 @@ function User_register() {
                         onChange={updateEmail}></input>
                     </div>
                 </div>
+                {/*
                 <div class="register_content3">
                     <button class="register_check_btn">중복확인</button>
                 </div>
+                 */}
             </div>
             <div class="inputCheck">{checkEmail}</div>
             <div class="register_content">

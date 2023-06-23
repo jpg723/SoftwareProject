@@ -97,3 +97,7 @@
     box-shadow: 3px 3px 3px 3px lightgray;
     border-radius: 10px;
 }
+
+#Donation_view_main{
+    display: flex;
+}

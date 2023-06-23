@@ -28,7 +28,7 @@ function MyDonation() {
         <div id="mypage_view">
           <div id="mypage_header">기부 내역</div>
           <div id="mypage_line"></div>
-    <div id="Item_view_main" style={{width:"30%", height:"300px", float: "left", flexDirection:"row", flexWrap:"wrap", display: "row"}}>
+    <div id="Donation_view_main">
     {
       list.map(function(a,i){
           return(

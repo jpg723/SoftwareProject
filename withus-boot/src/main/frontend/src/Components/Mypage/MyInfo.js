@@ -245,9 +245,11 @@ function  MyInfo(){
                         onChange={updateEmail}></input>
                     </div>
                 </div>
+                {/*
                 <div class="register_content3">
                     <button class="register_check_btn">중복확인</button>
                 </div>
+                */}
             </div>
             <div class="inputCheck">{checkEmail}</div>
             <div class="register_content">

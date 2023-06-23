@@ -61,7 +61,6 @@ function MyGroupItem() {
         })
       }
     </div>  
-    <div class="mypage-like-line"></div> 
   </div>
   );
 }
