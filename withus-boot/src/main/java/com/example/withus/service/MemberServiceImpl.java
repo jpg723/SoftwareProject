@@ -32,7 +32,16 @@ public class MemberServiceImpl implements MemberService {
 		return memberDao.findPW(member);
 	}
 	
-	
+	@Override
+	public void updateMember(Member member) {
+		// TODO Auto-generated method stub
+		memberDao.updateMember(member);
+	}
 
-	
+	@Override
+	public Member memberInfo(String user_id) {
+		// TODO Auto-generated method stub
+		return memberDao.memberInfo(user_id);
+	}
+
 }

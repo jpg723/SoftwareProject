@@ -12,4 +12,6 @@ public interface MemberDao {
 	Member findByIdAndPassword(String user_id, String password) throws DataAccessException;
 	String findId(Member member) throws DataAccessException;
 	String findPW(Member member) throws DataAccessException;
+	void updateMember(Member member) throws DataAccessException;
+	Member memberInfo(String user_id) throws DataAccessException;
 }

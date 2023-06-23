@@ -32,4 +32,6 @@ public interface MemberMapper {
 	Member findByIdAndPassword(String user_id, String password);
 	String findId(Member member);
 	String findPW(Member member);
+	void updateMember(Member member);
+	Member memberInfo(String user_id);
 }

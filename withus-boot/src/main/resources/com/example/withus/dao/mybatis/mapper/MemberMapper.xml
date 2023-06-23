@@ -26,4 +26,26 @@
     WHERE EMAIL = #{email}
     AND USER_ID = #{user_id}
   </select>
+  
+  <select id="memberInfo" resultType="MEMBER" parameterType="String">
+    SELECT *
+    FROM MEMBER
+    WHERE USER_ID = #{user_id}
+  </select>
+
+
+  <update id="updateMember">
+  	UPDATE MEMBER
+  	SET PASSWORD = #{password},
+  		USER_NAME = #{user_name},
+  		EMAIL = #{email},
+  		PHONE = #{phone},
+  		ZIP = #{zip} ,
+  		ADDRESS1 = #{address1},
+  		ADDRESS2 = #{address2},
+  		GENDER = #{gender},
+  		BIRTH = #{birth}
+  	WHERE USER_ID = #{user_id}
+  </update>
+  
 </mapper>

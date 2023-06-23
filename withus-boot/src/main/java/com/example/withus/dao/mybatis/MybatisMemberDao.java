@@ -36,6 +36,14 @@ public class MybatisMemberDao implements MemberDao {
 		return memberMapper.findPW(member);
 	}
 
+	@Override
+	public void updateMember(Member member) throws DataAccessException {
+		memberMapper.updateMember(member);
+	}
 
-	
+	@Override
+	public Member memberInfo(String user_id) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return memberMapper.memberInfo(user_id);
+	}
 }
