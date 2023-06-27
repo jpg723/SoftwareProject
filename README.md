@@ -13,7 +13,7 @@
 
 ## 🔧 Stack
 ### Environment
-<img src="https://img.shields.io/badge/Visual Studio Code-3776AB?style=for-the-badge&logo=Visual Studio Code&logoColor=#5C2D91">
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
 
 ### Development
 ### 
