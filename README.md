@@ -8,5 +8,5 @@
 | 동덕여자대학교 컴퓨터학과 4학년 | 동덕여자대학교 컴퓨터학과 4학년 | 동덕여자대학교 컴퓨터학과 4학년 | 동덕여자대학교 컴퓨터학과 4학년 |
 ## 📑 프로젝트 소개
 <div align="center">
-<img width="329" alt="image" src="https://github.com/jpg723/SoftwareProject/assets/86431761/2b394f94-011f-4476-a540-9b4f9803fba3">
+<img width="600" alt="image" src="https://github.com/jpg723/SoftwareProject/assets/86431761/5cca0af2-42f2-49f9-a6c0-6a12834adc77">
 </div>
