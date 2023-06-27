@@ -314,7 +314,7 @@ function User_register() {
                 <div class="register_content2">    
                     <div class="register_inputBox">
                         <input class="register_input" placeholder="YYYYMMDD"
-                        onChange={updateBirth} onBlur={checkBirth}></input>
+                        onChange={updateBirth}></input>
                     </div>
                 </div>
             </div>
