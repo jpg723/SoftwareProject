@@ -1,5 +1,6 @@
-# 구호물품 후원&거래 서비스 95창고
-
+# 📦 구호물품 후원&거래 서비스 95창고
+> **동덕여자대학교 컴퓨터학과 소프트웨어시스템개발** <br/> **개발기간: 2022.03 ~ 2022.6**
+> 
 ## 🙌 팀 소개
 
 |**박세아**|**윤채영**|**이혜연**|**이미지**|          
@@ -21,20 +22,25 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
 
 
-## 📺 주요 화면 구성
+## 📺 주요 화면 구성 및 기능
 |**메인 페이지**|**나눔 페이지**|**구호물품 공동구매 페이지**|
 |:---:|:---:|:---:|
-| <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/660dc51e-6727-45cb-bc2e-1ab538570847"/> | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/f917cd18-212b-42bd-a2f4-60e0e0dc7615"/>  | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/7b04b07b-e31c-4172-8ab4-02381748e7f8"/> 
+| <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/660dc51e-6727-45cb-bc2e-1ab538570847"/> | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/f917cd18-212b-42bd-a2f4-60e0e0dc7615"/>  | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/7b04b07b-e31c-4172-8ab4-02381748e7f8"/> |안녕하세요 | 안녕 | 하이
+
+
+
+
+
 
 |**기부 페이지**|**마이페이지**|**구호물품 공동구매 상세 페이지**|  
 |:---:|:---:|:---:|
 | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/8097baad-5481-428a-9e2b-4e70c2538191"/>   | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/b2e2ef76-8f9c-4bc1-9c8a-f8423f6823cf"/>     | <img width="329" src="https://github.com/jpg723/SoftwareProject/assets/86431761/2e43e612-b4f0-47d0-9b8b-d22226287a18"/>
 
 ## 📌 주요 기능
-### 1. 메인페이지
-- 나눔, 구호물품 공동구매, 기부, 마이페이지, 쪽지함 이동
-- 원하는 나눔, 구호물품 공동구매 상품 검색
-- 회원가입, 로그인, 로그아웃
+### 메인페이지                                                                                               
+> 나눔, 구호물품 공동구매, 기부, 마이페이지, 쪽지함 이동 <br>
+> 원하는 나눔, 구호물품 공동구매 상품 검색 <br>
+> 회원가입, 로그인, 로그아웃 <br>
 ### 2. 나눔
 - 나눔 상품 글 올리기
 - 카테고리별 상품 출력
